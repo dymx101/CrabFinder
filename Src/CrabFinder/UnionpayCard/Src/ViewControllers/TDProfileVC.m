@@ -110,52 +110,6 @@
 
 #pragma delegate - 
 - (void) getProfile:(NSString *) tOken{
-    NSLog(@">>> %@",tOken);
-    
-    MBProgressHUD * HUD = [[MBProgressHUD alloc] initWithView:self.view];
-    [self.view addSubview:HUD];
-    
-    HUD.labelText = @"努力装载中";
-	HUD.color = [UIColor clearColor];
-	HUD.square = YES;
-    
-    __block Userinfor * mUser = nil;
-    [HUD showAnimated:YES whileExecutingBlock:^{
-        NSMutableDictionary * input = [NSMutableDictionary new];
-        [input setValue:@"ShowcrrutUser" forKey:@"method"];
-        [input setValue:tOken forKey:@"userToken"];
-        TDHttpCommand * command = [TDHttpCommand new];
-        command.inPut = input;
-        //命令模式调用
-        [[TDHttpClient sharedClient] processCommand:command callback:^(NSURLSessionDataTask *task, id responseObject, NSError *anError) {
-            if (anError==nil && [responseObject isKindOfClass:[NSArray class]]) {
-                mUser = responseObject;
-            }
-        }];
-    } completionBlock:^{
-        //刷新 UI 主线程
-        
-        UIImageView *ivBg = [[UIImageView alloc] initWithImage:[TDImageLibrary sharedInstance].mineAccountBg];
-        [__headerView addSubview:ivBg];
-        
-        [ivBg alignToView:__headerView];
-        
-        // view not logged in
-        UIView *viewNotLoggedIn = [UIView new];
-        [__headerView addSubview:viewNotLoggedIn];
-        [viewNotLoggedIn alignToView:__headerView];
-        
-        // label not logged in
-        UILabel *lblNotLoggedIn = [UILabel new];
-        lblNotLoggedIn.text = [mUser u_realname];
-        lblNotLoggedIn.font = [TDFontLibrary sharedInstance].fontNormal;
-        [viewNotLoggedIn addSubview:lblNotLoggedIn];
-        [lblNotLoggedIn alignCenterXWithView:viewNotLoggedIn predicate:nil];
-        [lblNotLoggedIn alignTopEdgeWithView:viewNotLoggedIn predicate:@"10"];
-        
-        [self.view addSubview:__headerView];
-        
-        
-    }];
+   
 }
 @end

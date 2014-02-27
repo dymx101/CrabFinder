@@ -92,7 +92,7 @@
     UIImage *selectedImage = [UIImage imageNamed:@"icon_tabbar_homepage_selected.png"];
     RDVTabBarItem *item = tabItems[0];
 
-    [item setTitle:@"首页"];
+    [item setTitle:@"Newsfeed"];
     item.selectedTitleAttributes = selectedTitleAttributes;
     item.unselectedTitleAttributes = unselectedTitleAttributes;
     [item setFinishedSelectedImage:selectedImage withFinishedUnselectedImage:normalImage];
@@ -100,7 +100,7 @@
     normalImage = [UIImage imageNamed:@"icon_tabbar_merchant_normal.png"];
     selectedImage = [UIImage imageNamed:@"icon_tabbar_merchant_selected.png"];
     item = tabItems[1];
-    [item setTitle:@"分类"];
+    [item setTitle:@"Vendor"];
     item.selectedTitleAttributes = selectedTitleAttributes;
     item.unselectedTitleAttributes = unselectedTitleAttributes;
     [item setFinishedSelectedImage:selectedImage withFinishedUnselectedImage:normalImage];
@@ -108,7 +108,7 @@
     normalImage = [UIImage imageNamed:@"icon_tabbar_mine.png"];
     selectedImage = [UIImage imageNamed:@"icon_tabbar_mine_selected.png"];
     item = tabItems[2];
-    [item setTitle:@"我的"];
+    [item setTitle:@"Profile"];
     item.selectedTitleAttributes = selectedTitleAttributes;
     item.unselectedTitleAttributes = unselectedTitleAttributes;
     [item setFinishedSelectedImage:selectedImage withFinishedUnselectedImage:normalImage];
@@ -116,7 +116,7 @@
     normalImage = [UIImage imageNamed:@"icon_tabbar_misc.png"];
     selectedImage = [UIImage imageNamed:@"icon_tabbar_misc_selected.png"];
     item = tabItems[3];
-    [item setTitle:@"更多"];
+    [item setTitle:@"Settings"];
     item.selectedTitleAttributes = selectedTitleAttributes;
     item.unselectedTitleAttributes = unselectedTitleAttributes;
     [item setFinishedSelectedImage:selectedImage withFinishedUnselectedImage:normalImage];

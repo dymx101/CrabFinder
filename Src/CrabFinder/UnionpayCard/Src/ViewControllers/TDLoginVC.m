@@ -12,7 +12,7 @@
 #import "TDRegisterNoAccountVC.h"
 #import "Btype.h"
 
-@interface TDLoginVC ()<MBProgressHUDDelegate> {
+@interface TDLoginVC () {
     UIImageView     *_loginInputView;
     UIView          *_lineView;
     
@@ -24,7 +24,6 @@
     
     UIButton        *_btnLogin;
     UIButton        *_btnRegister;
-    UIButton        *_btnRegisterNoAccount;
 }
 
 @end
@@ -35,7 +34,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.navigationItem.title = @"登录";
+    self.navigationItem.title = @"Login";
     
     UIImage *dismissImg = [TDImageLibrary sharedInstance].dismiss;
     UIButton *btnDismiss = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, dismissImg.size.width, dismissImg.size.height)];
@@ -47,9 +46,9 @@
     UIImage *forgetPwdBgImg = [TDImageLibrary sharedInstance].btnBgGrayRound;
     UIButton *forgetPwdBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 80, 30)];
     [forgetPwdBtn setBackgroundImage:forgetPwdBgImg forState:UIControlStateNormal];
-    [forgetPwdBtn setTitle:@"忘记密码" forState:UIControlStateNormal];
+    [forgetPwdBtn setTitle:@"Register" forState:UIControlStateNormal];
     forgetPwdBtn.titleLabel.font = [TDFontLibrary sharedInstance].fontNormal;
-    [forgetPwdBtn addTarget:self action:@selector(forgetPasswordAction:) forControlEvents:UIControlEventTouchUpInside];
+    [forgetPwdBtn addTarget:self action:@selector(registerAction:) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem *itemForgetPwd = [[UIBarButtonItem alloc] initWithCustomView:forgetPwdBtn];
     self.navigationItem.rightBarButtonItem = itemForgetPwd;
     
@@ -85,37 +84,31 @@
     [_loginInputView addSubview:_ivPwd];
     
     _tfUserName = [UITextField new];
-    _tfUserName.placeholder = @"账号";
+    _tfUserName.placeholder = @"User name";
     _tfUserName.font = [TDFontLibrary sharedInstance].fontNormal;
     _tfUserName.clearButtonMode = UITextFieldViewModeWhileEditing;
     [_loginInputView addSubview:_tfUserName];
     
     _tfPwd = [UITextField new];
-    _tfPwd.placeholder = @"密码";
+    _tfPwd.placeholder = @"Password";
     _tfPwd.font = [TDFontLibrary sharedInstance].fontNormal;
     _tfPwd.clearButtonMode = UITextFieldViewModeWhileEditing;
     [_loginInputView addSubview:_tfPwd];
     
     _btnLogin = [UIButton new];
     [_btnLogin setBackgroundImage:[TDImageLibrary sharedInstance].btnBgGreen forState:UIControlStateNormal];
-    [_btnLogin setTitle:@"登录" forState:UIControlStateNormal];
+    [_btnLogin setTitle:@"Login" forState:UIControlStateNormal];
     _btnLogin.titleLabel.font = [TDFontLibrary sharedInstance].fontTitleBold;
     [_btnLogin addTarget:self action:@selector(loginAction:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:_btnLogin];
     
     _btnRegister = [UIButton new];
-    [_btnRegister setTitle:@"立即注册" forState:UIControlStateNormal];
+    [_btnRegister setTitle:@"Forgot password" forState:UIControlStateNormal];
     [_btnRegister setTitleColor:[FDColor sharedInstance].caribbeanGreen forState:UIControlStateNormal];
-    [_btnRegister addTarget:self action:@selector(registerAction:) forControlEvents:UIControlEventTouchUpInside];
+    [_btnRegister addTarget:self action:@selector(forgetPasswordAction:) forControlEvents:UIControlEventTouchUpInside];
     _btnRegister.titleLabel.font = [TDFontLibrary sharedInstance].fontNormal;
     [self.view addSubview:_btnRegister];
     
-    _btnRegisterNoAccount = [UIButton new];
-    [_btnRegisterNoAccount setTitle:@"无账号快捷登录" forState:UIControlStateNormal];
-    [_btnRegisterNoAccount setTitleColor:[FDColor sharedInstance].caribbeanGreen forState:UIControlStateNormal];
-    [_btnRegisterNoAccount addTarget:self action:@selector(registerNoAccountAction:) forControlEvents:UIControlEventTouchUpInside];
-    _btnRegisterNoAccount.titleLabel.font = [TDFontLibrary sharedInstance].fontNormal;
-    [self.view addSubview:_btnRegisterNoAccount];
 }
 
 -(void)layoutViews {
@@ -146,11 +139,9 @@
     [_btnLogin alignLeadingEdgeWithView:_loginInputView predicate:nil];
     [_btnLogin constrainTopSpaceToView:_loginInputView predicate:@"20"];
     
-    [_btnRegister alignLeadingEdgeWithView:_btnLogin predicate:@"15"];
-    [_btnRegister constrainTopSpaceToView:_btnLogin predicate:@"10"];
-    
-    [_btnRegisterNoAccount alignTrailingEdgeWithView:_btnLogin predicate:@"-15"];
-    [_btnRegisterNoAccount constrainTopSpaceToView:_btnLogin predicate:@"10"];
+    [_btnRegister alignCenterXWithView:self.view predicate:nil];
+    [_btnRegister constrainTopSpaceToView:_btnLogin predicate:@"20"];
+
 }
 
 
@@ -161,35 +152,6 @@
 }
 
 -(void)loginAction:(id)sender {
-    
-    MBProgressHUD * HUD = [[MBProgressHUD alloc] initWithView:self.view];
-    [self.view addSubview:HUD];
-	HUD.delegate = self;
-    HUD.labelText = @"努力装载中";
-	HUD.color = [UIColor clearColor];
-	HUD.square = YES;
-    
-    __block NSDictionary * loginResultMap;
-    //http://localhost:8000/yscardII/json/Show/{"method":"LoginUserinfor","u_logname":"tongling26","u_log_password":"123456"}
-    [HUD showAnimated:YES whileExecutingBlock:^{
-        NSMutableDictionary * input = [NSMutableDictionary new];
-        [input setValue:@"LoginUserinfor" forKey:@"method"];
-        [input setValue:@"tongling26" forKey:@"u_logname"];
-        [input setValue:@"123456" forKey:@"u_log_password"];
-        TDHttpCommand * command = [TDHttpCommand new];
-        command.inPut = input;
-        //命令模式调用
-        [[TDHttpClient sharedClient] processCommand:command callback:^(NSURLSessionDataTask *task, id responseObject, NSError *anError) {
-            if (anError==nil && [responseObject isKindOfClass:[NSDictionary class]]) {
-                 loginResultMap = responseObject;
-            }
-        }];
-    } completionBlock:^{
-        //刷新 UI 主线程
-        NSLog(@">>> %@",loginResultMap);
-        [self.delegate getProfile:[loginResultMap objectForKey:@"userToken"]];
-        [self dismissViewControllerAnimated:YES completion:nil];
-    }];
 }
 
 -(void)myTask {

@@ -131,7 +131,7 @@ typedef enum {
     //[btnTile setBackgroundColor:aBgColor];
     [btnTile setBackgroundImage:[TDImageLibrary sharedInstance].btnBgOrange forState:UIControlStateNormal];
     [btnTile setTitle:aTitle forState:UIControlStateNormal];
-    btnTile.titleLabel.font = [TDFontLibrary sharedInstance].fontTileButton;
+    btnTile.titleLabel.font = [TDFontLibrary sharedInstance].fontTitleBold;
     
     if (anAction != NULL) {
         [btnTile addTarget:self action:anAction forControlEvents:UIControlEventTouchUpInside];

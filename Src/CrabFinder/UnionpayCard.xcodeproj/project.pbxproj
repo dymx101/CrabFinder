@@ -64,7 +64,6 @@
 		EA098BD318B9B1E40034E0CF /* tableCellTopBg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EA098BCF18B9B1E40034E0CF /* tableCellTopBg@2x.png */; };
 		EA098BD818B9B4450034E0CF /* TDSettingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA098BD718B9B4450034E0CF /* TDSettingCell.m */; };
 		EA901B0618B6491700B1E20F /* TDUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = EA901B0518B6491700B1E20F /* TDUtil.m */; };
-		EA901B0818B64A1B00B1E20F /* 钟齐段宁行书.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA901B0718B64A1B00B1E20F /* 钟齐段宁行书.ttf */; };
 		EAC9D88418B888CF0096D555 /* TDForgetPasswordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC9D88318B888CF0096D555 /* TDForgetPasswordVC.m */; };
 		EACBE40118BF140F00F2E9CF /* TDCardListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EACBE40018BF140F00F2E9CF /* TDCardListVC.m */; };
 		EACBE40418BF149000F2E9CF /* TDVendorsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EACBE40318BF149000F2E9CF /* TDVendorsVC.m */; };
@@ -967,7 +966,6 @@
 		EA098BD718B9B4450034E0CF /* TDSettingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDSettingCell.m; sourceTree = "<group>"; };
 		EA901B0418B6491700B1E20F /* TDUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDUtil.h; sourceTree = "<group>"; };
 		EA901B0518B6491700B1E20F /* TDUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDUtil.m; sourceTree = "<group>"; };
-		EA901B0718B64A1B00B1E20F /* 钟齐段宁行书.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "钟齐段宁行书.ttf"; sourceTree = "<group>"; };
 		EAC9D88218B888CF0096D555 /* TDForgetPasswordVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDForgetPasswordVC.h; sourceTree = "<group>"; };
 		EAC9D88318B888CF0096D555 /* TDForgetPasswordVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDForgetPasswordVC.m; sourceTree = "<group>"; };
 		EACBE3FF18BF140F00F2E9CF /* TDCardListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDCardListVC.h; sourceTree = "<group>"; };
@@ -2027,7 +2025,6 @@
 		EACC148E18B36F8500DD27B0 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				EA901B0718B64A1B00B1E20F /* 钟齐段宁行书.ttf */,
 				EACD0D3418B3A51F009109CB /* Images */,
 				EACC148F18B36F8500DD27B0 /* MeituanImages */,
 			);
@@ -3581,7 +3578,6 @@
 				EACC186718B36F9100DD27B0 /* btn_nearby_filter_left_selected@2x.png in Resources */,
 				EACC19E718B36F9100DD27B0 /* icon_route_end@2x.png in Resources */,
 				EACC1A2418B36F9200DD27B0 /* logo_share_sina_weibo.png in Resources */,
-				EA901B0818B64A1B00B1E20F /* 钟齐段宁行书.ttf in Resources */,
 				EACC199918B36F9100DD27B0 /* icon_movie_3D@2x.png in Resources */,
 				EACC17E318B36F9100DD27B0 /* bg_myCoupon_sideShadow@2x.png in Resources */,
 				EACC187118B36F9100DD27B0 /* btn_r@2x.png in Resources */,
