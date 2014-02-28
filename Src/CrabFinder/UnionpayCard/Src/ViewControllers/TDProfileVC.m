@@ -18,6 +18,9 @@
     UILabel                 *_lblUserName;
     UILabel                 *_lblBio;
     UIImageView             *_ivPhoto;
+    
+    UIScrollView            *_horizontalScrollView;
+    NSLayoutConstraint      *_lastImageTrailingConstraint;
 }
 
 @end
@@ -100,12 +103,50 @@
     [_lblBio constrainTopSpaceToView:_lblUserName predicate:@"5"];
     [_lblBio constrainWidthToView:_headerView predicate:@"-100"];
     
+    //
+    _horizontalScrollView = [UIScrollView new];
+    //_horizontalScrollView.backgroundColor = [UIColor redColor];
+    _horizontalScrollView.showsHorizontalScrollIndicator = YES;
+    [_headerView addSubview:_horizontalScrollView];
+    // layout
+    [_horizontalScrollView constrainTopSpaceToView:_lblBio predicate:@"20"];
+    [_horizontalScrollView constrainWidthToView:_headerView predicate:nil];
+    [_horizontalScrollView alignCenterXWithView:_headerView predicate:nil];
+    [_horizontalScrollView constrainHeight:@"80"];
+    
+    //
+    UIImage *crabImg = [UIImage imageNamed:@"crab_icon"];
+    [self addImageArray:@[crabImg, crabImg, crabImg, crabImg, crabImg, crabImg, crabImg]];
     
     return _headerView;
 }
 
+#define IMAGE_MARGIN    (20)
+#define IMAGE_SIZE      (60)
+-(void)addImageArray:(NSArray *)aImages {
+    [_horizontalScrollView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
+    [_horizontalScrollView removeConstraint:_lastImageTrailingConstraint];
+    
+    int i = 0;
+    for (UIImage *image in aImages) {
+        UIImageView *iv = [[UIImageView alloc] initWithImage:image];
+        [iv applyEffectBorder];
+        [_horizontalScrollView addSubview:iv];
+        [iv constrainWidth:@(IMAGE_SIZE).stringValue height:@(IMAGE_SIZE).stringValue];
+        [iv alignTopEdgeWithView:_horizontalScrollView predicate:@"10"];
+        float leading = IMAGE_MARGIN * (i + 1) + IMAGE_SIZE * i;
+        [iv alignLeadingEdgeWithView:_horizontalScrollView predicate:@(leading).stringValue];
+        
+        if (i == aImages.count - 1) {
+            _lastImageTrailingConstraint = [iv alignTrailingEdgeWithView:_horizontalScrollView predicate:@(-IMAGE_MARGIN).stringValue].firstObject;
+        }
+        
+        i++;
+    }
+}
+
 -(float)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    return 120;
+    return 210;
 }
 
 #pragma mark - 
