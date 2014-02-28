@@ -44,6 +44,7 @@
     _tv = [UITableView new];
     _tv.delegate = self;
     _tv.dataSource = self;
+
     [self.view addSubview:_tv];
 }
 
@@ -54,8 +55,12 @@
 }
 
 #pragma mark -
+-(int)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 2;
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 0;
+    return 2;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -65,11 +70,19 @@
         cell = [[UITableViewCell alloc] initWithStyle:0 reuseIdentifier:cellIDStr];
     }
     
+    cell.imageView.image = [UIImage imageNamed:@"crab_boss"];
+    cell.textLabel.text = (indexPath.section == 0) ? @"Status goes here" : @"Review goes heres";
+    
     return cell;
 }
 
--(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+-(UIView *)tableHeaderView {
     
+    if (_headerView) {
+        return _headerView;
+    }
+    
+
     _headerView = [UIView new];
     UIImageView *ivBg = [[UIImageView alloc] initWithImage:[TDImageLibrary sharedInstance].mineAccountBg];
     [_headerView addSubview:ivBg];
@@ -121,6 +134,22 @@
     return _headerView;
 }
 
+-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    if (section == 0) {
+        return [self tableHeaderView];
+    }
+    
+    return nil;
+}
+
+-(float)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    if (section == 0) {
+        return 210;
+    }
+    
+    return 20;
+}
+
 #define IMAGE_MARGIN    (20)
 #define IMAGE_SIZE      (60)
 -(void)addImageArray:(NSArray *)aImages {
@@ -145,9 +174,7 @@
     }
 }
 
--(float)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    return 210;
-}
+
 
 #pragma mark - 
 -(void)loginAction:(id)sender {

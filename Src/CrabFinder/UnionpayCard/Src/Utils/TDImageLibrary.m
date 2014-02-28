@@ -21,7 +21,7 @@ DEF_SINGLETON(TDImageLibrary)
 }
 
 -(void)doInit {
-    _logoName = [UIImage imageNamed:@"icon_homepage_MTLogo.png"];
+    _logoName = [UIImage imageNamed:@"crab_logo"];
     _btnBgOrange = [[UIImage imageNamed:@"bg_roominfo_showtime.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(5, 5, 5, 5)];
     _mineAccountBg = [UIImage imageNamed:@"bg_mine_accountView"];
     _btnBgWhite = [UIImage imageNamed:@"ump_btn_change_normal"];

@@ -54,7 +54,7 @@
 -(void)installLogoToNavibar {
     UIImage *logoImg = [TDImageLibrary sharedInstance].logoName;
     UIImageView *ivLogo = [[UIImageView alloc] initWithImage:logoImg];
-    float ratio = .5f;
+    float ratio = .2f;
     ivLogo.frame = CGRectMake(0, 0, logoImg.size.width * ratio, logoImg.size.height * ratio);
     UIBarButtonItem *itemLogo = [[UIBarButtonItem alloc] initWithCustomView:ivLogo];
     self.navigationItem.leftBarButtonItem = itemLogo;
