@@ -853,6 +853,7 @@
 		EAD1249618B5F33300C6C145 /* FDDefine.m in Sources */ = {isa = PBXBuildFile; fileRef = EAD1249518B5F33300C6C145 /* FDDefine.m */; };
 		EAD1249B18B604B600C6C145 /* FDColor.m in Sources */ = {isa = PBXBuildFile; fileRef = EAD1249A18B604B600C6C145 /* FDColor.m */; };
 		EAD1249E18B605D500C6C145 /* TDFontLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = EAD1249D18B605D500C6C145 /* TDFontLibrary.m */; };
+		EAD5E21518C0249400EF9288 /* avatar_default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EAD5E21418C0249400EF9288 /* avatar_default@2x.png */; };
 		EAD6ACC618B79BC00003B24E /* TDLoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EAD6ACC518B79BC00003B24E /* TDLoginVC.m */; };
 /* End PBXBuildFile section */
 
@@ -1781,6 +1782,7 @@
 		EAD1249A18B604B600C6C145 /* FDColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FDColor.m; sourceTree = "<group>"; };
 		EAD1249C18B605D500C6C145 /* TDFontLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDFontLibrary.h; sourceTree = "<group>"; };
 		EAD1249D18B605D500C6C145 /* TDFontLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDFontLibrary.m; sourceTree = "<group>"; };
+		EAD5E21418C0249400EF9288 /* avatar_default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "avatar_default@2x.png"; sourceTree = "<group>"; };
 		EAD6ACC418B79BC00003B24E /* TDLoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDLoginVC.h; sourceTree = "<group>"; };
 		EAD6ACC518B79BC00003B24E /* TDLoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDLoginVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -2883,6 +2885,7 @@
 		EACD0D3418B3A51F009109CB /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				EAD5E21418C0249400EF9288 /* avatar_default@2x.png */,
 				EA098BCC18B9B1E40034E0CF /* tableCellBottomBg@2x.png */,
 				EA098BCD18B9B1E40034E0CF /* tableCellMiddleBg@2x.png */,
 				EA098BCE18B9B1E40034E0CF /* tableCellRoundBg@2x.png */,
@@ -3211,6 +3214,7 @@
 				EACC185118B36F9100DD27B0 /* btn_green_highlighted@2x.png in Resources */,
 				EACC186518B36F9100DD27B0 /* btn_nearby_filter_left_normal@2x.png in Resources */,
 				EACC1A2818B36F9200DD27B0 /* mapTabButton.png in Resources */,
+				EAD5E21518C0249400EF9288 /* avatar_default@2x.png in Resources */,
 				EACC19F718B36F9100DD27B0 /* icon_route_walking_selected@2x.png in Resources */,
 				EACC18E018B36F9100DD27B0 /* icon_deal_hotelBathe_enabled@2x.png in Resources */,
 				EACC179B18B36F9100DD27B0 /* bg_deal_status.png in Resources */,

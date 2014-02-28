@@ -9,11 +9,16 @@
 #import "TDProfileVC.h"
 #import "TDLoginVC.h"
 #import "Userinfor.h"
+#import "UIView+Effect.h"
 
-@interface TDProfileVC () <UITableViewDelegate, UITableViewDataSource,TDLoginVCDelegate> {
+@interface TDProfileVC () <UITableViewDelegate, UITableViewDataSource> {
     UITableView            *_tv;
+    UIView                 *_headerView;
+    
+    UILabel                 *_lblUserName;
+    UILabel                 *_lblBio;
+    UIImageView             *_ivPhoto;
 }
-@property (nonatomic,strong)     UIView                 *_headerView;
 
 @end
 
@@ -23,7 +28,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.navigationItem.title = @"我的";
+    self.navigationItem.title = @"Profile";
     
     [self createSubviews];
     [self layoutSubviews];
@@ -62,48 +67,50 @@
 
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     
-    __headerView = [UIView new];
+    _headerView = [UIView new];
     UIImageView *ivBg = [[UIImageView alloc] initWithImage:[TDImageLibrary sharedInstance].mineAccountBg];
-    [__headerView addSubview:ivBg];
+    [_headerView addSubview:ivBg];
     
-    [ivBg alignToView:__headerView];
+    [ivBg alignToView:_headerView];
     
-    // view not logged in
-    UIView *viewNotLoggedIn = [UIView new];
-    [__headerView addSubview:viewNotLoggedIn];
-    [viewNotLoggedIn alignToView:__headerView];
+    _ivPhoto = [UIImageView new];
+    _ivPhoto.image = [UIImage imageNamed:@"avatar_default"];
+    [_ivPhoto applyEffectBorder];
+    [_headerView addSubview:_ivPhoto];
+    [_ivPhoto constrainWidth:@"50" height:@"50"];
+    [_ivPhoto alignTop:@"20" leading:@"20" toView:_headerView];
     
-    // label not logged in
-    UILabel *lblNotLoggedIn = [UILabel new];
-    lblNotLoggedIn.text = @"您还没有登录哦～";
-    lblNotLoggedIn.font = [TDFontLibrary sharedInstance].fontNormal;
-    [viewNotLoggedIn addSubview:lblNotLoggedIn];
-    [lblNotLoggedIn alignCenterXWithView:viewNotLoggedIn predicate:nil];
-    [lblNotLoggedIn alignTopEdgeWithView:viewNotLoggedIn predicate:@"10"];
+    // label
+    _lblUserName = [UILabel new];
+    _lblUserName.text = @"Steve Jobs";
+    _lblUserName.font = [TDFontLibrary sharedInstance].fontTitle;
+    [_headerView addSubview:_lblUserName];
+    //layout
+    [_lblUserName constrainLeadingSpaceToView:_ivPhoto predicate:@"10"];
+    [_lblUserName alignTopEdgeWithView:_ivPhoto predicate:@"0"];
     
-    // button log in
-    UIButton *btnLogin = [UIButton new];
-    [btnLogin setBackgroundImage:[TDImageLibrary sharedInstance].btnBgWhite forState:UIControlStateNormal];
-    [btnLogin setTitle:@"马上登录" forState:UIControlStateNormal];
-    btnLogin.titleLabel.font = [TDFontLibrary sharedInstance].fontNormal;
-    [btnLogin setTitleColor:[FDColor sharedInstance].black forState:UIControlStateNormal];
-    [btnLogin addTarget:self action:@selector(loginAction:) forControlEvents:UIControlEventTouchUpInside];
-    [viewNotLoggedIn addSubview:btnLogin];
-    [btnLogin alignCenterXWithView:viewNotLoggedIn predicate:nil];
-    [btnLogin constrainTopSpaceToView:lblNotLoggedIn predicate:@"5"];
-    [btnLogin constrainWidth:@"100"];
+    //
+    _lblBio = [UILabel new];
+    _lblBio.text = @"An American entrepreneur, marketer, and inventor, who was the co-founder, chairman, and CEO of Apple Inc.";
+    _lblBio.numberOfLines = 0;
+    _lblBio.font = [TDFontLibrary sharedInstance].fontNormal;
+    [_headerView addSubview:_lblBio];
+    // layout
+    [_lblBio alignLeadingEdgeWithView:_lblUserName predicate:nil];
+    [_lblBio constrainTopSpaceToView:_lblUserName predicate:@"5"];
+    [_lblBio constrainWidthToView:_headerView predicate:@"-100"];
     
-    return __headerView;
+    
+    return _headerView;
 }
 
 -(float)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    return [TDImageLibrary sharedInstance].mineAccountBg.size.height;
+    return 120;
 }
 
 #pragma mark - 
 -(void)loginAction:(id)sender {
     TDLoginVC *vc = [TDLoginVC new];
-    vc.delegate = self;
     UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:vc];
     [self presentViewController:nc animated:YES completion:nil];
 }

@@ -39,10 +39,14 @@
 
 -(void)applyEffectShadowAndBorder
 {
-    self.layer.borderColor = [FDColor sharedInstance].silver.CGColor;
-    self.layer.borderWidth = 1;
+    [self applyEffectBorder];
     
     [self applyEffectShadow];
+}
+
+-(void)applyEffectBorder {
+    self.layer.borderColor = [FDColor sharedInstance].silver.CGColor;
+    self.layer.borderWidth = 1;
 }
 
 -(void)applyEffectShadow

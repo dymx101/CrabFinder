@@ -14,6 +14,8 @@
 -(void)applyEffectRoundRectSilverBorder;
 -(void)applyEffectRoundRectShadow;
 -(void)applyEffectShadowAndBorder;
+
+-(void)applyEffectBorder;
 -(void)applyEffectShadow;
 
 @end
