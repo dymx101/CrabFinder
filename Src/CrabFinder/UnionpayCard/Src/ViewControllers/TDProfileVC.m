@@ -106,7 +106,7 @@
     //
     _horizontalScrollView = [UIScrollView new];
     //_horizontalScrollView.backgroundColor = [UIColor redColor];
-    _horizontalScrollView.showsHorizontalScrollIndicator = YES;
+    _horizontalScrollView.showsHorizontalScrollIndicator = NO;
     [_headerView addSubview:_horizontalScrollView];
     // layout
     [_horizontalScrollView constrainTopSpaceToView:_lblBio predicate:@"20"];
