@@ -33,10 +33,7 @@ typedef enum {
 
 
 @interface TDHomeVC () <UIScrollViewDelegate> {
-    UIScrollView            *_scrollView;
-    NSMutableArray         *_tileButtons;
-    
-    UIPageControl           *_pageControl;
+
 }
 
 @end
@@ -47,11 +44,10 @@ typedef enum {
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    //self.view.backgroundColor = [FDColor sharedInstance].lightGray;
-    _tileButtons = [NSMutableArray array];
+    self.view.backgroundColor = [FDColor sharedInstance].desertSand;
+    self.navigationItem.title = @"Newsfeed";
     
-    [self installLogoToNavibar];
-    [self installMapAndSearchToNavibar];
+    [self installSearchToNavibar];
 	
     [self createSubviews];
     [self layoutSubviews];
@@ -61,179 +57,11 @@ typedef enum {
 
 -(void)createSubviews {
     
-    _scrollView = [UIScrollView new];
-    _scrollView.pagingEnabled = YES;
-    _scrollView.showsHorizontalScrollIndicator = NO;
-    _scrollView.delegate = self;
-    [self.view addSubview:_scrollView];
     
-//    _pageControl = [UIPageControl new];
-//    _pageControl.numberOfPages = 2;
-//    _pageControl.userInteractionEnabled = NO;
-//    _pageControl.pageIndicatorTintColor = [FDColor sharedInstance].white;
-//    _pageControl.currentPageIndicatorTintColor = [FDColor sharedInstance].caribbeanGreen;
-//    [self.view addSubview:_pageControl];
-    
-    //
-    UIButton *btnTile = [self tileButtonWithTitle:@"用户\n注册" action:nil];
-    btnTile.tag = kVcRegister;
-    [btnTile addTarget:self action:@selector(tileButtonAction:) forControlEvents:UIControlEventTouchUpInside];
-    [_scrollView addSubview:btnTile];
-    [_tileButtons addObject:btnTile];
-    
-    btnTile = [self tileButtonWithTitle:@"卡片\n管理" action:nil];
-    btnTile.tag = kVcCardList;
-    [btnTile addTarget:self action:@selector(tileButtonAction:) forControlEvents:UIControlEventTouchUpInside];
-    [_scrollView addSubview:btnTile];
-    [_tileButtons addObject:btnTile];
-    
-    btnTile = [self tileButtonWithTitle:@"商户\n浏览" action:nil];
-    btnTile.tag = kVcVendors;
-    [btnTile addTarget:self action:@selector(tileButtonAction:) forControlEvents:UIControlEventTouchUpInside];
-    [_scrollView addSubview:btnTile];
-    [_tileButtons addObject:btnTile];
-    
-    btnTile = [self tileButtonWithTitle:@"消费\n充值" action:nil];
-    btnTile.tag = kVcAddMoney;
-    [btnTile addTarget:self action:@selector(tileButtonAction:) forControlEvents:UIControlEventTouchUpInside];
-    [_scrollView addSubview:btnTile];
-    [_tileButtons addObject:btnTile];
-    
-    btnTile = [self tileButtonWithTitle:@"积分\n活动" action:nil];
-    btnTile.tag = kVcCredit;
-    [btnTile addTarget:self action:@selector(tileButtonAction:) forControlEvents:UIControlEventTouchUpInside];
-    [_scrollView addSubview:btnTile];
-    [_tileButtons addObject:btnTile];
-    
-    btnTile = [self tileButtonWithTitle:@"消费\n预定" action:nil];
-    btnTile.tag = kVcConsume;
-    [btnTile addTarget:self action:@selector(tileButtonAction:) forControlEvents:UIControlEventTouchUpInside];
-    [_scrollView addSubview:btnTile];
-    [_tileButtons addObject:btnTile];
-    
-    btnTile = [self tileButtonWithTitle:@"邮件\n管理" action:nil];
-    btnTile.tag = kVcMail;
-    [btnTile addTarget:self action:@selector(tileButtonAction:) forControlEvents:UIControlEventTouchUpInside];
-    [_scrollView addSubview:btnTile];
-    [_tileButtons addObject:btnTile];
-    
-    btnTile = [self tileButtonWithTitle:@"生活\n缴费" action:nil];
-    btnTile.tag = kVcLife;
-    [btnTile addTarget:self action:@selector(tileButtonAction:) forControlEvents:UIControlEventTouchUpInside];
-    [_scrollView addSubview:btnTile];
-    [_tileButtons addObject:btnTile];
 }
-
--(UIButton *)tileButtonWithTitle:(NSString *)aTitle action:(SEL)anAction {
-    UIButton *btnTile = [UIButton new];
-    btnTile.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
-    btnTile.titleLabel.textAlignment = NSTextAlignmentCenter;
-    //[btnTile setBackgroundColor:aBgColor];
-    [btnTile setBackgroundImage:[TDImageLibrary sharedInstance].btnBgOrange forState:UIControlStateNormal];
-    [btnTile setTitle:aTitle forState:UIControlStateNormal];
-    btnTile.titleLabel.font = [TDFontLibrary sharedInstance].fontTitleBold;
-    
-    if (anAction != NULL) {
-        [btnTile addTarget:self action:anAction forControlEvents:UIControlEventTouchUpInside];
-    }
-    
-    return btnTile;
-}
-
--(void)tileButtonAction:(UIButton *)sender {
-    int tag = sender.tag;
-    switch (tag) {
-        case kVcRegister:
-            [self naviToVC:[TDRegisterVC class]];
-            break;
-            
-        case kVcCardList:
-            [self naviToVC:[TDCardListVC class]];
-            break;
-            
-        case kVcVendors:
-            [self naviToVC:[TDVendorsVC class]];
-            break;
-            
-        case kVcAddMoney:
-            [self naviToVC:[TDAddMoneyVC class]];
-            break;
-            
-        case kVcCredit:
-            [self naviToVC:[TDCreditVC class]];
-            break;
-            
-        case kVcConsume:
-            [self naviToVC:[TDConsumeVC class]];
-            break;
-            
-        case kVcMail:
-            [self naviToVC:[TDMailVC class]];
-            break;
-            
-        case kVcLife:
-            [self naviToVC:[TDLifeVC class]];
-            break;
-            
-        default:
-            break;
-    }
-}
-
-#define PADDING_TOP              (20)
-#define PADDING_Y               (20)
-#define BUTTON_SIZE             (80)
-#define BUTTON_OFFSET_X_CENTER  (50)
-#define PAGE_WIDTH              (320)
 
 -(void)layoutSubviews {
-    
-    _scrollView.translatesAutoresizingMaskIntoConstraints = NO;
-    [_scrollView alignToView:self.view];
-    
-    int btnCount = _tileButtons.count;
-    for (int i = 0; i < btnCount; i++) {
-        UIButton *btn = _tileButtons[i];
-        
-        //int timesOfSix = i / 6;
-        
-        NSString *btnSize = (@(BUTTON_SIZE)).stringValue;
-        [btn constrainWidth:btnSize height:btnSize];
-        
-        int offsetX = (i % 2) ? BUTTON_OFFSET_X_CENTER : -BUTTON_OFFSET_X_CENTER;
-        NSNumber *offsetCenterX = @(offsetX);//@(offsetX + PAGE_WIDTH * timesOfSix);
-        [btn alignCenterXWithView:_scrollView predicate:offsetCenterX.stringValue];
-        
-        int factor = i;//i % 6;
-        NSNumber *paddingTop = @(PADDING_TOP + PADDING_Y * (factor / 2 + 1) + (factor / 2) * BUTTON_SIZE);
-        [btn alignTopEdgeWithView:_scrollView predicate:paddingTop.stringValue];
-        
-        
-        
-        if (i == btnCount - 1) {
-//            float paddingX = PAGE_WIDTH / 2 - BUTTON_OFFSET_X_CENTER - BUTTON_SIZE / 2;
-//            [btn alignTrailingEdgeWithView:_scrollView predicate:(@(-paddingX)).stringValue];
-            [btn alignBottomEdgeWithView:_scrollView predicate:@(-PADDING_TOP).stringValue];
-        }
-    }
-    
-//    [_pageControl alignCenterXWithView:self.view predicate:nil];
-//    [_pageControl constrainWidthToView:self.view predicate:nil];
-//    [_pageControl alignBottomEdgeWithView:(UIButton*)(_tileButtons[5]) predicate:@"40"];
-}
 
-#pragma mark - scroll view delegate
--(void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    int offsetX = scrollView.contentOffset.x;
-    float scrollWidth = scrollView.frame.size.width;
-    int page = (offsetX + (scrollWidth / 2)) / scrollWidth;
-    _pageControl.currentPage = page;
-}
-
-#pragma mark - actions 
--(void)pageValueChanged:(id)sender {
-    float offsetX = _pageControl.currentPage * PAGE_WIDTH;
-    [_scrollView setContentOffset:CGPointMake(offsetX, 0) animated:YES];
 }
 
 

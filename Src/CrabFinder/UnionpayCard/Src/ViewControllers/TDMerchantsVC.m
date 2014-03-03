@@ -17,10 +17,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.navigationItem.title = @"商家";
+    self.navigationItem.title = @"Deals";
     
-    [self installLogoToNavibar];
-    [self installMapAndSearchToNavibar];
+    [self installSearchToNavibar];
+
 }
 
 @end

@@ -88,8 +88,8 @@
         [item setBackgroundSelectedImage:finishedImage withUnselectedImage:unfinishedImage];
     }
     
-    UIImage *normalImage = [UIImage imageNamed:@"icon_tabbar_homepage.png"];
-    UIImage *selectedImage = [UIImage imageNamed:@"icon_tabbar_homepage_selected.png"];
+    UIImage *normalImage = [UIImage imageNamed:@"icon_tabbar_nearby.png"];
+    UIImage *selectedImage = [UIImage imageNamed:@"icon_tabbar_nearby_selected.png"];
     RDVTabBarItem *item = tabItems[0];
 
     [item setTitle:@"Newsfeed"];
@@ -100,7 +100,7 @@
     normalImage = [UIImage imageNamed:@"icon_tabbar_merchant_normal.png"];
     selectedImage = [UIImage imageNamed:@"icon_tabbar_merchant_selected.png"];
     item = tabItems[1];
-    [item setTitle:@"Vendor"];
+    [item setTitle:@"Deals"];
     item.selectedTitleAttributes = selectedTitleAttributes;
     item.unselectedTitleAttributes = unselectedTitleAttributes;
     [item setFinishedSelectedImage:selectedImage withFinishedUnselectedImage:normalImage];

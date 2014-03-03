@@ -36,7 +36,7 @@
     [self createSubviews];
     [self layoutSubviews];
     
-    [self installLogoToNavibar];
+    [self installSearchToNavibar];
 }
 
 -(void)createSubviews {

@@ -8,7 +8,10 @@
 
 #import "TDBaseVC.h"
 
-@interface TDBaseVC ()
+@interface TDBaseVC () {
+    UIButton *_btnSearch;
+    UIButton *_btnMap;
+}
 
 @end
 
@@ -60,18 +63,37 @@
     self.navigationItem.leftBarButtonItem = itemLogo;
 }
 
--(void)installMapAndSearchToNavibar {
-    UIImage *mapImg = [UIImage imageNamed:@"icon_map"];
-    UIButton *btnMap = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, mapImg.size.width, mapImg.size.height)];
-    [btnMap setImage:mapImg forState:UIControlStateNormal];
-    UIBarButtonItem *mapItem = [[UIBarButtonItem alloc] initWithCustomView:btnMap];
+-(UIBarButtonItem *)mapButtonItem {
+    if (_btnMap == nil) {
+        UIImage *mapImg = [UIImage imageNamed:@"icon_map"];
+        _btnMap = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, mapImg.size.width, mapImg.size.height)];
+        [_btnMap setImage:mapImg forState:UIControlStateNormal];
+        [_btnMap addTarget:self action:@selector(mapAction:) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return [[UIBarButtonItem alloc] initWithCustomView:_btnMap];
+}
+
+-(UIBarButtonItem *)searchButtonItem {
+    if (_btnSearch == nil) {
+        UIImage *searchImg = [UIImage imageNamed:@"icon_homepage_search"];
+        _btnSearch = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, searchImg.size.width, searchImg.size.height)];
+        [_btnSearch setImage:searchImg forState:UIControlStateNormal];
+        [_btnSearch addTarget:self action:@selector(searchAction:) forControlEvents:UIControlEventTouchUpInside];
+    }
     
-    UIImage *searchImg = [UIImage imageNamed:@"icon_homepage_search"];
-    UIButton *btnSearch = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, searchImg.size.width, searchImg.size.height)];
-    [btnSearch setImage:searchImg forState:UIControlStateNormal];
-    UIBarButtonItem *searchItem = [[UIBarButtonItem alloc] initWithCustomView:btnSearch];
+    return [[UIBarButtonItem alloc] initWithCustomView:_btnSearch];
+}
+
+-(void)mapAction:(id)sender {
     
-    self.navigationItem.rightBarButtonItems = @[searchItem, mapItem];
+}
+
+-(void)searchAction:(id)sender {
+    
+}
+
+-(void)installSearchToNavibar {
+    self.navigationItem.leftBarButtonItem = [self searchButtonItem];
 }
 
 -(void)installBackArrowToNavibar {

@@ -20,7 +20,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.navigationItem.title = @"更多";
+    self.navigationItem.title = @"Settings";
     
     [self installLogoToNavibar];
     
@@ -30,8 +30,8 @@
 
 -(NSArray *)settingItems {
     NSMutableArray *items = [NSMutableArray array];
-    [items addObject:@[@"消息提醒", @"分享设置", @"清空缓存"]];
-    [items addObject:@[@"意见反馈", @"支付帮助", @"检查更新", @"关于朋派"]];
+    [items addObject:@[@"Notifications", @"Share this app"]];
+    [items addObject:@[@"Feedback", @"Help", @"Version", @"About"]];
     
     return items;
 }
