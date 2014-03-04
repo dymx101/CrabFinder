@@ -64,6 +64,7 @@
 		EA098BD318B9B1E40034E0CF /* tableCellTopBg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EA098BCF18B9B1E40034E0CF /* tableCellTopBg@2x.png */; };
 		EA098BD818B9B4450034E0CF /* TDSettingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA098BD718B9B4450034E0CF /* TDSettingCell.m */; };
 		EA2C603A18C59EBF007E83D1 /* TDNewsfeedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2C603918C59EBF007E83D1 /* TDNewsfeedCell.m */; };
+		EA2C603C18C5AC90007E83D1 /* famers_market.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EA2C603B18C5AC90007E83D1 /* famers_market.jpg */; };
 		EA901B0618B6491700B1E20F /* TDUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = EA901B0518B6491700B1E20F /* TDUtil.m */; };
 		EAC9D88418B888CF0096D555 /* TDForgetPasswordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC9D88318B888CF0096D555 /* TDForgetPasswordVC.m */; };
 		EACBE40118BF140F00F2E9CF /* TDCardListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EACBE40018BF140F00F2E9CF /* TDCardListVC.m */; };
@@ -971,6 +972,7 @@
 		EA098BD718B9B4450034E0CF /* TDSettingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDSettingCell.m; sourceTree = "<group>"; };
 		EA2C603818C59EBF007E83D1 /* TDNewsfeedCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDNewsfeedCell.h; sourceTree = "<group>"; };
 		EA2C603918C59EBF007E83D1 /* TDNewsfeedCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDNewsfeedCell.m; sourceTree = "<group>"; };
+		EA2C603B18C5AC90007E83D1 /* famers_market.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = famers_market.jpg; sourceTree = "<group>"; };
 		EA901B0418B6491700B1E20F /* TDUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDUtil.h; sourceTree = "<group>"; };
 		EA901B0518B6491700B1E20F /* TDUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDUtil.m; sourceTree = "<group>"; };
 		EAC9D88218B888CF0096D555 /* TDForgetPasswordVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDForgetPasswordVC.h; sourceTree = "<group>"; };
@@ -2047,6 +2049,7 @@
 		EACC148F18B36F8500DD27B0 /* MeituanImages */ = {
 			isa = PBXGroup;
 			children = (
+				EA2C603B18C5AC90007E83D1 /* famers_market.jpg */,
 				EAD1248E18B5F1CD00C6C145 /* union_pay@2x.png */,
 				EAD1248C18B5EC2900C6C145 /* bg_navigationBar_tall@2x.png */,
 				EACC149018B36F8500DD27B0 /* Add_to_Passbook_CN.png */,
@@ -3401,6 +3404,7 @@
 				EACC18D418B36F9100DD27B0 /* icon_checkbox_checked.png in Resources */,
 				EACC18FC18B36F9100DD27B0 /* icon_dealsmap_cateArrow@2x.png in Resources */,
 				EACC18EC18B36F9100DD27B0 /* icon_deal_nobooking@2x.png in Resources */,
+				EA2C603C18C5AC90007E83D1 /* famers_market.jpg in Resources */,
 				EACC17D618B36F9100DD27B0 /* bg_morepage_subCell_selected.png in Resources */,
 				EACC1A6418B36F9200DD27B0 /* ump_bg_input_default.png in Resources */,
 				EACC182818B36F9100DD27B0 /* bt_login.png in Resources */,

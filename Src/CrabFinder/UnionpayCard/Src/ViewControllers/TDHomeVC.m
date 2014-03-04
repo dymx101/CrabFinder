@@ -25,8 +25,10 @@ typedef enum {
 
 
 @interface TDHomeVC () <UITableViewDelegate, UITableViewDataSource> {
-    UITableView     *_tvFeed;
+
 }
+@property (nonatomic, strong)    UITableView        *tvFeed;
+@property (nonatomic, assign)    int                testCount;
 
 @end
 
@@ -38,6 +40,7 @@ typedef enum {
     [super viewDidLoad];
     self.view.backgroundColor = [FDColor sharedInstance].desertSand;
     self.navigationItem.title = @"Newsfeed";
+    _testCount = 10;
     
     [self installSearchToNavibar];
 	
@@ -54,6 +57,26 @@ typedef enum {
     _tvFeed.dataSource = self;
     [self.view addSubview:_tvFeed];
     
+    __weak TDHomeVC *weakself = self;
+    [_tvFeed addPullToRefreshWithActionHandler:^{
+        double delayInSeconds = 1.0;
+        dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
+        dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+            
+            [weakself.tvFeed.pullToRefreshView stopAnimating];
+        });
+    }];
+    
+    [_tvFeed addInfiniteScrollingWithActionHandler:^{
+
+        double delayInSeconds = 1.0;
+        dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
+        dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+            weakself.testCount = weakself.testCount + 10;
+            [weakself.tvFeed reloadData];
+            [weakself.tvFeed.infiniteScrollingView stopAnimating];
+        });
+    }];
 }
 
 -(void)layoutSubviews {
@@ -62,7 +85,7 @@ typedef enum {
 
 #pragma mark - table view 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 20;
+    return _testCount;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {

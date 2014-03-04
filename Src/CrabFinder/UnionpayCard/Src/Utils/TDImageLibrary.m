@@ -40,6 +40,7 @@ DEF_SINGLETON(TDImageLibrary)
     _cellRightArrow = [UIImage imageNamed:@"icon_cell_rightArrow"];
     
     _avatar = [UIImage imageNamed:@"avatar_default"];
+    _farmersMarket = [UIImage imageNamed:@"famers_market.jpg"];
 }
 
 @end

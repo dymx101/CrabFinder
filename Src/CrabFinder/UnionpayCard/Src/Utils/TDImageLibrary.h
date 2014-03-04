@@ -29,5 +29,7 @@ AS_SINGLETON(TDImageLibrary)
 @property (nonatomic, strong) UIImage *cellRightArrow;
 
 @property (nonatomic, strong) UIImage *avatar;
+@property (nonatomic, strong) UIImage *farmersMarket;
+//@2x
 
 @end

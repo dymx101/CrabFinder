@@ -9,7 +9,7 @@
 #import "TDNewsfeedCell.h"
 
 @interface TDNewsfeedCell () {
-    NSMutableArray     *pictures;
+    NSMutableArray     *_pictures;
 }
 
 @end
@@ -32,6 +32,30 @@
     [_ivPhoto constrainWidth:@"40" height:@"45"];
     [_ivPhoto applyEffectBorder];
     [_ivPhoto alignTop:@"5" leading:@"10" toView:self];
+    
+    _lblTitle = [UILabel new];
+    _lblTitle.text = @"Picard: He's comparing the Enterprise to a cruise ship?";
+    _lblTitle.font = [TDFontLibrary sharedInstance].fontNormal;
+    _lblTitle.numberOfLines = 0;
+    [self addSubview:_lblTitle];
+    [_lblTitle alignTop:@"5" leading:@"60" toView:self];
+    [_lblTitle alignTrailingEdgeWithView:self predicate:@"-10"];
+    
+    int maxPicCount = 4;
+    _pictures = [NSMutableArray arrayWithCapacity:maxPicCount];
+    for (int i = 0; i < maxPicCount; i++) {
+        UIImageView *iv = [UIImageView new];
+        iv.image = [TDImageLibrary sharedInstance].farmersMarket;
+        [self addSubview:iv];
+        
+        [iv constrainWidth:@"40" height:@"40"];
+        [iv constrainTopSpaceToView:_lblTitle predicate:@"5"];
+        
+        [_pictures addObject:iv];
+    }
+    
+    [(_pictures.firstObject) alignLeadingEdgeWithView:_lblTitle predicate:@"10"];
+    [UIView spaceOutViewsHorizontally:_pictures predicate:@"10"];
 }
 
 -(UIButton *)buttonAt:(NSUInteger)aIndex {
@@ -39,7 +63,7 @@
 }
 
 +(float)HEIGHT {
-    return 80;
+    return 90;
 }
 
 @end
