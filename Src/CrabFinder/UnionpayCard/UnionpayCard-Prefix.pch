@@ -37,7 +37,7 @@
 #import "NSMutableArray+safe.h"
 #import "NSDictionary+safe.h"
 #import "NSMutableDictionary+safe.h"
-
+#import "UIView+Effect.h"
 
 #endif
 

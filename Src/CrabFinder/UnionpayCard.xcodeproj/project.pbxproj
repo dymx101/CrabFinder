@@ -63,6 +63,7 @@
 		EA098BD218B9B1E40034E0CF /* tableCellRoundBg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EA098BCE18B9B1E40034E0CF /* tableCellRoundBg@2x.png */; };
 		EA098BD318B9B1E40034E0CF /* tableCellTopBg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EA098BCF18B9B1E40034E0CF /* tableCellTopBg@2x.png */; };
 		EA098BD818B9B4450034E0CF /* TDSettingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA098BD718B9B4450034E0CF /* TDSettingCell.m */; };
+		EA2C603A18C59EBF007E83D1 /* TDNewsfeedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2C603918C59EBF007E83D1 /* TDNewsfeedCell.m */; };
 		EA901B0618B6491700B1E20F /* TDUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = EA901B0518B6491700B1E20F /* TDUtil.m */; };
 		EAC9D88418B888CF0096D555 /* TDForgetPasswordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC9D88318B888CF0096D555 /* TDForgetPasswordVC.m */; };
 		EACBE40118BF140F00F2E9CF /* TDCardListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EACBE40018BF140F00F2E9CF /* TDCardListVC.m */; };
@@ -968,6 +969,8 @@
 		EA098BCF18B9B1E40034E0CF /* tableCellTopBg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tableCellTopBg@2x.png"; sourceTree = "<group>"; };
 		EA098BD618B9B4450034E0CF /* TDSettingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDSettingCell.h; sourceTree = "<group>"; };
 		EA098BD718B9B4450034E0CF /* TDSettingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDSettingCell.m; sourceTree = "<group>"; };
+		EA2C603818C59EBF007E83D1 /* TDNewsfeedCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDNewsfeedCell.h; sourceTree = "<group>"; };
+		EA2C603918C59EBF007E83D1 /* TDNewsfeedCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDNewsfeedCell.m; sourceTree = "<group>"; };
 		EA901B0418B6491700B1E20F /* TDUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDUtil.h; sourceTree = "<group>"; };
 		EA901B0518B6491700B1E20F /* TDUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDUtil.m; sourceTree = "<group>"; };
 		EAC9D88218B888CF0096D555 /* TDForgetPasswordVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDForgetPasswordVC.h; sourceTree = "<group>"; };
@@ -1932,6 +1935,8 @@
 			children = (
 				EA098BD618B9B4450034E0CF /* TDSettingCell.h */,
 				EA098BD718B9B4450034E0CF /* TDSettingCell.m */,
+				EA2C603818C59EBF007E83D1 /* TDNewsfeedCell.h */,
+				EA2C603918C59EBF007E83D1 /* TDNewsfeedCell.m */,
 			);
 			path = TableCells;
 			sourceTree = "<group>";
@@ -3844,6 +3849,7 @@
 				EACD0D2318B3A09E009109CB /* TDBaseVC.m in Sources */,
 				4CB12C8118BBC96000F23A76 /* Parameters.m in Sources */,
 				4C98AC1E18B9345B007FAF12 /* Post.m in Sources */,
+				EA2C603A18C59EBF007E83D1 /* TDNewsfeedCell.m in Sources */,
 				4C98ABE918B91E01007FAF12 /* NSArray+safe.m in Sources */,
 				4CB12C7818BBC8C700F23A76 /* IntegRecords.m in Sources */,
 				4CB12C8418BBC9A400F23A76 /* PreRecords.m in Sources */,
