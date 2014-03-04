@@ -23,8 +23,6 @@
 
 #import "FDDefine.h"                // defines
 #import "NSObject+BeeNotification.h"
-#import "TDHttpCommand.h"
-#import "TDHttpClient.h"
 
 
 #import "TDImageLibrary.h"      // image library

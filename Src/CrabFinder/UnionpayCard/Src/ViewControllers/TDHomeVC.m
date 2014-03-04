@@ -38,7 +38,6 @@ typedef enum {
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.view.backgroundColor = [FDColor sharedInstance].desertSand;
     self.navigationItem.title = @"Newsfeed";
     _testCount = 10;
     

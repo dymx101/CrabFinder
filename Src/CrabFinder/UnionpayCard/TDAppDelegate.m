@@ -14,8 +14,6 @@
 #import "TDProfileVC.h"
 #import "TDSettingsVC.h"
 
-#import "TDAPIEngineTest.h"
-
 @implementation TDAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -43,8 +41,6 @@
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     
     [self customizeInterface];
-    
-    [TDAPIEngineTest run];
     
     [TDUtil findFonts];
     

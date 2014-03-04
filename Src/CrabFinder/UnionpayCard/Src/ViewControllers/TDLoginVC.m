@@ -10,7 +10,7 @@
 #import "TDForgetPasswordVC.h"
 #import "TDRegisterVC.h"
 #import "TDRegisterNoAccountVC.h"
-#import "Btype.h"
+
 
 @interface TDLoginVC () {
     UIImageView     *_loginInputView;

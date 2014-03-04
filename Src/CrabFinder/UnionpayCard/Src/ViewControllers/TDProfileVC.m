@@ -8,7 +8,6 @@
 
 #import "TDProfileVC.h"
 #import "TDLoginVC.h"
-#import "Userinfor.h"
 #import "UIView+Effect.h"
 
 @interface TDProfileVC () <UITableViewDelegate, UITableViewDataSource> {
