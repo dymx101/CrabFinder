@@ -30,9 +30,11 @@
 		EA098BD218B9B1E40034E0CF /* tableCellRoundBg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EA098BCE18B9B1E40034E0CF /* tableCellRoundBg@2x.png */; };
 		EA098BD318B9B1E40034E0CF /* tableCellTopBg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EA098BCF18B9B1E40034E0CF /* tableCellTopBg@2x.png */; };
 		EA098BD818B9B4450034E0CF /* TDSettingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA098BD718B9B4450034E0CF /* TDSettingCell.m */; };
+		EA10FA9D18C6F7D500D4395C /* TDNewsFeed.m in Sources */ = {isa = PBXBuildFile; fileRef = EA10FA9C18C6F7D500D4395C /* TDNewsFeed.m */; };
 		EA2C603A18C59EBF007E83D1 /* TDNewsfeedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2C603918C59EBF007E83D1 /* TDNewsfeedCell.m */; };
 		EA2C603C18C5AC90007E83D1 /* famers_market.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EA2C603B18C5AC90007E83D1 /* famers_market.jpg */; };
 		EA901B0618B6491700B1E20F /* TDUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = EA901B0518B6491700B1E20F /* TDUtil.m */; };
+		EAC6B70018CB1D2700AA702E /* JSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC6B6FF18CB1D2700AA702E /* JSLabel.m */; };
 		EAC7DCC318C608C50076E32A /* TDStatusDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC7DCC218C608C50076E32A /* TDStatusDetailVC.m */; };
 		EAC7DCC618C6092F0076E32A /* TDReviewDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC7DCC518C6092F0076E32A /* TDReviewDetailVC.m */; };
 		EAC7DCCA18C61D930076E32A /* TDBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC7DCC918C61D930076E32A /* TDBaseModel.m */; };
@@ -872,11 +874,15 @@
 		EA098BCF18B9B1E40034E0CF /* tableCellTopBg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tableCellTopBg@2x.png"; sourceTree = "<group>"; };
 		EA098BD618B9B4450034E0CF /* TDSettingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDSettingCell.h; sourceTree = "<group>"; };
 		EA098BD718B9B4450034E0CF /* TDSettingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDSettingCell.m; sourceTree = "<group>"; };
+		EA10FA9B18C6F7D500D4395C /* TDNewsFeed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDNewsFeed.h; sourceTree = "<group>"; };
+		EA10FA9C18C6F7D500D4395C /* TDNewsFeed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDNewsFeed.m; sourceTree = "<group>"; };
 		EA2C603818C59EBF007E83D1 /* TDNewsfeedCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDNewsfeedCell.h; sourceTree = "<group>"; };
 		EA2C603918C59EBF007E83D1 /* TDNewsfeedCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDNewsfeedCell.m; sourceTree = "<group>"; };
 		EA2C603B18C5AC90007E83D1 /* famers_market.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = famers_market.jpg; sourceTree = "<group>"; };
 		EA901B0418B6491700B1E20F /* TDUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDUtil.h; sourceTree = "<group>"; };
 		EA901B0518B6491700B1E20F /* TDUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDUtil.m; sourceTree = "<group>"; };
+		EAC6B6FE18CB1D2700AA702E /* JSLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSLabel.h; sourceTree = "<group>"; };
+		EAC6B6FF18CB1D2700AA702E /* JSLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSLabel.m; sourceTree = "<group>"; };
 		EAC7DCC118C608C50076E32A /* TDStatusDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TDStatusDetailVC.h; path = UnionpayCard/Src/Views/TableCells/TDStatusDetailVC.h; sourceTree = SOURCE_ROOT; };
 		EAC7DCC218C608C50076E32A /* TDStatusDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TDStatusDetailVC.m; path = UnionpayCard/Src/Views/TableCells/TDStatusDetailVC.m; sourceTree = SOURCE_ROOT; };
 		EAC7DCC418C6092F0076E32A /* TDReviewDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TDReviewDetailVC.h; path = UnionpayCard/Src/Views/TableCells/TDReviewDetailVC.h; sourceTree = SOURCE_ROOT; };
@@ -1726,6 +1732,8 @@
 		EA098BD518B9B4320034E0CF /* TableCells */ = {
 			isa = PBXGroup;
 			children = (
+				EAC6B6FE18CB1D2700AA702E /* JSLabel.h */,
+				EAC6B6FF18CB1D2700AA702E /* JSLabel.m */,
 				EA098BD618B9B4450034E0CF /* TDSettingCell.h */,
 				EA098BD718B9B4450034E0CF /* TDSettingCell.m */,
 				EA2C603818C59EBF007E83D1 /* TDNewsfeedCell.h */,
@@ -1747,6 +1755,8 @@
 				EAC7DCD218C61F4B0076E32A /* TDStatus.m */,
 				EAC7DCD418C61F920076E32A /* TDReview.h */,
 				EAC7DCD518C61F920076E32A /* TDReview.m */,
+				EA10FA9B18C6F7D500D4395C /* TDNewsFeed.h */,
+				EA10FA9C18C6F7D500D4395C /* TDNewsFeed.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -3608,6 +3618,7 @@
 				EACC147018B36EE900DD27B0 /* TDAppDelegate.m in Sources */,
 				4C98ABF818B91E01007FAF12 /* NSString+MD5Addition.m in Sources */,
 				4C98AC1518B9246F007FAF12 /* NSObject+JsonToVO.m in Sources */,
+				EAC6B70018CB1D2700AA702E /* JSLabel.m in Sources */,
 				EA098BC818B98E1C0034E0CF /* TDRegisterVC.m in Sources */,
 				EAD1249B18B604B600C6C145 /* FDColor.m in Sources */,
 				EAC7DCD018C61F160076E32A /* TDVendor.m in Sources */,
@@ -3625,6 +3636,7 @@
 				EACD0D2D18B3A1DD009109CB /* TDMerchantsVC.m in Sources */,
 				4C98ABF218B91E01007FAF12 /* NSObject+BeeNotification.m in Sources */,
 				4C98ABEF18B91E01007FAF12 /* NSMutableString+safe.m in Sources */,
+				EA10FA9D18C6F7D500D4395C /* TDNewsFeed.m in Sources */,
 				4C98AB1B18B7E13C007FAF12 /* TDJsonToDictionary.m in Sources */,
 				4C98AC0118B91E01007FAF12 /* UILabel+Attribute.m in Sources */,
 				EACD0D3318B3A243009109CB /* TDSettingsVC.m in Sources */,

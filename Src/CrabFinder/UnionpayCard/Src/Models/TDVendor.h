@@ -9,5 +9,5 @@
 #import "TDUser.h"
 
 @interface TDVendor : TDUser
-
+@property (nonatomic, copy) NSString       *vendorName;
 @end

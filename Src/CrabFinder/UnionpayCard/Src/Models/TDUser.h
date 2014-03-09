@@ -11,6 +11,7 @@
 @interface TDUser : TDBaseModel
 @property (nonatomic, copy) NSString            *email;
 @property (nonatomic, copy) NSString            *bio;
-@property (nonatomic, strong) NSString          *profilePicUrl;
-
+@property (nonatomic, copy) NSString            *profilePicUrl;
+@property (nonatomic, copy) NSString            *phone;
+@property (nonatomic, copy) NSString            *website;
 @end

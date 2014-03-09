@@ -12,8 +12,4 @@
 @property (nonatomic, strong) UIImageView       *ivPhoto;
 @property (nonatomic, strong) UILabel           *lblTitle;
 
--(UIButton *)buttonAt:(NSUInteger)aIndex;
-
-+(float)HEIGHT;
-
 @end

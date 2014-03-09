@@ -7,9 +7,16 @@
 //
 
 #import "TDNewsfeedCell.h"
+#import "JSLabel.h"
+
+//////
+
+//////
+
 
 @interface TDNewsfeedCell () {
-    NSMutableArray     *_pictures;
+    NSMutableArray      *_pictures;
+    UIView              *_imageContainerView;
 }
 
 @end
@@ -20,50 +27,89 @@
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-        [self doInit];
+        
+        [self createViews];
+        [self setupConstraints];
     }
     return self;
 }
 
--(void)doInit {
+-(void)createViews {
+    self.contentView.autoresizingMask = UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth;
+    
     _ivPhoto = [UIImageView new];
     _ivPhoto.image = [TDImageLibrary sharedInstance].avatar;
-    [self addSubview:_ivPhoto];
-    [_ivPhoto constrainWidth:@"40" height:@"45"];
+    [self.contentView addSubview:_ivPhoto];
     [_ivPhoto applyEffectBorder];
-    [_ivPhoto alignTop:@"5" leading:@"10" toView:self];
     
     _lblTitle = [UILabel new];
-    _lblTitle.text = @"Picard: He's comparing the Enterprise to a cruise ship?";
     _lblTitle.font = [TDFontLibrary sharedInstance].fontNormal;
     _lblTitle.numberOfLines = 0;
-    [self addSubview:_lblTitle];
-    [_lblTitle alignTop:@"5" leading:@"60" toView:self];
-    [_lblTitle alignTrailingEdgeWithView:self predicate:@"-10"];
+    [self.contentView addSubview:_lblTitle];
+    
+    _imageContainerView = [UIView new];
+    [self.contentView addSubview:_imageContainerView];
     
     int maxPicCount = 4;
     _pictures = [NSMutableArray arrayWithCapacity:maxPicCount];
     for (int i = 0; i < maxPicCount; i++) {
         UIImageView *iv = [UIImageView new];
         iv.image = [TDImageLibrary sharedInstance].farmersMarket;
-        [self addSubview:iv];
-        
-        [iv constrainWidth:@"40" height:@"40"];
-        [iv constrainTopSpaceToView:_lblTitle predicate:@"5"];
+        [_imageContainerView addSubview:iv];
         
         [_pictures addObject:iv];
     }
+}
+
+-(void)setupConstraints {
+    _ivPhoto.translatesAutoresizingMaskIntoConstraints = NO;
+    _lblTitle.translatesAutoresizingMaskIntoConstraints = NO;
+    _imageContainerView.translatesAutoresizingMaskIntoConstraints = NO;
     
-    [(_pictures.firstObject) alignLeadingEdgeWithView:_lblTitle predicate:@"10"];
+    NSLayoutConstraint *constraint = [NSLayoutConstraint constraintWithItem:_ivPhoto attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1 constant:40];
+    [self.contentView addConstraint:constraint];
+    
+    constraint = [NSLayoutConstraint constraintWithItem:_ivPhoto attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1 constant:45];
+    [self.contentView addConstraint:constraint];
+    
+    constraint = [NSLayoutConstraint constraintWithItem:_ivPhoto attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self.contentView attribute:NSLayoutAttributeLeading multiplier:1 constant:10];
+    [self.contentView addConstraint:constraint];
+    
+    constraint = [NSLayoutConstraint constraintWithItem:_ivPhoto attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.contentView attribute:NSLayoutAttributeLeading multiplier:1 constant:10];
+    [self.contentView addConstraint:constraint];
+    
+    constraint = [NSLayoutConstraint constraintWithItem:_lblTitle attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self.contentView attribute:NSLayoutAttributeLeading multiplier:1 constant:60];
+    [self.contentView addConstraint:constraint];
+    
+    constraint = [NSLayoutConstraint constraintWithItem:_lblTitle attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:self.contentView attribute:NSLayoutAttributeTrailing multiplier:1 constant:-10];
+    [self.contentView addConstraint:constraint];
+    
+    constraint = [NSLayoutConstraint constraintWithItem:_imageContainerView attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:self.contentView attribute:NSLayoutAttributeTrailing multiplier:1 constant:-10];
+    [self.contentView addConstraint:constraint];
+    
+    constraint = [NSLayoutConstraint constraintWithItem:_imageContainerView attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:_lblTitle attribute:NSLayoutAttributeLeading multiplier:1 constant:0];
+    [self.contentView addConstraint:constraint];
+    
+    NSArray *verticalConstriants = [NSLayoutConstraint constraintsWithVisualFormat:@"V:|-5-[_lblTitle]-3-[_imageContainerView(40@1000)]-5-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_lblTitle, _imageContainerView)];
+    [self.contentView addConstraints:verticalConstriants];
+    
+    //
+    for (UIImageView *iv in _pictures) {
+        [iv constrainWidth:@"40"];
+        //[iv constrainHeightToView:_imageContainerView predicate:@"0"];
+        [iv alignTop:@"0" bottom:@"0" toView:_imageContainerView];
+    }
+
+    [(_pictures.firstObject) alignLeadingEdgeWithView:_imageContainerView predicate:@"10"];
     [UIView spaceOutViewsHorizontally:_pictures predicate:@"10"];
 }
 
--(UIButton *)buttonAt:(NSUInteger)aIndex {
-    return nil;
-}
-
-+(float)HEIGHT {
-    return 90;
+- (void)layoutSubviews
+{
+    CGRect bounds = self.bounds;
+    _lblTitle.preferredMaxLayoutWidth = bounds.size.width - (60 + 10);
+    
+    [super layoutSubviews];
 }
 
 @end
