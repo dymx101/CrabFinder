@@ -40,7 +40,7 @@
 		EAC7DCCA18C61D930076E32A /* TDBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC7DCC918C61D930076E32A /* TDBaseModel.m */; };
 		EAC7DCCD18C61E0C0076E32A /* TDUser.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC7DCCC18C61E0C0076E32A /* TDUser.m */; };
 		EAC7DCD018C61F160076E32A /* TDVendor.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC7DCCF18C61F160076E32A /* TDVendor.m */; };
-		EAC7DCD318C61F4B0076E32A /* TDStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC7DCD218C61F4B0076E32A /* TDStatus.m */; };
+		EAC7DCD318C61F4B0076E32A /* TDStatusUpdate.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC7DCD218C61F4B0076E32A /* TDStatusUpdate.m */; };
 		EAC7DCD618C61F920076E32A /* TDReview.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC7DCD518C61F920076E32A /* TDReview.m */; };
 		EAC9D88418B888CF0096D555 /* TDForgetPasswordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC9D88318B888CF0096D555 /* TDForgetPasswordVC.m */; };
 		EACBE41618BF2EB100F2E9CF /* UIView+Effect.m in Sources */ = {isa = PBXBuildFile; fileRef = EACBE41518BF2EB100F2E9CF /* UIView+Effect.m */; };
@@ -818,6 +818,8 @@
 		EACD0D3C18B3A52A009109CB /* navigationbar_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EACD0D3818B3A52A009109CB /* navigationbar_background@2x.png */; };
 		EACD0D3F18B3A6A1009109CB /* tabbar_normal_background.png in Resources */ = {isa = PBXBuildFile; fileRef = EACD0D3D18B3A6A1009109CB /* tabbar_normal_background.png */; };
 		EACD0D4018B3A6A1009109CB /* tabbar_normal_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EACD0D3E18B3A6A1009109CB /* tabbar_normal_background@2x.png */; };
+		EACD64ED18CD4D64005621EC /* TDProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = EACD64EC18CD4D64005621EC /* TDProduct.m */; };
+		EACD64F018CD5371005621EC /* TDAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = EACD64EF18CD5371005621EC /* TDAlert.m */; };
 		EAD1248D18B5EC2900C6C145 /* bg_navigationBar_tall@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EAD1248C18B5EC2900C6C145 /* bg_navigationBar_tall@2x.png */; };
 		EAD1248F18B5F1CD00C6C145 /* union_pay@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EAD1248E18B5F1CD00C6C145 /* union_pay@2x.png */; };
 		EAD1249318B5F30200C6C145 /* TDImageLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = EAD1249218B5F30200C6C145 /* TDImageLibrary.m */; };
@@ -893,8 +895,8 @@
 		EAC7DCCC18C61E0C0076E32A /* TDUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDUser.m; sourceTree = "<group>"; };
 		EAC7DCCE18C61F160076E32A /* TDVendor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDVendor.h; sourceTree = "<group>"; };
 		EAC7DCCF18C61F160076E32A /* TDVendor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDVendor.m; sourceTree = "<group>"; };
-		EAC7DCD118C61F4B0076E32A /* TDStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDStatus.h; sourceTree = "<group>"; };
-		EAC7DCD218C61F4B0076E32A /* TDStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDStatus.m; sourceTree = "<group>"; };
+		EAC7DCD118C61F4B0076E32A /* TDStatusUpdate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDStatusUpdate.h; sourceTree = "<group>"; };
+		EAC7DCD218C61F4B0076E32A /* TDStatusUpdate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDStatusUpdate.m; sourceTree = "<group>"; };
 		EAC7DCD418C61F920076E32A /* TDReview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDReview.h; sourceTree = "<group>"; };
 		EAC7DCD518C61F920076E32A /* TDReview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDReview.m; sourceTree = "<group>"; };
 		EAC9D88218B888CF0096D555 /* TDForgetPasswordVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDForgetPasswordVC.h; sourceTree = "<group>"; };
@@ -1688,6 +1690,10 @@
 		EACD0D3818B3A52A009109CB /* navigationbar_background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navigationbar_background@2x.png"; sourceTree = "<group>"; };
 		EACD0D3D18B3A6A1009109CB /* tabbar_normal_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar_normal_background.png; sourceTree = "<group>"; };
 		EACD0D3E18B3A6A1009109CB /* tabbar_normal_background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_normal_background@2x.png"; sourceTree = "<group>"; };
+		EACD64EB18CD4D64005621EC /* TDProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDProduct.h; sourceTree = "<group>"; };
+		EACD64EC18CD4D64005621EC /* TDProduct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDProduct.m; sourceTree = "<group>"; };
+		EACD64EE18CD5371005621EC /* TDAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDAlert.h; sourceTree = "<group>"; };
+		EACD64EF18CD5371005621EC /* TDAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDAlert.m; sourceTree = "<group>"; };
 		EAD1248C18B5EC2900C6C145 /* bg_navigationBar_tall@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg_navigationBar_tall@2x.png"; sourceTree = "<group>"; };
 		EAD1248E18B5F1CD00C6C145 /* union_pay@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "union_pay@2x.png"; sourceTree = "<group>"; };
 		EAD1249118B5F30200C6C145 /* TDImageLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDImageLibrary.h; sourceTree = "<group>"; };
@@ -1751,12 +1757,16 @@
 				EAC7DCCC18C61E0C0076E32A /* TDUser.m */,
 				EAC7DCCE18C61F160076E32A /* TDVendor.h */,
 				EAC7DCCF18C61F160076E32A /* TDVendor.m */,
-				EAC7DCD118C61F4B0076E32A /* TDStatus.h */,
-				EAC7DCD218C61F4B0076E32A /* TDStatus.m */,
+				EAC7DCD118C61F4B0076E32A /* TDStatusUpdate.h */,
+				EAC7DCD218C61F4B0076E32A /* TDStatusUpdate.m */,
 				EAC7DCD418C61F920076E32A /* TDReview.h */,
 				EAC7DCD518C61F920076E32A /* TDReview.m */,
 				EA10FA9B18C6F7D500D4395C /* TDNewsFeed.h */,
 				EA10FA9C18C6F7D500D4395C /* TDNewsFeed.m */,
+				EACD64EB18CD4D64005621EC /* TDProduct.h */,
+				EACD64EC18CD4D64005621EC /* TDProduct.m */,
+				EACD64EE18CD5371005621EC /* TDAlert.h */,
+				EACD64EF18CD5371005621EC /* TDAlert.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -3625,7 +3635,7 @@
 				EAC7DCC618C6092F0076E32A /* TDReviewDetailVC.m in Sources */,
 				EAC7DCCA18C61D930076E32A /* TDBaseModel.m in Sources */,
 				EAD1249618B5F33300C6C145 /* FDDefine.m in Sources */,
-				EAC7DCD318C61F4B0076E32A /* TDStatus.m in Sources */,
+				EAC7DCD318C61F4B0076E32A /* TDStatusUpdate.m in Sources */,
 				4C98ABED18B91E01007FAF12 /* NSMutableArray+safe.m in Sources */,
 				EA098BD818B9B4450034E0CF /* TDSettingCell.m in Sources */,
 				EAC7DCD618C61F920076E32A /* TDReview.m in Sources */,
@@ -3638,6 +3648,7 @@
 				4C98ABEF18B91E01007FAF12 /* NSMutableString+safe.m in Sources */,
 				EA10FA9D18C6F7D500D4395C /* TDNewsFeed.m in Sources */,
 				4C98AB1B18B7E13C007FAF12 /* TDJsonToDictionary.m in Sources */,
+				EACD64ED18CD4D64005621EC /* TDProduct.m in Sources */,
 				4C98AC0118B91E01007FAF12 /* UILabel+Attribute.m in Sources */,
 				EACD0D3318B3A243009109CB /* TDSettingsVC.m in Sources */,
 				EACBE41618BF2EB100F2E9CF /* UIView+Effect.m in Sources */,
@@ -3645,6 +3656,7 @@
 				EACD0D2318B3A09E009109CB /* TDBaseVC.m in Sources */,
 				EA2C603A18C59EBF007E83D1 /* TDNewsfeedCell.m in Sources */,
 				4C98ABE918B91E01007FAF12 /* NSArray+safe.m in Sources */,
+				EACD64F018CD5371005621EC /* TDAlert.m in Sources */,
 				EAC9D88418B888CF0096D555 /* TDForgetPasswordVC.m in Sources */,
 				EA901B0618B6491700B1E20F /* TDUtil.m in Sources */,
 				4C98ABF018B91E01007FAF12 /* NSNumber+otsCopy.m in Sources */,

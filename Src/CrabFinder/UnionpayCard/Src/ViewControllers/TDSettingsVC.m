@@ -9,6 +9,8 @@
 #import "TDSettingsVC.h"
 #import "TDSettingCell.h"
 
+const NSString *strSettingCellID = @"strSettingCellID";
+
 @interface TDSettingsVC () <UITableViewDelegate, UITableViewDataSource> {
     UITableView *_tvSettings;
 }
@@ -42,6 +44,7 @@
     _tvSettings.delegate = self;
     _tvSettings.dataSource = self;
     _tvSettings.separatorStyle = UITableViewCellSeparatorStyleNone;
+    [_tvSettings registerClass:[TDSettingCell class] forCellReuseIdentifier:(NSString *)strSettingCellID];
     [self.view addSubview:_tvSettings];
     
 }
@@ -63,11 +66,8 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *cellIDStr = @"cellID";
-    TDSettingCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIDStr];
-    if (cell == nil) {
-        cell = [TDSettingCell new];//[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIDStr];
-    }
+    
+    TDSettingCell *cell = [tableView dequeueReusableCellWithIdentifier:(NSString *)strSettingCellID];
     
     int section = indexPath.section;
     int row = indexPath.row;
@@ -80,6 +80,10 @@
 
 -(float)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return [TDSettingCell HEIGHT];
+}
+
+-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    return [UIView new];
 }
 
 -(float)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {

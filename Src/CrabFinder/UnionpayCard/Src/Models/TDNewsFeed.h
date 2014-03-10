@@ -7,11 +7,11 @@
 //
 
 #import "TDBaseModel.h"
-#import "TDStatus.h"
+#import "TDStatusUpdate.h"
 #import "TDReview.h"
 
 @interface TDNewsFeed : TDBaseModel
-@property (nonatomic, strong) TDStatus  *status;
+@property (nonatomic, strong) TDStatusUpdate  *status;
 @property (nonatomic, strong) TDReview  *review;
 
 -(NSString *)title;

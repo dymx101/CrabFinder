@@ -40,12 +40,12 @@ const NSString *strStatusCellForHeightID = @"strStatusCellForHeightID";
 -(NSArray *)fakeDataArray {
     NSMutableArray *arr = [NSMutableArray array];
     TDNewsFeed *feed = [TDNewsFeed new];
-    feed.status = [TDStatus new];
+    feed.status = [TDStatusUpdate new];
     feed.status.title = @"Romulan Commander: Humans have a way of showing up when you least expect them.";
     [arr addObject:feed];
     
     feed = [TDNewsFeed new];
-    feed.status = [TDStatus new];
+    feed.status = [TDStatusUpdate new];
     feed.status.title = @"Spock: Excuse me, there is a multi-legged creature crawling up your shoulder.";
     [arr addObject:feed];
     
@@ -55,12 +55,12 @@ const NSString *strStatusCellForHeightID = @"strStatusCellForHeightID";
     [arr addObject:feed];
     
     feed = [TDNewsFeed new];
-    feed.status = [TDStatus new];
+    feed.status = [TDStatusUpdate new];
     feed.status.title = @"Romulan Commander: Humans have a way of showing up when you least expect them.";
     [arr addObject:feed];
     
     feed = [TDNewsFeed new];
-    feed.status = [TDStatus new];
+    feed.status = [TDStatusUpdate new];
     feed.status.title = @"Spock: Excuse me, there is a multi-legged creature crawling up your shoulder.";
     [arr addObject:feed];
     

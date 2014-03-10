@@ -1,13 +1,13 @@
 //
-//  TDStatus.h
+//  TDStatus.m
 //  UnionpayCard
 //
 //  Created by Dong Yiming on 3/4/14.
 //  Copyright (c) 2014 Frodo. All rights reserved.
 //
 
-#import "TDBaseModel.h"
+#import "TDStatusUpdate.h"
 
-@interface TDStatus : TDBaseModel
-@property (nonatomic, copy) NSString    *title;
+@implementation TDStatusUpdate
+
 @end

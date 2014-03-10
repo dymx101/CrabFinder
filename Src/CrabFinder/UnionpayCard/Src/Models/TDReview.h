@@ -9,5 +9,9 @@
 #import "TDBaseModel.h"
 
 @interface TDReview : TDBaseModel
-@property (nonatomic, copy) NSString    *title;
+@property (nonatomic, assign) long long     userID;
+@property (nonatomic, assign) long long     vendorID;
+@property (nonatomic, copy)     NSString    *title;
+@property (nonatomic, copy)     NSString    *content;
+@property (nonatomic, assign)   float       rating;
 @end
