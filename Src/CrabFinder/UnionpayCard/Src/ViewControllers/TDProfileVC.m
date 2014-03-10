@@ -9,6 +9,7 @@
 #import "TDProfileVC.h"
 #import "TDLoginVC.h"
 #import "UIView+Effect.h"
+#import "TDStatusDetailVC.h"
 
 @interface TDProfileVC () <UITableViewDelegate, UITableViewDataSource> {
     UITableView            *_tv;
@@ -83,10 +84,10 @@
     
 
     _headerView = [UIView new];
-    UIImageView *ivBg = [[UIImageView alloc] initWithImage:[TDImageLibrary sharedInstance].mineAccountBg];
-    [_headerView addSubview:ivBg];
     
-    [ivBg alignToView:_headerView];
+//    UIImageView *ivBg = [[UIImageView alloc] initWithImage:[TDImageLibrary sharedInstance].mineAccountBg];
+//    [_headerView addSubview:ivBg];
+//    [ivBg alignToView:_headerView];
     
     _ivPhoto = [UIImageView new];
     _ivPhoto.image = [UIImage imageNamed:@"avatar_default"];
@@ -147,6 +148,17 @@
     }
     
     return 20;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.section == 0) {
+        TDStatusDetailVC *vc = [TDStatusDetailVC new];
+        TDStatusUpdate *status = [TDStatusUpdate new];
+        status.title = @"I am endevoring to construct a pneumonic memory circuit using stone knives and bear skins.";
+        vc.statusUpdate = status;
+        
+        [self.navigationController pushViewController:vc animated:YES];
+    }
 }
 
 #define IMAGE_MARGIN    (20)

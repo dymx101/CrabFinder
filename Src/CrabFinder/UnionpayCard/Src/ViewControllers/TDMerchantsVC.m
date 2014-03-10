@@ -20,7 +20,15 @@
     self.navigationItem.title = @"Deals";
     
     [self installSearchToNavibar];
+    
+    [self setupViews];
+}
 
+-(void)setupViews {
+    UIImageView *iv = [UIImageView new];
+    [iv setImageWithURL:[NSURL URLWithString:@"http://orzhd.com/briian/2007/08/0022.png"] placeholderImage:[TDImageLibrary sharedInstance].avatar];
+    [self.view addSubview:iv];
+    [iv alignCenterWithView:self.view];
 }
 
 @end

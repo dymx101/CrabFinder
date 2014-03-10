@@ -153,7 +153,7 @@ const NSString *strStatusCellForHeightID = @"strStatusCellForHeightID";
     [_sizingCell setNeedsLayout];
     [_sizingCell layoutIfNeeded];
     CGSize size = [self.sizingCell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
-    return size.height;
+    return size.height + 1;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
