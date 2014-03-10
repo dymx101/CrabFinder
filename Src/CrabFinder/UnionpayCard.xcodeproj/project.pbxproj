@@ -31,7 +31,7 @@
 		EA098BD318B9B1E40034E0CF /* tableCellTopBg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EA098BCF18B9B1E40034E0CF /* tableCellTopBg@2x.png */; };
 		EA098BD818B9B4450034E0CF /* TDSettingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA098BD718B9B4450034E0CF /* TDSettingCell.m */; };
 		EA10FA9D18C6F7D500D4395C /* TDNewsFeed.m in Sources */ = {isa = PBXBuildFile; fileRef = EA10FA9C18C6F7D500D4395C /* TDNewsFeed.m */; };
-		EA2C603A18C59EBF007E83D1 /* TDNewsfeedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2C603918C59EBF007E83D1 /* TDNewsfeedCell.m */; };
+		EA2C603A18C59EBF007E83D1 /* TDStatusFeedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2C603918C59EBF007E83D1 /* TDStatusFeedCell.m */; };
 		EA2C603C18C5AC90007E83D1 /* famers_market.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EA2C603B18C5AC90007E83D1 /* famers_market.jpg */; };
 		EA901B0618B6491700B1E20F /* TDUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = EA901B0518B6491700B1E20F /* TDUtil.m */; };
 		EAC6B70018CB1D2700AA702E /* JSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC6B6FF18CB1D2700AA702E /* JSLabel.m */; };
@@ -878,8 +878,8 @@
 		EA098BD718B9B4450034E0CF /* TDSettingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDSettingCell.m; sourceTree = "<group>"; };
 		EA10FA9B18C6F7D500D4395C /* TDNewsFeed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDNewsFeed.h; sourceTree = "<group>"; };
 		EA10FA9C18C6F7D500D4395C /* TDNewsFeed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDNewsFeed.m; sourceTree = "<group>"; };
-		EA2C603818C59EBF007E83D1 /* TDNewsfeedCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDNewsfeedCell.h; sourceTree = "<group>"; };
-		EA2C603918C59EBF007E83D1 /* TDNewsfeedCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDNewsfeedCell.m; sourceTree = "<group>"; };
+		EA2C603818C59EBF007E83D1 /* TDStatusFeedCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDStatusFeedCell.h; sourceTree = "<group>"; };
+		EA2C603918C59EBF007E83D1 /* TDStatusFeedCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDStatusFeedCell.m; sourceTree = "<group>"; };
 		EA2C603B18C5AC90007E83D1 /* famers_market.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = famers_market.jpg; sourceTree = "<group>"; };
 		EA901B0418B6491700B1E20F /* TDUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDUtil.h; sourceTree = "<group>"; };
 		EA901B0518B6491700B1E20F /* TDUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDUtil.m; sourceTree = "<group>"; };
@@ -1742,8 +1742,8 @@
 				EAC6B6FF18CB1D2700AA702E /* JSLabel.m */,
 				EA098BD618B9B4450034E0CF /* TDSettingCell.h */,
 				EA098BD718B9B4450034E0CF /* TDSettingCell.m */,
-				EA2C603818C59EBF007E83D1 /* TDNewsfeedCell.h */,
-				EA2C603918C59EBF007E83D1 /* TDNewsfeedCell.m */,
+				EA2C603818C59EBF007E83D1 /* TDStatusFeedCell.h */,
+				EA2C603918C59EBF007E83D1 /* TDStatusFeedCell.m */,
 			);
 			path = TableCells;
 			sourceTree = "<group>";
@@ -3654,7 +3654,7 @@
 				EACBE41618BF2EB100F2E9CF /* UIView+Effect.m in Sources */,
 				4C98ABF118B91E01007FAF12 /* NSNumber+safe.m in Sources */,
 				EACD0D2318B3A09E009109CB /* TDBaseVC.m in Sources */,
-				EA2C603A18C59EBF007E83D1 /* TDNewsfeedCell.m in Sources */,
+				EA2C603A18C59EBF007E83D1 /* TDStatusFeedCell.m in Sources */,
 				4C98ABE918B91E01007FAF12 /* NSArray+safe.m in Sources */,
 				EACD64F018CD5371005621EC /* TDAlert.m in Sources */,
 				EAC9D88418B888CF0096D555 /* TDForgetPasswordVC.m in Sources */,

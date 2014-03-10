@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TDNewsfeedCell : UITableViewCell
+@interface TDStatusFeedCell : UITableViewCell
 @property (nonatomic, strong) UIImageView       *ivPhoto;
 @property (nonatomic, strong) UILabel           *lblTitle;
 

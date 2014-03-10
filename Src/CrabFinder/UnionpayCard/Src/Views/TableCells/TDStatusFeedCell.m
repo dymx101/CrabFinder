@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Frodo. All rights reserved.
 //
 
-#import "TDNewsfeedCell.h"
+#import "TDStatusFeedCell.h"
 #import "JSLabel.h"
 
 //////
@@ -14,14 +14,14 @@
 //////
 
 
-@interface TDNewsfeedCell () {
+@interface TDStatusFeedCell () {
     NSMutableArray      *_pictures;
     UIView              *_imageContainerView;
 }
 
 @end
 
-@implementation TDNewsfeedCell
+@implementation TDStatusFeedCell
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {

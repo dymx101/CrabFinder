@@ -8,8 +8,9 @@
 
 #import "TDHomeVC.h"
 
-#import "TDNewsfeedCell.h"
+#import "TDStatusFeedCell.h"
 #import "TDNewsFeed.h"
+#import "TDStatusDetailVC.h"
 
 typedef enum {
     kVcRegister = 1000
@@ -28,10 +29,9 @@ const NSString *strStatusCellForHeightID = @"strStatusCellForHeightID";
 @interface TDHomeVC () <UITableViewDelegate, UITableViewDataSource> {
 
 }
-@property (nonatomic, strong)    UITableView        *tvFeed;
-@property (nonatomic, strong)    NSMutableArray     *newsFeeds;
-@property(nonatomic, strong)    TDNewsfeedCell		*sizingCell;
-//@property (nonatomic, assign)    int                testCount;
+@property (nonatomic, strong)    UITableView            *tvFeed;
+@property (nonatomic, strong)    NSMutableArray         *newsFeeds;
+@property(nonatomic, strong)    TDStatusFeedCell		*sizingCell;
 
 @end
 
@@ -50,8 +50,8 @@ const NSString *strStatusCellForHeightID = @"strStatusCellForHeightID";
     [arr addObject:feed];
     
     feed = [TDNewsFeed new];
-    feed.review = [TDReview new];
-    feed.review.title = @"Kirk Reviewed Spock: \nAh, my old friend Kirk, do you know the Klingon proverb that says revenge is a dish best served cold? It is very cold in space.He tasks me. He tasks me, and I shall have him. I'll chase him 'round the moons of Nibia and 'round the Antares Maelstrom and 'round perdition's flame before I give him up!";
+    feed.status = [TDStatusUpdate new];
+    feed.status.title = @"Kirk Reviewed Spock: \nAh, my old friend Kirk, do you know the Klingon proverb that says revenge is a dish best served cold? It is very cold in space.He tasks me. He tasks me, and I shall have him. I'll chase him 'round the moons of Nibia and 'round the Antares Maelstrom and 'round perdition's flame before I give him up!";
     [arr addObject:feed];
     
     feed = [TDNewsFeed new];
@@ -65,8 +65,8 @@ const NSString *strStatusCellForHeightID = @"strStatusCellForHeightID";
     [arr addObject:feed];
     
     feed = [TDNewsFeed new];
-    feed.review = [TDReview new];
-    feed.review.title = @"Kirk Reviewed Spock: \nSpock. Where the hell's the power you promised me?";
+    feed.status = [TDStatusUpdate new];
+    feed.status.title = @"Kirk Reviewed Spock: \nSpock. Where the hell's the power you promised me?";
     [arr addObject:feed];
     
     return arr;
@@ -78,7 +78,6 @@ const NSString *strStatusCellForHeightID = @"strStatusCellForHeightID";
     self.navigationItem.title = @"Newsfeed";
     _newsFeeds = [NSMutableArray array];
     [_newsFeeds addObjectsFromArray:[self fakeDataArray]];
-    //_testCount = 10;
     
     [self installSearchToNavibar];
 	
@@ -95,8 +94,8 @@ const NSString *strStatusCellForHeightID = @"strStatusCellForHeightID";
     _tvFeed.dataSource = self;
     [self.view addSubview:_tvFeed];
     
-    [_tvFeed registerClass:[TDNewsfeedCell class] forCellReuseIdentifier:(NSString *)strStatusCellID];
-    [_tvFeed registerClass:[TDNewsfeedCell class] forCellReuseIdentifier:(NSString *)strStatusCellForHeightID];
+    [_tvFeed registerClass:[TDStatusFeedCell class] forCellReuseIdentifier:(NSString *)strStatusCellID];
+    [_tvFeed registerClass:[TDStatusFeedCell class] forCellReuseIdentifier:(NSString *)strStatusCellForHeightID];
     
     _sizingCell = [_tvFeed dequeueReusableCellWithIdentifier:(NSString *)strStatusCellForHeightID];
     
@@ -133,7 +132,7 @@ const NSString *strStatusCellForHeightID = @"strStatusCellForHeightID";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 
-    TDNewsfeedCell *cell = [tableView dequeueReusableCellWithIdentifier:(NSString *)strStatusCellID forIndexPath:indexPath];
+    TDStatusFeedCell *cell = [tableView dequeueReusableCellWithIdentifier:(NSString *)strStatusCellID forIndexPath:indexPath];
     
     TDNewsFeed *feed = _newsFeeds[indexPath.row];
     
@@ -155,6 +154,13 @@ const NSString *strStatusCellForHeightID = @"strStatusCellForHeightID";
     [_sizingCell layoutIfNeeded];
     CGSize size = [self.sizingCell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
     return size.height;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    TDStatusDetailVC *vc = [TDStatusDetailVC new];
+    TDNewsFeed *feed = _newsFeeds[indexPath.row];
+    vc.statusUpdate = feed.status;
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 @end

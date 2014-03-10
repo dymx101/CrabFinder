@@ -7,7 +7,8 @@
 //
 
 #import "TDBaseVC.h"
+#import "TDStatusUpdate.h"
 
 @interface TDStatusDetailVC : TDBaseVC
-
+@property (nonatomic, strong) TDStatusUpdate    *statusUpdate;
 @end
