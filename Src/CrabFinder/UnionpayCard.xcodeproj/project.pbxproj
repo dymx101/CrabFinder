@@ -35,8 +35,6 @@
 		EA2C603C18C5AC90007E83D1 /* famers_market.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EA2C603B18C5AC90007E83D1 /* famers_market.jpg */; };
 		EA901B0618B6491700B1E20F /* TDUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = EA901B0518B6491700B1E20F /* TDUtil.m */; };
 		EAC6B70018CB1D2700AA702E /* JSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC6B6FF18CB1D2700AA702E /* JSLabel.m */; };
-		EAC7DCC318C608C50076E32A /* TDStatusDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC7DCC218C608C50076E32A /* TDStatusDetailVC.m */; };
-		EAC7DCC618C6092F0076E32A /* TDReviewDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC7DCC518C6092F0076E32A /* TDReviewDetailVC.m */; };
 		EAC7DCCA18C61D930076E32A /* TDBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC7DCC918C61D930076E32A /* TDBaseModel.m */; };
 		EAC7DCCD18C61E0C0076E32A /* TDUser.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC7DCCC18C61E0C0076E32A /* TDUser.m */; };
 		EAC7DCD018C61F160076E32A /* TDVendor.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC7DCCF18C61F160076E32A /* TDVendor.m */; };
@@ -820,6 +818,11 @@
 		EACD0D4018B3A6A1009109CB /* tabbar_normal_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EACD0D3E18B3A6A1009109CB /* tabbar_normal_background@2x.png */; };
 		EACD64ED18CD4D64005621EC /* TDProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = EACD64EC18CD4D64005621EC /* TDProduct.m */; };
 		EACD64F018CD5371005621EC /* TDAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = EACD64EF18CD5371005621EC /* TDAlert.m */; };
+		EACD837618CDF5020050EEA6 /* TDReviewDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EACD837318CDF5020050EEA6 /* TDReviewDetailVC.m */; };
+		EACD837718CDF5020050EEA6 /* TDStatusDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EACD837518CDF5020050EEA6 /* TDStatusDetailVC.m */; };
+		EACD837A18CDF5140050EEA6 /* TDNotificationsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EACD837918CDF5140050EEA6 /* TDNotificationsVC.m */; };
+		EACD837D18CDF5220050EEA6 /* TDDealsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EACD837C18CDF5220050EEA6 /* TDDealsVC.m */; };
+		EACD838018CDF53B0050EEA6 /* TDSeasonalItemsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EACD837F18CDF53B0050EEA6 /* TDSeasonalItemsVC.m */; };
 		EAD1248D18B5EC2900C6C145 /* bg_navigationBar_tall@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EAD1248C18B5EC2900C6C145 /* bg_navigationBar_tall@2x.png */; };
 		EAD1248F18B5F1CD00C6C145 /* union_pay@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EAD1248E18B5F1CD00C6C145 /* union_pay@2x.png */; };
 		EAD1249318B5F30200C6C145 /* TDImageLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = EAD1249218B5F30200C6C145 /* TDImageLibrary.m */; };
@@ -885,10 +888,6 @@
 		EA901B0518B6491700B1E20F /* TDUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDUtil.m; sourceTree = "<group>"; };
 		EAC6B6FE18CB1D2700AA702E /* JSLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSLabel.h; sourceTree = "<group>"; };
 		EAC6B6FF18CB1D2700AA702E /* JSLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSLabel.m; sourceTree = "<group>"; };
-		EAC7DCC118C608C50076E32A /* TDStatusDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TDStatusDetailVC.h; path = UnionpayCard/Src/Views/TableCells/TDStatusDetailVC.h; sourceTree = SOURCE_ROOT; };
-		EAC7DCC218C608C50076E32A /* TDStatusDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TDStatusDetailVC.m; path = UnionpayCard/Src/Views/TableCells/TDStatusDetailVC.m; sourceTree = SOURCE_ROOT; };
-		EAC7DCC418C6092F0076E32A /* TDReviewDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TDReviewDetailVC.h; path = UnionpayCard/Src/Views/TableCells/TDReviewDetailVC.h; sourceTree = SOURCE_ROOT; };
-		EAC7DCC518C6092F0076E32A /* TDReviewDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TDReviewDetailVC.m; path = UnionpayCard/Src/Views/TableCells/TDReviewDetailVC.m; sourceTree = SOURCE_ROOT; };
 		EAC7DCC818C61D930076E32A /* TDBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDBaseModel.h; sourceTree = "<group>"; };
 		EAC7DCC918C61D930076E32A /* TDBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDBaseModel.m; sourceTree = "<group>"; };
 		EAC7DCCB18C61E0C0076E32A /* TDUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDUser.h; sourceTree = "<group>"; };
@@ -1694,6 +1693,16 @@
 		EACD64EC18CD4D64005621EC /* TDProduct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDProduct.m; sourceTree = "<group>"; };
 		EACD64EE18CD5371005621EC /* TDAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDAlert.h; sourceTree = "<group>"; };
 		EACD64EF18CD5371005621EC /* TDAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDAlert.m; sourceTree = "<group>"; };
+		EACD837218CDF5020050EEA6 /* TDReviewDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDReviewDetailVC.h; sourceTree = "<group>"; };
+		EACD837318CDF5020050EEA6 /* TDReviewDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDReviewDetailVC.m; sourceTree = "<group>"; };
+		EACD837418CDF5020050EEA6 /* TDStatusDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDStatusDetailVC.h; sourceTree = "<group>"; };
+		EACD837518CDF5020050EEA6 /* TDStatusDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDStatusDetailVC.m; sourceTree = "<group>"; };
+		EACD837818CDF5140050EEA6 /* TDNotificationsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDNotificationsVC.h; sourceTree = "<group>"; };
+		EACD837918CDF5140050EEA6 /* TDNotificationsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDNotificationsVC.m; sourceTree = "<group>"; };
+		EACD837B18CDF5220050EEA6 /* TDDealsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDDealsVC.h; sourceTree = "<group>"; };
+		EACD837C18CDF5220050EEA6 /* TDDealsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDDealsVC.m; sourceTree = "<group>"; };
+		EACD837E18CDF53B0050EEA6 /* TDSeasonalItemsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDSeasonalItemsVC.h; sourceTree = "<group>"; };
+		EACD837F18CDF53B0050EEA6 /* TDSeasonalItemsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDSeasonalItemsVC.m; sourceTree = "<group>"; };
 		EAD1248C18B5EC2900C6C145 /* bg_navigationBar_tall@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg_navigationBar_tall@2x.png"; sourceTree = "<group>"; };
 		EAD1248E18B5F1CD00C6C145 /* union_pay@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "union_pay@2x.png"; sourceTree = "<group>"; };
 		EAD1249118B5F30200C6C145 /* TDImageLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDImageLibrary.h; sourceTree = "<group>"; };
@@ -1769,17 +1778,6 @@
 				EACD64EF18CD5371005621EC /* TDAlert.m */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		EACBE3FE18BF13E500F2E9CF /* SubVCs */ = {
-			isa = PBXGroup;
-			children = (
-				EAC7DCC118C608C50076E32A /* TDStatusDetailVC.h */,
-				EAC7DCC218C608C50076E32A /* TDStatusDetailVC.m */,
-				EAC7DCC418C6092F0076E32A /* TDReviewDetailVC.h */,
-				EAC7DCC518C6092F0076E32A /* TDReviewDetailVC.m */,
-			);
-			path = SubVCs;
 			sourceTree = "<group>";
 		};
 		EACC145318B36EE900DD27B0 = {
@@ -2645,7 +2643,7 @@
 		EACD0D1F18B3A050009109CB /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				EACBE3FE18BF13E500F2E9CF /* SubVCs */,
+				EACD837118CDF5020050EEA6 /* SubVCs */,
 				EACD0D2018B3A050009109CB /* Base */,
 				EACD0D2818B3A166009109CB /* TDHomeVC.h */,
 				EACD0D2918B3A166009109CB /* TDHomeVC.m */,
@@ -2732,6 +2730,23 @@
 				EACD0D3818B3A52A009109CB /* navigationbar_background@2x.png */,
 			);
 			path = Images;
+			sourceTree = "<group>";
+		};
+		EACD837118CDF5020050EEA6 /* SubVCs */ = {
+			isa = PBXGroup;
+			children = (
+				EACD837218CDF5020050EEA6 /* TDReviewDetailVC.h */,
+				EACD837318CDF5020050EEA6 /* TDReviewDetailVC.m */,
+				EACD837418CDF5020050EEA6 /* TDStatusDetailVC.h */,
+				EACD837518CDF5020050EEA6 /* TDStatusDetailVC.m */,
+				EACD837818CDF5140050EEA6 /* TDNotificationsVC.h */,
+				EACD837918CDF5140050EEA6 /* TDNotificationsVC.m */,
+				EACD837B18CDF5220050EEA6 /* TDDealsVC.h */,
+				EACD837C18CDF5220050EEA6 /* TDDealsVC.m */,
+				EACD837E18CDF53B0050EEA6 /* TDSeasonalItemsVC.h */,
+				EACD837F18CDF53B0050EEA6 /* TDSeasonalItemsVC.m */,
+			);
+			path = SubVCs;
 			sourceTree = "<group>";
 		};
 		EAD1249018B5F2E500C6C145 /* Utils */ = {
@@ -3637,7 +3652,7 @@
 				EA098BC818B98E1C0034E0CF /* TDRegisterVC.m in Sources */,
 				EAD1249B18B604B600C6C145 /* FDColor.m in Sources */,
 				EAC7DCD018C61F160076E32A /* TDVendor.m in Sources */,
-				EAC7DCC618C6092F0076E32A /* TDReviewDetailVC.m in Sources */,
+				EACD838018CDF53B0050EEA6 /* TDSeasonalItemsVC.m in Sources */,
 				EAC7DCCA18C61D930076E32A /* TDBaseModel.m in Sources */,
 				EAD1249618B5F33300C6C145 /* FDDefine.m in Sources */,
 				EAC7DCD318C61F4B0076E32A /* TDStatusUpdate.m in Sources */,
@@ -3646,13 +3661,13 @@
 				EAC7DCD618C61F920076E32A /* TDReview.m in Sources */,
 				EACC146C18B36EE900DD27B0 /* main.m in Sources */,
 				4C98ABEC18B91E01007FAF12 /* NSDictionary+safe.m in Sources */,
-				EAC7DCC318C608C50076E32A /* TDStatusDetailVC.m in Sources */,
 				4C98ABF618B91E01007FAF12 /* NSObject+swizzle.m in Sources */,
 				EACD0D2D18B3A1DD009109CB /* TDMerchantsVC.m in Sources */,
 				4C98ABF218B91E01007FAF12 /* NSObject+BeeNotification.m in Sources */,
 				4C98ABEF18B91E01007FAF12 /* NSMutableString+safe.m in Sources */,
 				EA10FA9D18C6F7D500D4395C /* TDNewsFeed.m in Sources */,
 				4C98AB1B18B7E13C007FAF12 /* TDJsonToDictionary.m in Sources */,
+				EACD837718CDF5020050EEA6 /* TDStatusDetailVC.m in Sources */,
 				EACD64ED18CD4D64005621EC /* TDProduct.m in Sources */,
 				4C98AC0118B91E01007FAF12 /* UILabel+Attribute.m in Sources */,
 				EACD0D3318B3A243009109CB /* TDSettingsVC.m in Sources */,
@@ -3665,14 +3680,17 @@
 				EAC9D88418B888CF0096D555 /* TDForgetPasswordVC.m in Sources */,
 				EA901B0618B6491700B1E20F /* TDUtil.m in Sources */,
 				4C98ABF018B91E01007FAF12 /* NSNumber+otsCopy.m in Sources */,
+				EACD837D18CDF5220050EEA6 /* TDDealsVC.m in Sources */,
 				EAC7DCCD18C61E0C0076E32A /* TDUser.m in Sources */,
 				EACD0D3018B3A216009109CB /* TDProfileVC.m in Sources */,
 				EACD0D2A18B3A166009109CB /* TDHomeVC.m in Sources */,
 				EAD1249318B5F30200C6C145 /* TDImageLibrary.m in Sources */,
 				EAD1249E18B605D500C6C145 /* TDFontLibrary.m in Sources */,
 				4C98ABF318B91E01007FAF12 /* NSObject+Coder.m in Sources */,
+				EACD837618CDF5020050EEA6 /* TDReviewDetailVC.m in Sources */,
 				EA098BCB18B98E590034E0CF /* TDRegisterNoAccountVC.m in Sources */,
 				EAD6ACC618B79BC00003B24E /* TDLoginVC.m in Sources */,
+				EACD837A18CDF5140050EEA6 /* TDNotificationsVC.m in Sources */,
 				4C98ABFA18B91E01007FAF12 /* NSString+safe.m in Sources */,
 				4C98ABEE18B91E01007FAF12 /* NSMutableDictionary+safe.m in Sources */,
 			);
