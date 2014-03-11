@@ -1698,7 +1698,7 @@
 		EACD837418CDF5020050EEA6 /* TDStatusDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDStatusDetailVC.h; sourceTree = "<group>"; };
 		EACD837518CDF5020050EEA6 /* TDStatusDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDStatusDetailVC.m; sourceTree = "<group>"; };
 		EACD837818CDF5140050EEA6 /* TDNotificationsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDNotificationsVC.h; sourceTree = "<group>"; };
-		EACD837918CDF5140050EEA6 /* TDNotificationsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDNotificationsVC.m; sourceTree = "<group>"; };
+		EACD837918CDF5140050EEA6 /* TDNotificationsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = TDNotificationsVC.m; sourceTree = "<group>"; };
 		EACD837B18CDF5220050EEA6 /* TDDealsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDDealsVC.h; sourceTree = "<group>"; };
 		EACD837C18CDF5220050EEA6 /* TDDealsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDDealsVC.m; sourceTree = "<group>"; };
 		EACD837E18CDF53B0050EEA6 /* TDSeasonalItemsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDSeasonalItemsVC.h; sourceTree = "<group>"; };

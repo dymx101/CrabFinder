@@ -30,6 +30,9 @@ AS_SINGLETON(TDImageLibrary)
 
 @property (nonatomic, strong) UIImage *avatar;
 @property (nonatomic, strong) UIImage *farmersMarket;
+@property (nonatomic, strong) UIImage *boxChecked;
+@property (nonatomic, strong) UIImage *boxUnchecked;
+//@2x
 //@2x
 
 @end

@@ -41,6 +41,8 @@ DEF_SINGLETON(TDImageLibrary)
     
     _avatar = [UIImage imageNamed:@"avatar_default"];
     _farmersMarket = [UIImage imageNamed:@"famers_market.jpg"];
+    _boxChecked = [UIImage imageNamed:@"icon_orderReview_checked"];
+    _boxUnchecked = [UIImage imageNamed:@"icon_orderReview_unchecked"];
 }
 
 @end
