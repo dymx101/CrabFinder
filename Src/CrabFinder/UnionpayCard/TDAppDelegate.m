@@ -42,7 +42,7 @@
     
     [self customizeInterface];
     
-    [TDUtil findFonts];
+    //[TDUtil findFonts];
     
     return YES;
 }
