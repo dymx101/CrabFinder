@@ -34,7 +34,6 @@
 		EA2C603A18C59EBF007E83D1 /* TDStatusFeedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2C603918C59EBF007E83D1 /* TDStatusFeedCell.m */; };
 		EA2C603C18C5AC90007E83D1 /* famers_market.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EA2C603B18C5AC90007E83D1 /* famers_market.jpg */; };
 		EA901B0618B6491700B1E20F /* TDUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = EA901B0518B6491700B1E20F /* TDUtil.m */; };
-		EAC6B70018CB1D2700AA702E /* JSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC6B6FF18CB1D2700AA702E /* JSLabel.m */; };
 		EAC7DCCA18C61D930076E32A /* TDBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC7DCC918C61D930076E32A /* TDBaseModel.m */; };
 		EAC7DCCD18C61E0C0076E32A /* TDUser.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC7DCCC18C61E0C0076E32A /* TDUser.m */; };
 		EAC7DCD018C61F160076E32A /* TDVendor.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC7DCCF18C61F160076E32A /* TDVendor.m */; };
@@ -805,6 +804,8 @@
 		EACC1A7518B36F9200DD27B0 /* ump_icon_back.png in Resources */ = {isa = PBXBuildFile; fileRef = EACC178118B36F9100DD27B0 /* ump_icon_back.png */; };
 		EACC1A7618B36F9200DD27B0 /* ump_icon_back_foucs.png in Resources */ = {isa = PBXBuildFile; fileRef = EACC178218B36F9100DD27B0 /* ump_icon_back_foucs.png */; };
 		EACC1A7718B36F9200DD27B0 /* ump_titlebar_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = EACC178318B36F9100DD27B0 /* ump_titlebar_bg.png */; };
+		EACCBC0F18D091940084186B /* TDNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = EACCBC0E18D091940084186B /* TDNotification.m */; };
+		EACCBC1218D09B1C0084186B /* TDNotificationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EACCBC1118D09B1C0084186B /* TDNotificationCell.m */; };
 		EACD0D2318B3A09E009109CB /* TDBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EACD0D2218B3A09E009109CB /* TDBaseVC.m */; };
 		EACD0D2A18B3A166009109CB /* TDHomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EACD0D2918B3A166009109CB /* TDHomeVC.m */; };
 		EACD0D2D18B3A1DD009109CB /* TDMerchantsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EACD0D2C18B3A1DD009109CB /* TDMerchantsVC.m */; };
@@ -886,8 +887,6 @@
 		EA2C603B18C5AC90007E83D1 /* famers_market.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = famers_market.jpg; sourceTree = "<group>"; };
 		EA901B0418B6491700B1E20F /* TDUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDUtil.h; sourceTree = "<group>"; };
 		EA901B0518B6491700B1E20F /* TDUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDUtil.m; sourceTree = "<group>"; };
-		EAC6B6FE18CB1D2700AA702E /* JSLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSLabel.h; sourceTree = "<group>"; };
-		EAC6B6FF18CB1D2700AA702E /* JSLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSLabel.m; sourceTree = "<group>"; };
 		EAC7DCC818C61D930076E32A /* TDBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDBaseModel.h; sourceTree = "<group>"; };
 		EAC7DCC918C61D930076E32A /* TDBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDBaseModel.m; sourceTree = "<group>"; };
 		EAC7DCCB18C61E0C0076E32A /* TDUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDUser.h; sourceTree = "<group>"; };
@@ -1673,6 +1672,10 @@
 		EACC178118B36F9100DD27B0 /* ump_icon_back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ump_icon_back.png; sourceTree = "<group>"; };
 		EACC178218B36F9100DD27B0 /* ump_icon_back_foucs.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ump_icon_back_foucs.png; sourceTree = "<group>"; };
 		EACC178318B36F9100DD27B0 /* ump_titlebar_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ump_titlebar_bg.png; sourceTree = "<group>"; };
+		EACCBC0D18D091940084186B /* TDNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDNotification.h; sourceTree = "<group>"; };
+		EACCBC0E18D091940084186B /* TDNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDNotification.m; sourceTree = "<group>"; };
+		EACCBC1018D09B1C0084186B /* TDNotificationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDNotificationCell.h; sourceTree = "<group>"; };
+		EACCBC1118D09B1C0084186B /* TDNotificationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDNotificationCell.m; sourceTree = "<group>"; };
 		EACD0D2118B3A09E009109CB /* TDBaseVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDBaseVC.h; sourceTree = "<group>"; };
 		EACD0D2218B3A09E009109CB /* TDBaseVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDBaseVC.m; sourceTree = "<group>"; };
 		EACD0D2818B3A166009109CB /* TDHomeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDHomeVC.h; sourceTree = "<group>"; };
@@ -1747,12 +1750,12 @@
 		EA098BD518B9B4320034E0CF /* TableCells */ = {
 			isa = PBXGroup;
 			children = (
-				EAC6B6FE18CB1D2700AA702E /* JSLabel.h */,
-				EAC6B6FF18CB1D2700AA702E /* JSLabel.m */,
 				EA098BD618B9B4450034E0CF /* TDSettingCell.h */,
 				EA098BD718B9B4450034E0CF /* TDSettingCell.m */,
 				EA2C603818C59EBF007E83D1 /* TDStatusFeedCell.h */,
 				EA2C603918C59EBF007E83D1 /* TDStatusFeedCell.m */,
+				EACCBC1018D09B1C0084186B /* TDNotificationCell.h */,
+				EACCBC1118D09B1C0084186B /* TDNotificationCell.m */,
 			);
 			path = TableCells;
 			sourceTree = "<group>";
@@ -1776,6 +1779,8 @@
 				EACD64EC18CD4D64005621EC /* TDProduct.m */,
 				EACD64EE18CD5371005621EC /* TDAlert.h */,
 				EACD64EF18CD5371005621EC /* TDAlert.m */,
+				EACCBC0D18D091940084186B /* TDNotification.h */,
+				EACCBC0E18D091940084186B /* TDNotification.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -3648,7 +3653,6 @@
 				EACC147018B36EE900DD27B0 /* TDAppDelegate.m in Sources */,
 				4C98ABF818B91E01007FAF12 /* NSString+MD5Addition.m in Sources */,
 				4C98AC1518B9246F007FAF12 /* NSObject+JsonToVO.m in Sources */,
-				EAC6B70018CB1D2700AA702E /* JSLabel.m in Sources */,
 				EA098BC818B98E1C0034E0CF /* TDRegisterVC.m in Sources */,
 				EAD1249B18B604B600C6C145 /* FDColor.m in Sources */,
 				EAC7DCD018C61F160076E32A /* TDVendor.m in Sources */,
@@ -3672,11 +3676,13 @@
 				4C98AC0118B91E01007FAF12 /* UILabel+Attribute.m in Sources */,
 				EACD0D3318B3A243009109CB /* TDSettingsVC.m in Sources */,
 				EACBE41618BF2EB100F2E9CF /* UIView+Effect.m in Sources */,
+				EACCBC1218D09B1C0084186B /* TDNotificationCell.m in Sources */,
 				4C98ABF118B91E01007FAF12 /* NSNumber+safe.m in Sources */,
 				EACD0D2318B3A09E009109CB /* TDBaseVC.m in Sources */,
 				EA2C603A18C59EBF007E83D1 /* TDStatusFeedCell.m in Sources */,
 				4C98ABE918B91E01007FAF12 /* NSArray+safe.m in Sources */,
 				EACD64F018CD5371005621EC /* TDAlert.m in Sources */,
+				EACCBC0F18D091940084186B /* TDNotification.m in Sources */,
 				EAC9D88418B888CF0096D555 /* TDForgetPasswordVC.m in Sources */,
 				EA901B0618B6491700B1E20F /* TDUtil.m in Sources */,
 				4C98ABF018B91E01007FAF12 /* NSNumber+otsCopy.m in Sources */,

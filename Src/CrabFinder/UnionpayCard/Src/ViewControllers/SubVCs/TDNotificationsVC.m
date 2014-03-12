@@ -7,11 +7,18 @@
 //
 
 #import "TDNotificationsVC.h"
+#import "TDNotificationCell.h"
 
-@interface TDNotificationsVC () {
+#define STR_CELL_ID             @"STR_CELL_ID"
+#define STR_CELL_FOR_HEIGHT_ID  @"STR_CELL_FOR_HEIGHT_ID"
+
+@interface TDNotificationsVC () <UITableViewDelegate, UITableViewDataSource> {
     UIButton      *_cbWeather;
     UIButton      *_cbAttendance;
     UIButton      *_cbInventory;
+    
+    UITableView             *_tvNotifications;
+    TDNotificationCell      *_cellForHeight;
 }
 
 @end
@@ -37,6 +44,15 @@
     [self.view addSubview:_cbInventory];
     
     _cbWeather.selected = _cbAttendance.selected = _cbInventory.selected = YES;
+    
+    _tvNotifications = [UITableView new];
+    _tvNotifications.delegate = self;
+    _tvNotifications.dataSource = self;
+    [_tvNotifications registerClass:[TDNotificationCell class] forCellReuseIdentifier:STR_CELL_ID];
+    [_tvNotifications registerClass:[TDNotificationCell class] forCellReuseIdentifier:STR_CELL_FOR_HEIGHT_ID];
+    [self.view addSubview:_tvNotifications];
+    
+    _cellForHeight = [_tvNotifications dequeueReusableCellWithIdentifier:STR_CELL_FOR_HEIGHT_ID];
 }
 
 -(UIButton *)checkBoxWithTitle:(NSString *)aTitle action:(SEL)anAction {
@@ -66,6 +82,10 @@
     
     NSArray *checkBoxes = @[_cbWeather, _cbAttendance, _cbInventory];
     [UIView spaceOutViewsHorizontally:checkBoxes predicate:@"10"];
+    
+    [_tvNotifications alignLeading:@"0" trailing:@"0" toView:self.view];
+    [_tvNotifications constrainTopSpaceToView:_cbWeather predicate:@"10"];
+    [_tvNotifications alignBottomEdgeWithView:self.view predicate:nil];
 }
 
 #pragma mark - actions
@@ -79,6 +99,36 @@
 
 -(void)inventoryBoxCheckAction:(id)sender {
     _cbInventory.selected = !_cbInventory.selected;
+}
+
+#pragma mark -
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 10;
+}
+
+
+#define TEST_DESC @"Unfortunately we had a flat, so we can't show up.Unfortunately we had a flat, so we can't show up."
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    TDNotificationCell *cell = [tableView dequeueReusableCellWithIdentifier:STR_CELL_ID forIndexPath:indexPath];
+    cell.lblTitle.text = @"Safeway (Farmer Market)";
+    cell.lblDescription.text = TEST_DESC;
+    cell.ivPhoto.image = [TDImageLibrary sharedInstance].avatar;
+    [cell setNeedsLayout];
+    [cell layoutIfNeeded];
+    
+    return cell;
+}
+
+-(float)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    TDNotificationCell *cell = _cellForHeight;
+    cell.frame = tableView.bounds;
+    cell.lblTitle.text = @"Safeway (Farmer Market)";
+    cell.lblDescription.text = TEST_DESC;
+    cell.ivPhoto.image = [TDImageLibrary sharedInstance].avatar;
+    [cell setNeedsLayout];
+    [cell layoutIfNeeded];
+    CGSize size = [cell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
+    return size.height + 1;
 }
 
 @end

@@ -7,7 +7,6 @@
 //
 
 #import "TDStatusFeedCell.h"
-#import "JSLabel.h"
 
 //////
 
@@ -65,6 +64,7 @@
     _ivPhoto.translatesAutoresizingMaskIntoConstraints = NO;
     _lblTitle.translatesAutoresizingMaskIntoConstraints = NO;
     _imageContainerView.translatesAutoresizingMaskIntoConstraints = NO;
+    
     
     NSLayoutConstraint *constraint = [NSLayoutConstraint constraintWithItem:_ivPhoto attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1 constant:40];
     [self.contentView addConstraint:constraint];
