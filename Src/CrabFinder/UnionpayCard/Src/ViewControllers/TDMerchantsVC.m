@@ -9,7 +9,7 @@
 #import "TDMerchantsVC.h"
 #import "TDNotificationsVC.h"
 #import "TDDealsVC.h"
-#import "TDSeasonalItemsVC.h"
+#import "TDSeasonalCategoriesVC.h"
 
 @interface TDMerchantsVC () {
     UIButton        *_btnNotification;
@@ -80,7 +80,7 @@
 
 #pragma mark - actions
 -(void)gotoItems:(id)sender {
-    TDSeasonalItemsVC *vc = [TDSeasonalItemsVC new];
+    TDSeasonalCategoriesVC *vc = [TDSeasonalCategoriesVC new];
     [self.navigationController pushViewController:vc animated:YES];
 }
 

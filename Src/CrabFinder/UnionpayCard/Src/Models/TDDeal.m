@@ -54,7 +54,7 @@
     deal.providerName = @"Kirk";
     deal.providerPhoto = @"avatar_default";
     deal.providerType = @"Seller";
-    deal.desc = @"Closing in 80% off all meatarians!Closing in 80% off all meatarians!Closing in 80% off all meatarians!Closing in 80% off all meatarians!";
+    deal.desc = @"Closing in 80% off all Fruit! Closing in 80% off all Fruit! Closing in 80% off all Fruit! Closing in 80% off all Fruit! ";
     [arr addObject:deal];
     
     return arr;

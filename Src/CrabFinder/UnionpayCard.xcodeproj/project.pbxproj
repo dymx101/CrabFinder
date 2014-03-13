@@ -824,13 +824,14 @@
 		EACD837718CDF5020050EEA6 /* TDStatusDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EACD837518CDF5020050EEA6 /* TDStatusDetailVC.m */; };
 		EACD837A18CDF5140050EEA6 /* TDNotificationsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EACD837918CDF5140050EEA6 /* TDNotificationsVC.m */; };
 		EACD837D18CDF5220050EEA6 /* TDDealsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EACD837C18CDF5220050EEA6 /* TDDealsVC.m */; };
-		EACD838018CDF53B0050EEA6 /* TDSeasonalItemsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EACD837F18CDF53B0050EEA6 /* TDSeasonalItemsVC.m */; };
+		EACD838018CDF53B0050EEA6 /* TDSeasonalCategoriesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EACD837F18CDF53B0050EEA6 /* TDSeasonalCategoriesVC.m */; };
 		EAD1248D18B5EC2900C6C145 /* bg_navigationBar_tall@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EAD1248C18B5EC2900C6C145 /* bg_navigationBar_tall@2x.png */; };
 		EAD1248F18B5F1CD00C6C145 /* union_pay@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EAD1248E18B5F1CD00C6C145 /* union_pay@2x.png */; };
 		EAD1249318B5F30200C6C145 /* TDImageLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = EAD1249218B5F30200C6C145 /* TDImageLibrary.m */; };
 		EAD1249618B5F33300C6C145 /* FDDefine.m in Sources */ = {isa = PBXBuildFile; fileRef = EAD1249518B5F33300C6C145 /* FDDefine.m */; };
 		EAD1249B18B604B600C6C145 /* FDColor.m in Sources */ = {isa = PBXBuildFile; fileRef = EAD1249A18B604B600C6C145 /* FDColor.m */; };
 		EAD1249E18B605D500C6C145 /* TDFontLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = EAD1249D18B605D500C6C145 /* TDFontLibrary.m */; };
+		EAD24B1818D1E43E00291003 /* TDSeasonalItemsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EAD24B1718D1E43E00291003 /* TDSeasonalItemsVC.m */; };
 		EAD5E21518C0249400EF9288 /* avatar_default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EAD5E21418C0249400EF9288 /* avatar_default@2x.png */; };
 		EAD5E21718C03E0400EF9288 /* crab_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EAD5E21618C03E0400EF9288 /* crab_icon@2x.png */; };
 		EAD5E21918C0583200EF9288 /* crab_boss@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EAD5E21818C0583200EF9288 /* crab_boss@2x.png */; };
@@ -1707,8 +1708,8 @@
 		EACD837918CDF5140050EEA6 /* TDNotificationsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = TDNotificationsVC.m; sourceTree = "<group>"; };
 		EACD837B18CDF5220050EEA6 /* TDDealsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDDealsVC.h; sourceTree = "<group>"; };
 		EACD837C18CDF5220050EEA6 /* TDDealsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDDealsVC.m; sourceTree = "<group>"; };
-		EACD837E18CDF53B0050EEA6 /* TDSeasonalItemsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDSeasonalItemsVC.h; sourceTree = "<group>"; };
-		EACD837F18CDF53B0050EEA6 /* TDSeasonalItemsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDSeasonalItemsVC.m; sourceTree = "<group>"; };
+		EACD837E18CDF53B0050EEA6 /* TDSeasonalCategoriesVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDSeasonalCategoriesVC.h; sourceTree = "<group>"; };
+		EACD837F18CDF53B0050EEA6 /* TDSeasonalCategoriesVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDSeasonalCategoriesVC.m; sourceTree = "<group>"; };
 		EAD1248C18B5EC2900C6C145 /* bg_navigationBar_tall@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg_navigationBar_tall@2x.png"; sourceTree = "<group>"; };
 		EAD1248E18B5F1CD00C6C145 /* union_pay@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "union_pay@2x.png"; sourceTree = "<group>"; };
 		EAD1249118B5F30200C6C145 /* TDImageLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDImageLibrary.h; sourceTree = "<group>"; };
@@ -1719,6 +1720,8 @@
 		EAD1249A18B604B600C6C145 /* FDColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FDColor.m; sourceTree = "<group>"; };
 		EAD1249C18B605D500C6C145 /* TDFontLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDFontLibrary.h; sourceTree = "<group>"; };
 		EAD1249D18B605D500C6C145 /* TDFontLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDFontLibrary.m; sourceTree = "<group>"; };
+		EAD24B1618D1E43E00291003 /* TDSeasonalItemsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDSeasonalItemsVC.h; sourceTree = "<group>"; };
+		EAD24B1718D1E43E00291003 /* TDSeasonalItemsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDSeasonalItemsVC.m; sourceTree = "<group>"; };
 		EAD5E21418C0249400EF9288 /* avatar_default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "avatar_default@2x.png"; sourceTree = "<group>"; };
 		EAD5E21618C03E0400EF9288 /* crab_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "crab_icon@2x.png"; sourceTree = "<group>"; };
 		EAD5E21818C0583200EF9288 /* crab_boss@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "crab_boss@2x.png"; sourceTree = "<group>"; };
@@ -2753,8 +2756,10 @@
 				EACD837918CDF5140050EEA6 /* TDNotificationsVC.m */,
 				EACD837B18CDF5220050EEA6 /* TDDealsVC.h */,
 				EACD837C18CDF5220050EEA6 /* TDDealsVC.m */,
-				EACD837E18CDF53B0050EEA6 /* TDSeasonalItemsVC.h */,
-				EACD837F18CDF53B0050EEA6 /* TDSeasonalItemsVC.m */,
+				EACD837E18CDF53B0050EEA6 /* TDSeasonalCategoriesVC.h */,
+				EACD837F18CDF53B0050EEA6 /* TDSeasonalCategoriesVC.m */,
+				EAD24B1618D1E43E00291003 /* TDSeasonalItemsVC.h */,
+				EAD24B1718D1E43E00291003 /* TDSeasonalItemsVC.m */,
 			);
 			path = SubVCs;
 			sourceTree = "<group>";
@@ -3661,10 +3666,11 @@
 				EA098BC818B98E1C0034E0CF /* TDRegisterVC.m in Sources */,
 				EAD1249B18B604B600C6C145 /* FDColor.m in Sources */,
 				EAC7DCD018C61F160076E32A /* TDVendor.m in Sources */,
-				EACD838018CDF53B0050EEA6 /* TDSeasonalItemsVC.m in Sources */,
+				EACD838018CDF53B0050EEA6 /* TDSeasonalCategoriesVC.m in Sources */,
 				EAC7DCCA18C61D930076E32A /* TDBaseModel.m in Sources */,
 				EAD1249618B5F33300C6C145 /* FDDefine.m in Sources */,
 				EAC7DCD318C61F4B0076E32A /* TDStatusUpdate.m in Sources */,
+				EAD24B1818D1E43E00291003 /* TDSeasonalItemsVC.m in Sources */,
 				4C98ABED18B91E01007FAF12 /* NSMutableArray+safe.m in Sources */,
 				EA098BD818B9B4450034E0CF /* TDSettingCell.m in Sources */,
 				EAC7DCD618C61F920076E32A /* TDReview.m in Sources */,

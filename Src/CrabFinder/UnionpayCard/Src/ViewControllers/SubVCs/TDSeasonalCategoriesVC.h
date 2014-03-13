@@ -2,12 +2,13 @@
 //  TDSeasonalItemsVC.h
 //  UnionpayCard
 //
-//  Created by Dong Yiming on 3/13/14.
+//  Created by Dong Yiming on 3/10/14.
 //  Copyright (c) 2014 Frodo. All rights reserved.
 //
 
+#import <UIKit/UIKit.h>
 #import "TDBaseVC.h"
 
-@interface TDSeasonalItemsVC : TDBaseVC
+@interface TDSeasonalCategoriesVC : TDBaseVC
 
 @end
