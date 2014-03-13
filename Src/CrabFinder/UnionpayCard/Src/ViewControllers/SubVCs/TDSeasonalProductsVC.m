@@ -2,28 +2,26 @@
 //  TDSeasonalItemsVC.m
 //  UnionpayCard
 //
-//  Created by Dong Yiming on 3/10/14.
+//  Created by Dong Yiming on 3/13/14.
 //  Copyright (c) 2014 Frodo. All rights reserved.
 //
 
-#import "TDSeasonalCategoriesVC.h"
 #import "TDSeasonalProductsVC.h"
 
 #define TABLE_CELL_ID       @"TABLE_CELL_ID"
 
-@interface TDSeasonalCategoriesVC () <UITableViewDelegate, UITableViewDataSource> {
-    UITableView     *_tvCategories;
+@interface TDSeasonalProductsVC () <UITableViewDelegate, UITableViewDataSource> {
+    UITableView     *_tvProducts;
 }
 
 @end
 
-
-@implementation TDSeasonalCategoriesVC
+@implementation TDSeasonalProductsVC
 
 -(NSArray *)testData {
     static NSArray *testData = nil;
     if (testData == nil) {
-        testData = @[@"Nuts", @"Veggies", @"Fruit", @"Herbs", @"Spreads/Sauces", @"Dairy", @"Grain", @"Crafts", @"Surf n' Turf", @"Plants", @"Baked Goods"];
+        testData = @[@"Apple", @"Orange", @"Bilberry", @"Cherry", @"Damson", @"Honeydew", @"Lemon", @"Persimmon", @"Satsuma"];
     }
     
     return testData;
@@ -32,22 +30,21 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.navigationItem.title = @"Seasonal Food";
     
     [self initViews];
     [self setupViews];
 }
 
 -(void)initViews {
-    _tvCategories = [UITableView new];
-    _tvCategories.dataSource = self;
-    _tvCategories.delegate = self;
-    [self.view addSubview:_tvCategories];
-    [_tvCategories registerClass:[UITableViewCell class] forCellReuseIdentifier:TABLE_CELL_ID];
+    _tvProducts = [UITableView new];
+    _tvProducts.dataSource = self;
+    _tvProducts.delegate = self;
+    [self.view addSubview:_tvProducts];
+    [_tvProducts registerClass:[UITableViewCell class] forCellReuseIdentifier:TABLE_CELL_ID];
 }
 
 -(void)setupViews {
-    [_tvCategories alignToView:self.view];
+    [_tvProducts alignToView:self.view];
 }
 
 #pragma mark - table view delegate
@@ -66,10 +63,6 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    TDSeasonalProductsVC *vc = [TDSeasonalProductsVC new];
-    vc.title = [self testData][indexPath.row];
-    [self.navigationController pushViewController:vc animated:YES];
-
 }
 
 @end

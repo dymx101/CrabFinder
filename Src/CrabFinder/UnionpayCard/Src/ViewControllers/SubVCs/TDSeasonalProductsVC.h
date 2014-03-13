@@ -8,6 +8,6 @@
 
 #import "TDBaseVC.h"
 
-@interface TDSeasonalItemsVC : TDBaseVC
+@interface TDSeasonalProductsVC : TDBaseVC
 
 @end
