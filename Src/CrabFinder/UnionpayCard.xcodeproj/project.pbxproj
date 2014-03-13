@@ -34,6 +34,7 @@
 		EA2C603A18C59EBF007E83D1 /* TDStatusFeedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2C603918C59EBF007E83D1 /* TDStatusFeedCell.m */; };
 		EA2C603C18C5AC90007E83D1 /* famers_market.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EA2C603B18C5AC90007E83D1 /* famers_market.jpg */; };
 		EA901B0618B6491700B1E20F /* TDUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = EA901B0518B6491700B1E20F /* TDUtil.m */; };
+		EAAED84318D1AD9400DA54F2 /* TDDeal.m in Sources */ = {isa = PBXBuildFile; fileRef = EAAED84218D1AD9400DA54F2 /* TDDeal.m */; };
 		EAC7DCCA18C61D930076E32A /* TDBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC7DCC918C61D930076E32A /* TDBaseModel.m */; };
 		EAC7DCCD18C61E0C0076E32A /* TDUser.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC7DCCC18C61E0C0076E32A /* TDUser.m */; };
 		EAC7DCD018C61F160076E32A /* TDVendor.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC7DCCF18C61F160076E32A /* TDVendor.m */; };
@@ -887,6 +888,8 @@
 		EA2C603B18C5AC90007E83D1 /* famers_market.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = famers_market.jpg; sourceTree = "<group>"; };
 		EA901B0418B6491700B1E20F /* TDUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDUtil.h; sourceTree = "<group>"; };
 		EA901B0518B6491700B1E20F /* TDUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDUtil.m; sourceTree = "<group>"; };
+		EAAED84118D1AD9400DA54F2 /* TDDeal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDDeal.h; sourceTree = "<group>"; };
+		EAAED84218D1AD9400DA54F2 /* TDDeal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDDeal.m; sourceTree = "<group>"; };
 		EAC7DCC818C61D930076E32A /* TDBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDBaseModel.h; sourceTree = "<group>"; };
 		EAC7DCC918C61D930076E32A /* TDBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDBaseModel.m; sourceTree = "<group>"; };
 		EAC7DCCB18C61E0C0076E32A /* TDUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDUser.h; sourceTree = "<group>"; };
@@ -1781,6 +1784,8 @@
 				EACD64EF18CD5371005621EC /* TDAlert.m */,
 				EACCBC0D18D091940084186B /* TDNotification.h */,
 				EACCBC0E18D091940084186B /* TDNotification.m */,
+				EAAED84118D1AD9400DA54F2 /* TDDeal.h */,
+				EAAED84218D1AD9400DA54F2 /* TDDeal.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -3677,6 +3682,7 @@
 				EACD0D3318B3A243009109CB /* TDSettingsVC.m in Sources */,
 				EACBE41618BF2EB100F2E9CF /* UIView+Effect.m in Sources */,
 				EACCBC1218D09B1C0084186B /* TDNotificationCell.m in Sources */,
+				EAAED84318D1AD9400DA54F2 /* TDDeal.m in Sources */,
 				4C98ABF118B91E01007FAF12 /* NSNumber+safe.m in Sources */,
 				EACD0D2318B3A09E009109CB /* TDBaseVC.m in Sources */,
 				EA2C603A18C59EBF007E83D1 /* TDStatusFeedCell.m in Sources */,

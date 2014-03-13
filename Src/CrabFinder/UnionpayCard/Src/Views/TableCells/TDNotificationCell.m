@@ -38,7 +38,7 @@
     [_ivPhoto applyEffectBorder];
     
     _lblTitle = [UILabel new];
-    _lblTitle.font = [TDFontLibrary sharedInstance].fontNormal;
+    _lblTitle.font = [TDFontLibrary sharedInstance].fontTitleBold;
     _lblTitle.numberOfLines = 1;
     [self.contentView addSubview:_lblTitle];
     
@@ -53,8 +53,8 @@
     _lblTitle.translatesAutoresizingMaskIntoConstraints = NO;
     _lblDescription.translatesAutoresizingMaskIntoConstraints = NO;
     
-    //[_lblTitle setContentCompressionResistancePriority:UILayoutPriorityRequired forAxis:UILayoutConstraintAxisVertical];
-    //[_lblDescription setContentCompressionResistancePriority:UILayoutPriorityRequired forAxis:UILayoutConstraintAxisVertical];
+    [_lblTitle setContentCompressionResistancePriority:UILayoutPriorityRequired forAxis:UILayoutConstraintAxisVertical];
+    [_lblDescription setContentCompressionResistancePriority:UILayoutPriorityRequired forAxis:UILayoutConstraintAxisVertical];
     
     NSLayoutConstraint *constraint = [NSLayoutConstraint constraintWithItem:_ivPhoto attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1 constant:40];
     [self.contentView addConstraint:constraint];
@@ -65,7 +65,11 @@
     constraint = [NSLayoutConstraint constraintWithItem:_ivPhoto attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self.contentView attribute:NSLayoutAttributeLeading multiplier:1 constant:10];
     [self.contentView addConstraint:constraint];
     
-    constraint = [NSLayoutConstraint constraintWithItem:_ivPhoto attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.contentView attribute:NSLayoutAttributeLeading multiplier:1 constant:10];
+    constraint = [NSLayoutConstraint constraintWithItem:_ivPhoto attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.contentView attribute:NSLayoutAttributeTop multiplier:1 constant:10];
+    [self.contentView addConstraint:constraint];
+    
+    constraint = [NSLayoutConstraint constraintWithItem:_ivPhoto attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationLessThanOrEqual toItem:self.contentView attribute:NSLayoutAttributeBottom multiplier:1 constant:-10];
+    constraint.priority = UILayoutPriorityDefaultHigh;
     [self.contentView addConstraint:constraint];
     
     constraint = [NSLayoutConstraint constraintWithItem:_lblDescription attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self.contentView attribute:NSLayoutAttributeLeading multiplier:1 constant:60];
@@ -80,7 +84,7 @@
     constraint = [NSLayoutConstraint constraintWithItem:_lblTitle attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:self.contentView attribute:NSLayoutAttributeTrailing multiplier:1 constant:-10];
     [self.contentView addConstraint:constraint];
     
-    NSArray *verticalConstriants = [NSLayoutConstraint constraintsWithVisualFormat:@"V:|-5-[_lblTitle]-3-[_lblDescription]-5-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_lblTitle, _lblDescription)];
+    NSArray *verticalConstriants = [NSLayoutConstraint constraintsWithVisualFormat:@"V:|-5-[_lblTitle]-3-[_lblDescription]-(>=5)-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_lblTitle, _lblDescription)];
     [self.contentView addConstraints:verticalConstriants];
 }
 
