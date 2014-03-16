@@ -41,6 +41,7 @@
 		EAC7DCD318C61F4B0076E32A /* TDStatusUpdate.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC7DCD218C61F4B0076E32A /* TDStatusUpdate.m */; };
 		EAC7DCD618C61F920076E32A /* TDReview.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC7DCD518C61F920076E32A /* TDReview.m */; };
 		EAC9D88418B888CF0096D555 /* TDForgetPasswordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC9D88318B888CF0096D555 /* TDForgetPasswordVC.m */; };
+		EACA29A418D5BDBC009BCEA5 /* btn_add@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EACA29A318D5BDBC009BCEA5 /* btn_add@2x.png */; };
 		EACBE41618BF2EB100F2E9CF /* UIView+Effect.m in Sources */ = {isa = PBXBuildFile; fileRef = EACBE41518BF2EB100F2E9CF /* UIView+Effect.m */; };
 		EACC146018B36EE900DD27B0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EACC145F18B36EE900DD27B0 /* Foundation.framework */; };
 		EACC146218B36EE900DD27B0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EACC146118B36EE900DD27B0 /* CoreGraphics.framework */; };
@@ -906,6 +907,7 @@
 		EAC7DCD518C61F920076E32A /* TDReview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDReview.m; sourceTree = "<group>"; };
 		EAC9D88218B888CF0096D555 /* TDForgetPasswordVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDForgetPasswordVC.h; sourceTree = "<group>"; };
 		EAC9D88318B888CF0096D555 /* TDForgetPasswordVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDForgetPasswordVC.m; sourceTree = "<group>"; };
+		EACA29A318D5BDBC009BCEA5 /* btn_add@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_add@2x.png"; sourceTree = "<group>"; };
 		EACBE41418BF2EB100F2E9CF /* UIView+Effect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Effect.h"; sourceTree = "<group>"; };
 		EACBE41518BF2EB100F2E9CF /* UIView+Effect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Effect.m"; sourceTree = "<group>"; };
 		EACC145C18B36EE900DD27B0 /* UnionpayCard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UnionpayCard.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -2737,6 +2739,7 @@
 		EACD0D3418B3A51F009109CB /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				EACA29A318D5BDBC009BCEA5 /* btn_add@2x.png */,
 				EACC59BE18D5A29600759CDE /* default_image@2x.png */,
 				EAD5E21A18C0619500EF9288 /* crab_logo@2x.png */,
 				EAD5E21818C0583200EF9288 /* crab_boss@2x.png */,
@@ -3385,6 +3388,7 @@
 				EACC1A1218B36F9200DD27B0 /* input_textField.png in Resources */,
 				EACC196718B36F9100DD27B0 /* icon_merchantInfo_correct.png in Resources */,
 				EACC19F018B36F9100DD27B0 /* icon_route_title_bg@2x.png in Resources */,
+				EACA29A418D5BDBC009BCEA5 /* btn_add@2x.png in Resources */,
 				EACC18D118B36F9100DD27B0 /* icon_cell_rightArrow_selected.png in Resources */,
 				EACC17BA18B36F9100DD27B0 /* bg_hotTopicList_cell@2x.png in Resources */,
 				EACC196A18B36F9100DD27B0 /* icon_messageCenter_empty@2x.png in Resources */,
@@ -3835,8 +3839,8 @@
 				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Luosheng Peng (75BAGEK59M)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Luosheng Peng (75BAGEK59M)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Yiming Dong (Z45HDA65GT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Yiming Dong (Z45HDA65GT)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UnionpayCard/UnionpayCard-Prefix.pch";
 				INFOPLIST_FILE = "UnionpayCard/UnionpayCard-Info.plist";
@@ -3854,8 +3858,8 @@
 				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: GageIn, Inc (2L7KL2QHQ3)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: GageIn, Inc (2L7KL2QHQ3)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: YI MING DONG (K2QJU8A9HC)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: YI MING DONG (K2QJU8A9HC)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UnionpayCard/UnionpayCard-Prefix.pch";
 				INFOPLIST_FILE = "UnionpayCard/UnionpayCard-Info.plist";

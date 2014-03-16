@@ -54,7 +54,6 @@
     [self.contentView addSubview:_viewRating];
     
     _viewPhotoContaner = [UIView new];
-    _viewPhotoContaner.backgroundColor = [FDColor sharedInstance].random;
     [self.contentView addSubview:_viewPhotoContaner];
 }
 
@@ -74,31 +73,37 @@
     [_viewPhotoContaner constrainTopSpaceToView:_viewRating predicate:@"5"];
     [_viewPhotoContaner alignLeadingEdgeWithView:_viewRating predicate:nil];
     [_viewPhotoContaner alignTrailingEdgeWithView:self.contentView predicate:@"-10"];
-    [_viewPhotoContaner constrainHeight:@"30"];
+    [_viewPhotoContaner constrainHeight:@"40"];
     
     
-//    int userImageCount = 8;
-//    for (int i = 0; i < userImageCount; i++) {
-//        UIImageView *iv = [UIImageView new];
-//        [iv setImageWithURL:[NSURL URLWithString:SharedImage.urlVendorApple] placeholderImage:SharedImage.defaultImage];
-//        [_viewPhotoContaner addSubview:iv];
-//        [_photosByVendor addObject:iv];
-//        
-//        [iv alignTopEdgeWithView:_viewPhotoContaner predicate:@"0"];
-//        [iv constrainWidth:@"30" height:@"30"];
-//        
-//        if (i == 0) {
-//            [iv alignLeadingEdgeWithView:_viewPhotoContaner predicate:@"10"];
-//        } else if (i == userImageCount - 1) {
-//            [iv alignTrailingEdgeWithView:_viewPhotoContaner predicate:@"-10"];
-//        }
-//    }
-//    
-//    [UIView spaceOutViewsHorizontally:_photosByVendor predicate:@"20"];
+    int userImageCount = 4;
+    for (int i = 0; i < userImageCount; i++) {
+        UIImageView *iv = [UIImageView new];
+        
+        if (i < userImageCount - 1) {
+            [iv setImageWithURL:[NSURL URLWithString:SharedImage.urlVendorApple] placeholderImage:SharedImage.defaultImage];
+        } else {
+            iv.image = SharedImage.btnAdd;
+        }
+        
+        [_viewPhotoContaner addSubview:iv];
+        [_photosByVendor addObject:iv];
+        
+        [iv alignTopEdgeWithView:_viewPhotoContaner predicate:@"0"];
+        [iv constrainWidth:@"40" height:@"40"];
+        
+        if (i == 0) {
+            [iv alignLeadingEdgeWithView:_viewPhotoContaner predicate:@"0"];
+        } else if (i == userImageCount - 1) {
+            //[iv alignTrailingEdgeWithView:_viewPhotoContaner predicate:@"-10"];
+        }
+    }
+    
+    [UIView spaceOutViewsHorizontally:_photosByVendor predicate:@"20"];
 }
 
 +(float)cellHeight {
-    return 100;
+    return 105;
 }
 
 @end
