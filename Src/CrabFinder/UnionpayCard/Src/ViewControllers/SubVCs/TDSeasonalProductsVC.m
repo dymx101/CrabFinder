@@ -7,6 +7,7 @@
 //
 
 #import "TDSeasonalProductsVC.h"
+#import "TDProductDetailVC.h"
 
 #define TABLE_CELL_ID       @"TABLE_CELL_ID"
 
@@ -62,7 +63,8 @@
 
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
+    TDProductDetailVC *vc = [TDProductDetailVC new];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 @end

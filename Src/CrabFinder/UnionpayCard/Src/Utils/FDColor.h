@@ -31,4 +31,6 @@ AS_SINGLETON(FDColor)
 @property (nonatomic, strong) UIColor *darkGray;
 @property (nonatomic, strong) UIColor *lightGray;
 
+-(UIColor *)random;
+
 @end

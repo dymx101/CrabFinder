@@ -45,4 +45,14 @@ DEF_SINGLETON(FDColor)
     return self;
 }
 
+-(UIColor *)colorFromR:(int)aRed g:(int)aGreen b:(int)aBlue
+{
+    return [UIColor colorWithRed:aRed / 255.f green:aGreen / 255.f blue:aBlue / 255.f alpha:1.f];
+}
+
+-(UIColor *)random
+{
+    return [self colorFromR:(arc4random() % 255) g:(arc4random() % 255) b:(arc4random() % 255)];
+}
+
 @end
