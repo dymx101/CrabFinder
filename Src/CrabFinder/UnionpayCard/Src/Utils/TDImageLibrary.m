@@ -39,10 +39,24 @@ DEF_SINGLETON(TDImageLibrary)
     _cellGroupRound = [[UIImage imageNamed:@"tableCellRoundBg"] resizableImageWithCapInsets:UIEdgeInsetsMake(5, 5, 5, 5)];
     _cellRightArrow = [UIImage imageNamed:@"icon_cell_rightArrow"];
     
+    _ratingStarEmpty = [UIImage imageNamed:@"rating_star_empty"];
+    _ratingStarHalf = [UIImage imageNamed:@"rating_star_half"];
+    _ratingStarFull = [UIImage imageNamed:@"rating_star_full"];
+    
     _avatar = [UIImage imageNamed:@"avatar_default"];
     _farmersMarket = [UIImage imageNamed:@"famers_market.jpg"];
     _boxChecked = [UIImage imageNamed:@"icon_orderReview_checked"];
     _boxUnchecked = [UIImage imageNamed:@"icon_orderReview_unchecked"];
+    
+    _defaultImage = [UIImage imageNamed:@"default_image"];
+    
+    [self initURLs];
 }
+
+-(void)initURLs {
+    _urlVendorApple = @"http://images.wildtangent.com/fruitsinc/big_icon.png";
+}
+
+
 
 @end

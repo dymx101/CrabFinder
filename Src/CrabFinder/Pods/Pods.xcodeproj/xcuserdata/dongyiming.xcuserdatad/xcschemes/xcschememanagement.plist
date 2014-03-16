@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-EDStarRating.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-FLKAutoLayout.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -47,42 +52,47 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>206CA8B9BD8042349C88DE34</key>
+		<key>16D1ADFA4CB642A99E24AABB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3062E644CD13445A90B6EBB3</key>
+		<key>216A1D094AED47678EB0D19D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6503828C0B0640E6A0FA33DA</key>
+		<key>4EB8FF66FAFA4FD2BEF0CB78</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8E7586306FFD46859D16A68A</key>
+		<key>734D721F21074D69A8F3216A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A34B93037CEC440192C796FE</key>
+		<key>933F07174B3148E0A34E1A8C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A760FB7433794ED982CE11F7</key>
+		<key>E1E3D8A6158544BCB7DCC96E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>AC438AA320FD49A195251F03</key>
+		<key>F1ACB19349BE49F89078D2C9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>EADB26175B294307A754115C</key>
+		<key>F3AF07B3C393499E95DAE16A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F530EF5BFA114253A07E616F</key>
 		<dict>
 			<key>primary</key>
 			<true/>

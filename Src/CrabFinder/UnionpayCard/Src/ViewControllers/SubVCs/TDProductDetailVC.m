@@ -7,21 +7,19 @@
 //
 
 #import "TDProductDetailVC.h"
+#import "TDProductVendorCell.h"
 
-@interface TDProductDetailVC () {
+#define STR_CELL_ID     @"STR_CELL_ID"
+
+const float constantUserImageSize = 60.f;
+
+@interface TDProductDetailVC () <UITableViewDelegate, UITableViewDataSource> {
     UITableView    *_tvContent;
     UIView          *_viewTvHeader;
     
     UILabel         *_lblDesctiption;
     UIScrollView    *_svPhotosByUsers;
     NSMutableArray  *_photosByUsers;
-    
-    UIImageView     *_ivVendorPhoto;
-    UILabel         *_lblVendorName;
-    UIView          *_viewRating;
-    
-    UIScrollView    *_svPhotosByVendor;
-    NSMutableArray  *_photosByVendor;
 }
 
 @end
@@ -33,17 +31,18 @@
     [super viewDidLoad];
     self.navigationItem.title = @"Example Item";
     
+    _photosByUsers = [NSMutableArray array];
+
+    
     [self initViews];
     [self setupViews];
 }
 
 -(UIView *)tvHeader {
     if (_viewTvHeader == nil) {
-        _viewTvHeader = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 200)];
-        _viewTvHeader.backgroundColor = [UIColor redColor];
+        _viewTvHeader = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 180)];
         
         _lblDesctiption = [UILabel new];
-        _lblDesctiption.backgroundColor = [FDColor sharedInstance].random;
         _lblDesctiption.font = [TDFontLibrary sharedInstance].fontNormal;
         _lblDesctiption.text = @"Description of example item goes here. Description of example item goes here. Description of example item goes here. Description of example item goes here. Description of example item goes here.";
         _lblDesctiption.numberOfLines = 0;
@@ -55,13 +54,32 @@
         
         //
         _svPhotosByUsers = [UIScrollView new];
-        _svPhotosByUsers.backgroundColor = [FDColor sharedInstance].random;
+        _svPhotosByUsers.showsHorizontalScrollIndicator = NO;
         [_viewTvHeader addSubview:_svPhotosByUsers];
         
         [_svPhotosByUsers constrainTopSpaceToView:_lblDesctiption predicate:@"10"];
         [_svPhotosByUsers constrainWidthToView:_lblDesctiption predicate:nil];
         [_svPhotosByUsers alignLeadingEdgeWithView:_lblDesctiption predicate:nil];
-        [_svPhotosByUsers constrainHeight:@"60"];
+        [_svPhotosByUsers constrainHeight:@(constantUserImageSize).stringValue];
+        
+        int userImageCount = 8;
+        for (int i = 0; i < userImageCount; i++) {
+            UIImageView *iv = [UIImageView new];
+            [iv setImageWithURL:[NSURL URLWithString:SharedImage.urlVendorApple] placeholderImage:SharedImage.defaultImage];
+            [_svPhotosByUsers addSubview:iv];
+            [_photosByUsers addObject:iv];
+            
+            [iv alignTopEdgeWithView:_svPhotosByUsers predicate:@"0"];
+            [iv constrainWidth:@(constantUserImageSize).stringValue height:@(constantUserImageSize).stringValue];
+            
+            if (i == 0) {
+                [iv alignLeadingEdgeWithView:_svPhotosByUsers predicate:@"10"];
+            } else if (i == userImageCount - 1) {
+                [iv alignTrailingEdgeWithView:_svPhotosByUsers predicate:@"-10"];
+            }
+        }
+        
+        [UIView spaceOutViewsHorizontally:_photosByUsers predicate:@"20"];
     }
     
     return _viewTvHeader;
@@ -71,6 +89,9 @@
     
     _tvContent = [UITableView new];
     _tvContent.tableHeaderView = [self tvHeader];
+    _tvContent.delegate = self;
+    _tvContent.dataSource = self;
+    [_tvContent registerClass:[TDProductVendorCell class] forCellReuseIdentifier:STR_CELL_ID];
     [self.view addSubview:_tvContent];
 }
 
@@ -78,5 +99,20 @@
     [_tvContent alignToView:self.view];
 }
 
+
+#pragma mark - table view
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 10;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    TDProductVendorCell *cell = [tableView dequeueReusableCellWithIdentifier:STR_CELL_ID forIndexPath:indexPath];
+    
+    return cell;
+}
+
+-(float)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return [TDProductVendorCell cellHeight];
+}
 
 @end

@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "libPods-SVProgressHUD.a"
-               BlueprintIdentifier = "E1E3D8A6158544BCB7DCC96E"
+               BuildableName = "libPods-EDStarRating.a"
+               BlueprintIdentifier = "F3AF07B3C393499E95DAE16A"
                BuildableIdentifier = "primary"
-               BlueprintName = "Pods-SVProgressHUD">
+               BlueprintName = "Pods-EDStarRating">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

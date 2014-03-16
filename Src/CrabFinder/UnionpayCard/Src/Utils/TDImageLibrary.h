@@ -28,11 +28,21 @@ AS_SINGLETON(TDImageLibrary)
 @property (nonatomic, strong) UIImage *cellGroupRound;
 @property (nonatomic, strong) UIImage *cellRightArrow;
 
+@property (nonatomic, strong) UIImage *ratingStarEmpty;
+@property (nonatomic, strong) UIImage *ratingStarHalf;
+@property (nonatomic, strong) UIImage *ratingStarFull;
+
 @property (nonatomic, strong) UIImage *avatar;
 @property (nonatomic, strong) UIImage *farmersMarket;
 @property (nonatomic, strong) UIImage *boxChecked;
 @property (nonatomic, strong) UIImage *boxUnchecked;
-//@2x
-//@2x
+
+@property (nonatomic, strong) UIImage *defaultImage;
+
+#pragma mark - image urls
+@property (nonatomic, copy) NSString    *urlVendorApple;
 
 @end
+
+
+#define SharedImage ([TDImageLibrary sharedInstance])
