@@ -841,6 +841,7 @@
 		EAD5E21918C0583200EF9288 /* crab_boss@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EAD5E21818C0583200EF9288 /* crab_boss@2x.png */; };
 		EAD5E21B18C0619500EF9288 /* crab_logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EAD5E21A18C0619500EF9288 /* crab_logo@2x.png */; };
 		EAD6ACC618B79BC00003B24E /* TDLoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EAD6ACC518B79BC00003B24E /* TDLoginVC.m */; };
+		EAD9AA2818D72A2E002743F3 /* TDReviewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EAD9AA2718D72A2E002743F3 /* TDReviewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -1738,6 +1739,8 @@
 		EAD5E21A18C0619500EF9288 /* crab_logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "crab_logo@2x.png"; sourceTree = "<group>"; };
 		EAD6ACC418B79BC00003B24E /* TDLoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDLoginVC.h; sourceTree = "<group>"; };
 		EAD6ACC518B79BC00003B24E /* TDLoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDLoginVC.m; sourceTree = "<group>"; };
+		EAD9AA2618D72A2E002743F3 /* TDReviewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDReviewCell.h; sourceTree = "<group>"; };
+		EAD9AA2718D72A2E002743F3 /* TDReviewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDReviewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1774,6 +1777,8 @@
 				EACCBC1118D09B1C0084186B /* TDNotificationCell.m */,
 				EACC59C018D5A6D700759CDE /* TDProductVendorCell.h */,
 				EACC59C118D5A6D700759CDE /* TDProductVendorCell.m */,
+				EAD9AA2618D72A2E002743F3 /* TDReviewCell.h */,
+				EAD9AA2718D72A2E002743F3 /* TDReviewCell.m */,
 			);
 			path = TableCells;
 			sourceTree = "<group>";
@@ -3717,6 +3722,7 @@
 				EACCBC0F18D091940084186B /* TDNotification.m in Sources */,
 				EAC9D88418B888CF0096D555 /* TDForgetPasswordVC.m in Sources */,
 				EA901B0618B6491700B1E20F /* TDUtil.m in Sources */,
+				EAD9AA2818D72A2E002743F3 /* TDReviewCell.m in Sources */,
 				4C98ABF018B91E01007FAF12 /* NSNumber+otsCopy.m in Sources */,
 				EACD837D18CDF5220050EEA6 /* TDDealsVC.m in Sources */,
 				EAC7DCCD18C61E0C0076E32A /* TDUser.m in Sources */,

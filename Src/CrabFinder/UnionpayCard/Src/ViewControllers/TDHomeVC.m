@@ -9,6 +9,8 @@
 #import "TDHomeVC.h"
 
 #import "TDStatusFeedCell.h"
+#import "TDReviewCell.h"
+
 #import "TDNewsFeed.h"
 #import "TDStatusDetailVC.h"
 
@@ -24,6 +26,7 @@ typedef enum {
 }EVcType;
 
 const NSString *strStatusCellID = @"strStatusCellID";
+const NSString *strReviewCellID = @"strReviewCellID";
 const NSString *strStatusCellForHeightID = @"strStatusCellForHeightID";
 
 @interface TDHomeVC () <UITableViewDelegate, UITableViewDataSource> {
@@ -45,6 +48,20 @@ const NSString *strStatusCellForHeightID = @"strStatusCellForHeightID";
     [arr addObject:feed];
     
     feed = [TDNewsFeed new];
+    feed.review = [TDReview new];
+    feed.review.title = @"Romulan Commander Reviewed Kirk";
+    feed.review.content = @"Humans have a way of showing up when you least expect them.";
+    feed.review.rating = 3;
+    [arr addObject:feed];
+    
+    feed = [TDNewsFeed new];
+    feed.review = [TDReview new];
+    feed.review.title = @"Romulan Commander Reviewed Kirk";
+    feed.review.content = @"Humans have a way of showing up when you least expect them.";
+    feed.review.rating = 5;
+    [arr addObject:feed];
+    
+    feed = [TDNewsFeed new];
     feed.status = [TDStatusUpdate new];
     feed.status.title = @"Spock: Excuse me, there is a multi-legged creature crawling up your shoulder.";
     [arr addObject:feed];
@@ -54,19 +71,12 @@ const NSString *strStatusCellForHeightID = @"strStatusCellForHeightID";
     feed.status.title = @"Kirk Reviewed Spock: \nAh, my old friend Kirk, do you know the Klingon proverb that says revenge is a dish best served cold? It is very cold in space.He tasks me. He tasks me, and I shall have him. I'll chase him 'round the moons of Nibia and 'round the Antares Maelstrom and 'round perdition's flame before I give him up!";
     [arr addObject:feed];
     
-    feed = [TDNewsFeed new];
-    feed.status = [TDStatusUpdate new];
-    feed.status.title = @"Romulan Commander: Humans have a way of showing up when you least expect them.";
-    [arr addObject:feed];
     
     feed = [TDNewsFeed new];
-    feed.status = [TDStatusUpdate new];
-    feed.status.title = @"Spock: Excuse me, there is a multi-legged creature crawling up your shoulder.";
-    [arr addObject:feed];
-    
-    feed = [TDNewsFeed new];
-    feed.status = [TDStatusUpdate new];
-    feed.status.title = @"Kirk Reviewed Spock: \nSpock. Where the hell's the power you promised me?";
+    feed.review = [TDReview new];
+    feed.review.title = @"Romulan Commander Reviewed Kirk";
+    feed.review.content = @"Humans have a way of showing up when you least expect them.";
+    feed.review.rating = 2;
     [arr addObject:feed];
     
     return arr;
@@ -96,6 +106,7 @@ const NSString *strStatusCellForHeightID = @"strStatusCellForHeightID";
     
     [_tvFeed registerClass:[TDStatusFeedCell class] forCellReuseIdentifier:(NSString *)strStatusCellID];
     [_tvFeed registerClass:[TDStatusFeedCell class] forCellReuseIdentifier:(NSString *)strStatusCellForHeightID];
+    [_tvFeed registerClass:[TDReviewCell class] forCellReuseIdentifier:(NSString *)strReviewCellID];
     
     _sizingCell = [_tvFeed dequeueReusableCellWithIdentifier:(NSString *)strStatusCellForHeightID];
     
@@ -132,35 +143,48 @@ const NSString *strStatusCellForHeightID = @"strStatusCellForHeightID";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 
-    TDStatusFeedCell *cell = [tableView dequeueReusableCellWithIdentifier:(NSString *)strStatusCellID forIndexPath:indexPath];
-    
     TDNewsFeed *feed = _newsFeeds[indexPath.row];
+    if (feed.status) {
+        TDStatusFeedCell *cell = [tableView dequeueReusableCellWithIdentifier:(NSString *)strStatusCellID forIndexPath:indexPath];
+        
+        cell.lblTitle.text = [feed title];
+        
+        [cell setNeedsLayout];
+        [cell layoutIfNeeded];
+        
+        return cell;
+    }
     
+    TDReviewCell *cell = [tableView dequeueReusableCellWithIdentifier:(NSString *)strReviewCellID forIndexPath:indexPath];
     cell.lblTitle.text = [feed title];
-
-    [cell setNeedsLayout];
-    [cell layoutIfNeeded];
+    cell.lblMessage.text = feed.review.content;
+    cell.viewRating.rating = feed.review.rating;
     
     return cell;
 }
 
 -(float)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    _sizingCell.frame = tableView.bounds;
-    
     TDNewsFeed *feed = _newsFeeds[indexPath.row];
+    if (feed.status) {
+        _sizingCell.frame = tableView.bounds;
+        
+        _sizingCell.lblTitle.text = [feed title];
+        [_sizingCell setNeedsLayout];
+        [_sizingCell layoutIfNeeded];
+        CGSize size = [self.sizingCell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
+        return size.height + 1;
+    }
     
-    _sizingCell.lblTitle.text = [feed title];
-    [_sizingCell setNeedsLayout];
-    [_sizingCell layoutIfNeeded];
-    CGSize size = [self.sizingCell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
-    return size.height + 1;
+    return [TDReviewCell cellHeight];
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    TDStatusDetailVC *vc = [TDStatusDetailVC new];
     TDNewsFeed *feed = _newsFeeds[indexPath.row];
-    vc.statusUpdate = feed.status;
-    [self.navigationController pushViewController:vc animated:YES];
+    if (feed.status) {
+        TDStatusDetailVC *vc = [TDStatusDetailVC new];
+        vc.statusUpdate = feed.status;
+        [self.navigationController pushViewController:vc animated:YES];
+    }
 }
 
 @end
