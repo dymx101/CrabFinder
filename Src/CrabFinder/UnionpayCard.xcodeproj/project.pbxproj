@@ -842,6 +842,7 @@
 		EAD5E21B18C0619500EF9288 /* crab_logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EAD5E21A18C0619500EF9288 /* crab_logo@2x.png */; };
 		EAD6ACC618B79BC00003B24E /* TDLoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EAD6ACC518B79BC00003B24E /* TDLoginVC.m */; };
 		EAD9AA2818D72A2E002743F3 /* TDReviewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EAD9AA2718D72A2E002743F3 /* TDReviewCell.m */; };
+		EAD9AA2B18D730F0002743F3 /* TDComposeStatusVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EAD9AA2A18D730F0002743F3 /* TDComposeStatusVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -1741,6 +1742,8 @@
 		EAD6ACC518B79BC00003B24E /* TDLoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDLoginVC.m; sourceTree = "<group>"; };
 		EAD9AA2618D72A2E002743F3 /* TDReviewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDReviewCell.h; sourceTree = "<group>"; };
 		EAD9AA2718D72A2E002743F3 /* TDReviewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDReviewCell.m; sourceTree = "<group>"; };
+		EAD9AA2918D730F0002743F3 /* TDComposeStatusVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDComposeStatusVC.h; sourceTree = "<group>"; };
+		EAD9AA2A18D730F0002743F3 /* TDComposeStatusVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDComposeStatusVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -2691,6 +2694,8 @@
 				EA098BC718B98E1C0034E0CF /* TDRegisterVC.m */,
 				EA098BC918B98E590034E0CF /* TDRegisterNoAccountVC.h */,
 				EA098BCA18B98E590034E0CF /* TDRegisterNoAccountVC.m */,
+				EAD9AA2918D730F0002743F3 /* TDComposeStatusVC.h */,
+				EAD9AA2A18D730F0002743F3 /* TDComposeStatusVC.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -3737,6 +3742,7 @@
 				EACD837A18CDF5140050EEA6 /* TDNotificationsVC.m in Sources */,
 				4C98ABFA18B91E01007FAF12 /* NSString+safe.m in Sources */,
 				4C98ABEE18B91E01007FAF12 /* NSMutableDictionary+safe.m in Sources */,
+				EAD9AA2B18D730F0002743F3 /* TDComposeStatusVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

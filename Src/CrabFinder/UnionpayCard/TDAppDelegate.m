@@ -129,7 +129,7 @@
 
 - (void)customizeInterface {
     UINavigationBar *navigationBarAppearance = [UINavigationBar appearance];
-    
+    navigationBarAppearance.tintColor = [UIColor whiteColor];
     
     if ([[[UIDevice currentDevice] systemVersion] integerValue] >= 7.0) {
         [navigationBarAppearance setBackgroundImage:[UIImage imageNamed:@"bg_navigationBar_tall"]

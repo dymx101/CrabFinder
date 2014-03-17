@@ -13,6 +13,7 @@
 
 #import "TDNewsFeed.h"
 #import "TDStatusDetailVC.h"
+#import "TDComposeStatusVC.h"
 
 typedef enum {
     kVcRegister = 1000
@@ -88,6 +89,9 @@ const NSString *strStatusCellForHeightID = @"strStatusCellForHeightID";
     self.navigationItem.title = @"Newsfeed";
     _newsFeeds = [NSMutableArray array];
     [_newsFeeds addObjectsFromArray:[self fakeDataArray]];
+    
+    UIBarButtonItem *btnCompose = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCompose target:self action:@selector(composeAction:)];
+    self.navigationItem.rightBarButtonItem = btnCompose;
     
     [self installSearchToNavibar];
 	
@@ -185,6 +189,13 @@ const NSString *strStatusCellForHeightID = @"strStatusCellForHeightID";
         vc.statusUpdate = feed.status;
         [self.navigationController pushViewController:vc animated:YES];
     }
+}
+
+#pragma mark - actions
+-(void)composeAction:(id)sender {
+    DLog(@"composeAction:");
+    TDComposeStatusVC *vc = [TDComposeStatusVC new];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 @end
