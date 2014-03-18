@@ -10,8 +10,9 @@
 #import "TDLoginVC.h"
 #import "UIView+Effect.h"
 #import "TDStatusDetailVC.h"
+#import <MWPhotoBrowser/MWPhotoBrowser.h>
 
-@interface TDProfileVC () <UITableViewDelegate, UITableViewDataSource> {
+@interface TDProfileVC () <UITableViewDelegate, UITableViewDataSource, MWPhotoBrowserDelegate> {
     UITableView            *_tv;
     UIView                 *_headerView;
     
@@ -129,6 +130,7 @@
     
     //
     UIImage *crabImg = [UIImage imageNamed:@"crab_icon"];
+
     [self addImageArray:@[crabImg, crabImg, crabImg, crabImg, crabImg, crabImg, crabImg]];
     
     return _headerView;
@@ -170,6 +172,11 @@
     int i = 0;
     for (UIImage *image in aImages) {
         UIImageView *iv = [[UIImageView alloc] initWithImage:image];
+        iv.userInteractionEnabled = YES;
+        
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(imageTapped:)];
+        [iv addGestureRecognizer:tap];
+        
         [iv applyEffectBorder];
         [_horizontalScrollView addSubview:iv];
         [iv constrainWidth:@(IMAGE_SIZE).stringValue height:@(IMAGE_SIZE).stringValue];
@@ -185,7 +192,17 @@
     }
 }
 
+-(void)imageTapped:(id)sender {
+    MWPhotoBrowser *vc = [[MWPhotoBrowser alloc] initWithDelegate:self];
+    vc.enableGrid = YES;
+    vc.startOnGrid = YES;
+    
+    vc.displayActionButton = YES;
+    vc.displayNavArrows = YES;
 
+    UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:vc];
+    [self presentViewController:nc animated:YES completion:nil];
+}
 
 #pragma mark - 
 -(void)loginAction:(id)sender {
@@ -198,4 +215,45 @@
 - (void) getProfile:(NSString *) tOken{
    
 }
+
+#pragma mark -
+-(NSArray *)photos {
+    static NSMutableArray *photos;
+    if (photos == nil) {
+        photos = [NSMutableArray array];
+        [photos addObject:[MWPhoto photoWithURL:[NSURL URLWithString:@"http://farm4.static.flickr.com/3567/3523321514_371d9ac42f_b.jpg"]]];
+        [photos addObject:[MWPhoto photoWithURL:[NSURL URLWithString:@"http://farm4.static.flickr.com/3629/3339128908_7aecabc34b_b.jpg"]]];
+        [photos addObject:[MWPhoto photoWithURL:[NSURL URLWithString:@"http://farm4.static.flickr.com/3364/3338617424_7ff836d55f_b.jpg"]]];
+        [photos addObject:[MWPhoto photoWithURL:[NSURL URLWithString:@"http://farm4.static.flickr.com/3590/3329114220_5fbc5bc92b_b.jpg"]]];
+        [photos addObject:[MWPhoto photoWithURL:[NSURL URLWithString:@"http://farm3.static.flickr.com/2449/4052876281_6e068ac860_b.jpg"]]];
+    }
+    return photos;
+}
+
+-(NSArray *)thumbs {
+    
+    static NSMutableArray *thumbs;
+    if (thumbs == nil) {
+        thumbs = [NSMutableArray array];
+        [thumbs addObject:[MWPhoto photoWithURL:[NSURL URLWithString:@"http://farm4.static.flickr.com/3567/3523321514_371d9ac42f_q.jpg"]]];
+        [thumbs addObject:[MWPhoto photoWithURL:[NSURL URLWithString:@"http://farm4.static.flickr.com/3629/3339128908_7aecabc34b_q.jpg"]]];
+        [thumbs addObject:[MWPhoto photoWithURL:[NSURL URLWithString:@"http://farm4.static.flickr.com/3364/3338617424_7ff836d55f_q.jpg"]]];
+        [thumbs addObject:[MWPhoto photoWithURL:[NSURL URLWithString:@"http://farm4.static.flickr.com/3590/3329114220_5fbc5bc92b_q.jpg"]]];
+        [thumbs addObject:[MWPhoto photoWithURL:[NSURL URLWithString:@"http://farm3.static.flickr.com/2449/4052876281_6e068ac860_q.jpg"]]];
+    }
+    return thumbs;
+}
+
+- (NSUInteger)numberOfPhotosInPhotoBrowser:(MWPhotoBrowser *)photoBrowser {
+    return [self photos].count;
+}
+
+- (id <MWPhoto>)photoBrowser:(MWPhotoBrowser *)photoBrowser photoAtIndex:(NSUInteger)index {
+    return [self photos][index];
+}
+
+- (id <MWPhoto>)photoBrowser:(MWPhotoBrowser *)photoBrowser thumbPhotoAtIndex:(NSUInteger)index {
+    return [self thumbs][index];
+}
+
 @end
