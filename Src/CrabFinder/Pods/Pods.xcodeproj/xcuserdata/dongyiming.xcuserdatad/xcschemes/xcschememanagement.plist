@@ -24,7 +24,7 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-MNCalendarView.xcscheme</key>
+		<key>Pods-MBCalendarKit.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -57,52 +57,52 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>085FD1ED79234AE69329AE91</key>
+		<key>054547A66DA54F24B77E3206</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2032F2AFDD444C8DBA7DFC27</key>
+		<key>0AFE83E0576C4B35B1300C4B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>389114E548E04694809A2CEC</key>
+		<key>0BAB2A7D1AE541F98A44ACD7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5E5AD404CDDF43C2849D260F</key>
+		<key>17F2247B2BBE4CA98AEDAD81</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>75B373CB73F84DD181D016EC</key>
+		<key>28C702ECAFC74028A64B0F50</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7CC123DD8C574275807215F0</key>
+		<key>542F3B3BA0D04C789F69ABF8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A9D898E5571243C5965FAEC5</key>
+		<key>99066051060C410999A983F3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B397D9DC1D8341FDA36F0293</key>
+		<key>A91C93E85930400CB86703B2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>CC1266A07A8E41EB913BE428</key>
+		<key>B02B753A9CE14F9C897024CE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>FED6111DAA5B44A697614E74</key>
+		<key>B311EE98D552467E80DB42A0</key>
 		<dict>
 			<key>primary</key>
 			<true/>

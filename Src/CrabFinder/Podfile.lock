@@ -20,7 +20,7 @@ PODS:
   - EDColor (0.2.1)
   - EDStarRating (1.1)
   - FLKAutoLayout (0.1.1)
-  - MNCalendarView (0.0.1)
+  - MBCalendarKit (1.1.1)
   - RDVTabBarController (1.1.3)
   - SDWebImage (3.5.4):
     - SDWebImage/Core
@@ -33,7 +33,7 @@ DEPENDENCIES:
   - EDColor
   - EDStarRating (~> 1.1)
   - FLKAutoLayout (~> 0.1.1)
-  - MNCalendarView (~> 0.0.1)
+  - MBCalendarKit (~> 1.1.1)
   - RDVTabBarController (~> 1.1.3)
   - SDWebImage (~> 3.5.2)
   - SVProgressHUD (~> 1.0)
@@ -44,7 +44,7 @@ SPEC CHECKSUMS:
   EDColor: d3717ea14cd90bf47591d0dc66aeb871bd6c850d
   EDStarRating: 6761f41fd040f1cde155e2885dddc96461620f67
   FLKAutoLayout: fc04b932009174d4118ef4bda9dc8fedf1369efc
-  MNCalendarView: 418d04817ff7130a4ad5ae7eeb945cedd91e91a9
+  MBCalendarKit: ad46506c82539f38179e19e3fe51ebb04cf3f752
   RDVTabBarController: 98bb589109d139821ac08e26ab9215b9057285f6
   SDWebImage: 1a62010700adbba823b621fc217906739dbf6aa5
   SVProgressHUD: 5e10939a296debf5fe5a5895eda9539b8b2114f1

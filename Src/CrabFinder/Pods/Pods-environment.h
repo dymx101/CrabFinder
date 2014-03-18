@@ -66,11 +66,11 @@
 #define COCOAPODS_VERSION_MINOR_FLKAutoLayout 1
 #define COCOAPODS_VERSION_PATCH_FLKAutoLayout 1
 
-// MNCalendarView
-#define COCOAPODS_POD_AVAILABLE_MNCalendarView
-#define COCOAPODS_VERSION_MAJOR_MNCalendarView 0
-#define COCOAPODS_VERSION_MINOR_MNCalendarView 0
-#define COCOAPODS_VERSION_PATCH_MNCalendarView 1
+// MBCalendarKit
+#define COCOAPODS_POD_AVAILABLE_MBCalendarKit
+#define COCOAPODS_VERSION_MAJOR_MBCalendarKit 1
+#define COCOAPODS_VERSION_MINOR_MBCalendarKit 1
+#define COCOAPODS_VERSION_PATCH_MBCalendarKit 1
 
 // RDVTabBarController
 #define COCOAPODS_POD_AVAILABLE_RDVTabBarController
