@@ -34,8 +34,7 @@
 }
 
 -(void)createViews {
-    self.contentView.autoresizingMask = UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth;
-    
+
     _ivPhoto = [UIImageView new];
     _ivPhoto.image = [TDImageLibrary sharedInstance].avatar;
     [self.contentView addSubview:_ivPhoto];
@@ -61,6 +60,7 @@
 }
 
 -(void)setupConstraints {
+    self.contentView.autoresizingMask = UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth;
     _ivPhoto.translatesAutoresizingMaskIntoConstraints = NO;
     _lblTitle.translatesAutoresizingMaskIntoConstraints = NO;
     _imageContainerView.translatesAutoresizingMaskIntoConstraints = NO;
@@ -96,7 +96,6 @@
     //
     for (UIImageView *iv in _pictures) {
         [iv constrainWidth:@"40"];
-        //[iv constrainHeightToView:_imageContainerView predicate:@"0"];
         [iv alignTop:@"0" bottom:@"0" toView:_imageContainerView];
     }
 

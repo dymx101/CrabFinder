@@ -13,6 +13,7 @@
 #import "TDMerchantsVC.h"
 #import "TDProfileVC.h"
 #import "TDSettingsVC.h"
+#import "TDCalenderVC.h"
 
 @implementation TDAppDelegate
 
@@ -29,8 +30,8 @@
     _tabbarController = [RDVTabBarController new];
     NSArray *viewControllers = @[[self ncWithVC:[TDHomeVC new]]
                                  , [self ncWithVC:[TDMerchantsVC new]]
-                                 , [self ncWithVC:[TDProfileVC new]]
-                                 , [self ncWithVC:[TDSettingsVC new]]];
+                                 , [self ncWithVC:[TDCalenderVC new]]
+                                 , [self ncWithVC:[TDProfileVC new]]];
     _tabbarController.viewControllers = viewControllers;
     [self customizeTabBarForController:_tabbarController];
     
@@ -101,18 +102,18 @@
     item.unselectedTitleAttributes = unselectedTitleAttributes;
     [item setFinishedSelectedImage:selectedImage withFinishedUnselectedImage:normalImage];
     
-    normalImage = [UIImage imageNamed:@"icon_tabbar_mine.png"];
-    selectedImage = [UIImage imageNamed:@"icon_tabbar_mine_selected.png"];
+    normalImage = [UIImage imageNamed:@"icon_tabbar_misc.png"];
+    selectedImage = [UIImage imageNamed:@"icon_tabbar_misc_selected.png"];
     item = tabItems[2];
-    [item setTitle:@"Profile"];
+    [item setTitle:@"Calendar"];
     item.selectedTitleAttributes = selectedTitleAttributes;
     item.unselectedTitleAttributes = unselectedTitleAttributes;
     [item setFinishedSelectedImage:selectedImage withFinishedUnselectedImage:normalImage];
     
-    normalImage = [UIImage imageNamed:@"icon_tabbar_misc.png"];
-    selectedImage = [UIImage imageNamed:@"icon_tabbar_misc_selected.png"];
+    normalImage = [UIImage imageNamed:@"icon_tabbar_mine.png"];
+    selectedImage = [UIImage imageNamed:@"icon_tabbar_mine_selected.png"];
     item = tabItems[3];
-    [item setTitle:@"Settings"];
+    [item setTitle:@"Profile"];
     item.selectedTitleAttributes = selectedTitleAttributes;
     item.unselectedTitleAttributes = unselectedTitleAttributes;
     [item setFinishedSelectedImage:selectedImage withFinishedUnselectedImage:normalImage];

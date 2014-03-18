@@ -167,7 +167,7 @@ const NSString *strStatusCellForHeightID = @"strStatusCellForHeightID";
     return cell;
 }
 
--(float)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     TDNewsFeed *feed = _newsFeeds[indexPath.row];
     if (feed.status) {
         _sizingCell.frame = tableView.bounds;

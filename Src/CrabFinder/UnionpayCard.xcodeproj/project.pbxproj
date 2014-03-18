@@ -34,6 +34,7 @@
 		EA2C603A18C59EBF007E83D1 /* TDStatusFeedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2C603918C59EBF007E83D1 /* TDStatusFeedCell.m */; };
 		EA2C603C18C5AC90007E83D1 /* famers_market.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EA2C603B18C5AC90007E83D1 /* famers_market.jpg */; };
 		EA901B0618B6491700B1E20F /* TDUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = EA901B0518B6491700B1E20F /* TDUtil.m */; };
+		EAA843F518D8482C003F5032 /* TDCalenderVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA843F418D8482C003F5032 /* TDCalenderVC.m */; };
 		EAAED84318D1AD9400DA54F2 /* TDDeal.m in Sources */ = {isa = PBXBuildFile; fileRef = EAAED84218D1AD9400DA54F2 /* TDDeal.m */; };
 		EAC7DCCA18C61D930076E32A /* TDBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC7DCC918C61D930076E32A /* TDBaseModel.m */; };
 		EAC7DCCD18C61E0C0076E32A /* TDUser.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC7DCCC18C61E0C0076E32A /* TDUser.m */; };
@@ -895,6 +896,8 @@
 		EA2C603B18C5AC90007E83D1 /* famers_market.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = famers_market.jpg; sourceTree = "<group>"; };
 		EA901B0418B6491700B1E20F /* TDUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDUtil.h; sourceTree = "<group>"; };
 		EA901B0518B6491700B1E20F /* TDUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDUtil.m; sourceTree = "<group>"; };
+		EAA843F318D8482C003F5032 /* TDCalenderVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDCalenderVC.h; sourceTree = "<group>"; };
+		EAA843F418D8482C003F5032 /* TDCalenderVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDCalenderVC.m; sourceTree = "<group>"; };
 		EAAED84118D1AD9400DA54F2 /* TDDeal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDDeal.h; sourceTree = "<group>"; };
 		EAAED84218D1AD9400DA54F2 /* TDDeal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDDeal.m; sourceTree = "<group>"; };
 		EAC7DCC818C61D930076E32A /* TDBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDBaseModel.h; sourceTree = "<group>"; };
@@ -2696,6 +2699,8 @@
 				EA098BCA18B98E590034E0CF /* TDRegisterNoAccountVC.m */,
 				EAD9AA2918D730F0002743F3 /* TDComposeStatusVC.h */,
 				EAD9AA2A18D730F0002743F3 /* TDComposeStatusVC.m */,
+				EAA843F318D8482C003F5032 /* TDCalenderVC.h */,
+				EAA843F418D8482C003F5032 /* TDCalenderVC.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -3696,6 +3701,7 @@
 				EAD1249B18B604B600C6C145 /* FDColor.m in Sources */,
 				EAC7DCD018C61F160076E32A /* TDVendor.m in Sources */,
 				EACD838018CDF53B0050EEA6 /* TDSeasonalCategoriesVC.m in Sources */,
+				EAA843F518D8482C003F5032 /* TDCalenderVC.m in Sources */,
 				EAC7DCCA18C61D930076E32A /* TDBaseModel.m in Sources */,
 				EAD1249618B5F33300C6C145 /* FDDefine.m in Sources */,
 				EACC59C218D5A6D700759CDE /* TDProductVendorCell.m in Sources */,
