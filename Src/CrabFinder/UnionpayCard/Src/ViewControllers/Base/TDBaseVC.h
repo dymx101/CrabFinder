@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface TDBaseVC : UIViewController
+@property (nonatomic, strong) UIScrollView  *scrollView;
+
 -(void)installLogoToNavibar;
 -(void)installSearchToNavibar;
 -(void)installBackArrowToNavibar;

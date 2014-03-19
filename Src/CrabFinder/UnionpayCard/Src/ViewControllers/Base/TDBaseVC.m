@@ -39,6 +39,13 @@
     if (self.navigationController.viewControllers.count > 1 && self == self.navigationController.topViewController) {
         [self installBackArrowToNavibar];
     }
+    
+    // scrollView
+    _scrollView = [UIScrollView new];
+    _scrollView.backgroundColor = [UIColor clearColor];
+    _scrollView.showsVerticalScrollIndicator = NO;
+    [self.view addSubview:_scrollView];
+    [_scrollView alignToView:self.view];
 }
 
 

@@ -7,7 +7,8 @@
 //
 
 #import "TDBaseVC.h"
+#import "TDReview.h"
 
 @interface TDReviewDetailVC : TDBaseVC
-
+@property (nonatomic, strong) TDReview      *review;
 @end

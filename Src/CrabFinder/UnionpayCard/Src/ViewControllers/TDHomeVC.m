@@ -14,6 +14,7 @@
 #import "TDNewsFeed.h"
 #import "TDStatusDetailVC.h"
 #import "TDComposeStatusVC.h"
+#import "TDReviewDetailVC.h"
 
 typedef enum {
     kVcRegister = 1000
@@ -187,6 +188,10 @@ const NSString *strStatusCellForHeightID = @"strStatusCellForHeightID";
     if (feed.status) {
         TDStatusDetailVC *vc = [TDStatusDetailVC new];
         vc.statusUpdate = feed.status;
+        [self.navigationController pushViewController:vc animated:YES];
+    } else {
+        TDReviewDetailVC *vc = [TDReviewDetailVC new];
+        vc.review = feed.review;
         [self.navigationController pushViewController:vc animated:YES];
     }
 }

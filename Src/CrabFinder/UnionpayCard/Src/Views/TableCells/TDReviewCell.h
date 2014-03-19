@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <EDStarRating/EDStarRating.h>
 
 @interface TDReviewCell : UITableViewCell
 @property (nonatomic, strong) UIImageView     *ivPhoto;

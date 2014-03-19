@@ -111,7 +111,7 @@ const float constantUserImageSize = 60.f;
     return cell;
 }
 
--(float)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return [TDProductVendorCell cellHeight];
 }
 

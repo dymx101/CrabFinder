@@ -43,6 +43,7 @@
 		EAC7DCD618C61F920076E32A /* TDReview.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC7DCD518C61F920076E32A /* TDReview.m */; };
 		EAC9D88418B888CF0096D555 /* TDForgetPasswordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC9D88318B888CF0096D555 /* TDForgetPasswordVC.m */; };
 		EACA29A418D5BDBC009BCEA5 /* btn_add@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EACA29A318D5BDBC009BCEA5 /* btn_add@2x.png */; };
+		EACA42A718D9CB3200916F8C /* TDCommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EACA42A618D9CB3200916F8C /* TDCommentCell.m */; };
 		EACBE41618BF2EB100F2E9CF /* UIView+Effect.m in Sources */ = {isa = PBXBuildFile; fileRef = EACBE41518BF2EB100F2E9CF /* UIView+Effect.m */; };
 		EACC146018B36EE900DD27B0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EACC145F18B36EE900DD27B0 /* Foundation.framework */; };
 		EACC146218B36EE900DD27B0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EACC146118B36EE900DD27B0 /* CoreGraphics.framework */; };
@@ -913,6 +914,8 @@
 		EAC9D88218B888CF0096D555 /* TDForgetPasswordVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDForgetPasswordVC.h; sourceTree = "<group>"; };
 		EAC9D88318B888CF0096D555 /* TDForgetPasswordVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDForgetPasswordVC.m; sourceTree = "<group>"; };
 		EACA29A318D5BDBC009BCEA5 /* btn_add@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_add@2x.png"; sourceTree = "<group>"; };
+		EACA42A518D9CB3200916F8C /* TDCommentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDCommentCell.h; sourceTree = "<group>"; };
+		EACA42A618D9CB3200916F8C /* TDCommentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDCommentCell.m; sourceTree = "<group>"; };
 		EACBE41418BF2EB100F2E9CF /* UIView+Effect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Effect.h"; sourceTree = "<group>"; };
 		EACBE41518BF2EB100F2E9CF /* UIView+Effect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Effect.m"; sourceTree = "<group>"; };
 		EACC145C18B36EE900DD27B0 /* UnionpayCard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UnionpayCard.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1785,6 +1788,8 @@
 				EACC59C118D5A6D700759CDE /* TDProductVendorCell.m */,
 				EAD9AA2618D72A2E002743F3 /* TDReviewCell.h */,
 				EAD9AA2718D72A2E002743F3 /* TDReviewCell.m */,
+				EACA42A518D9CB3200916F8C /* TDCommentCell.h */,
+				EACA42A618D9CB3200916F8C /* TDCommentCell.m */,
 			);
 			path = TableCells;
 			sourceTree = "<group>";
@@ -3741,6 +3746,7 @@
 				EACD0D2A18B3A166009109CB /* TDHomeVC.m in Sources */,
 				EAD1249318B5F30200C6C145 /* TDImageLibrary.m in Sources */,
 				EAD1249E18B605D500C6C145 /* TDFontLibrary.m in Sources */,
+				EACA42A718D9CB3200916F8C /* TDCommentCell.m in Sources */,
 				4C98ABF318B91E01007FAF12 /* NSObject+Coder.m in Sources */,
 				EACD837618CDF5020050EEA6 /* TDReviewDetailVC.m in Sources */,
 				EA098BCB18B98E590034E0CF /* TDRegisterNoAccountVC.m in Sources */,
