@@ -34,6 +34,7 @@
 		EA2C603A18C59EBF007E83D1 /* TDStatusFeedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2C603918C59EBF007E83D1 /* TDStatusFeedCell.m */; };
 		EA2C603C18C5AC90007E83D1 /* famers_market.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EA2C603B18C5AC90007E83D1 /* famers_market.jpg */; };
 		EA500FB018DA88BA00F1291C /* btn_compose@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EA500FAF18DA88BA00F1291C /* btn_compose@2x.png */; };
+		EA500FB318DA9AD100F1291C /* TDComposeReviewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EA500FB218DA9AD100F1291C /* TDComposeReviewVC.m */; };
 		EA901B0618B6491700B1E20F /* TDUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = EA901B0518B6491700B1E20F /* TDUtil.m */; };
 		EAA843F518D8482C003F5032 /* TDCalenderVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA843F418D8482C003F5032 /* TDCalenderVC.m */; };
 		EAAED84318D1AD9400DA54F2 /* TDDeal.m in Sources */ = {isa = PBXBuildFile; fileRef = EAAED84218D1AD9400DA54F2 /* TDDeal.m */; };
@@ -897,6 +898,8 @@
 		EA2C603918C59EBF007E83D1 /* TDStatusFeedCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDStatusFeedCell.m; sourceTree = "<group>"; };
 		EA2C603B18C5AC90007E83D1 /* famers_market.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = famers_market.jpg; sourceTree = "<group>"; };
 		EA500FAF18DA88BA00F1291C /* btn_compose@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_compose@2x.png"; sourceTree = "<group>"; };
+		EA500FB118DA9AD100F1291C /* TDComposeReviewVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDComposeReviewVC.h; sourceTree = "<group>"; };
+		EA500FB218DA9AD100F1291C /* TDComposeReviewVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDComposeReviewVC.m; sourceTree = "<group>"; };
 		EA901B0418B6491700B1E20F /* TDUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDUtil.h; sourceTree = "<group>"; };
 		EA901B0518B6491700B1E20F /* TDUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDUtil.m; sourceTree = "<group>"; };
 		EAA843F318D8482C003F5032 /* TDCalenderVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDCalenderVC.h; sourceTree = "<group>"; };
@@ -2708,6 +2711,8 @@
 				EAD9AA2A18D730F0002743F3 /* TDComposeStatusVC.m */,
 				EAA843F318D8482C003F5032 /* TDCalenderVC.h */,
 				EAA843F418D8482C003F5032 /* TDCalenderVC.m */,
+				EA500FB118DA9AD100F1291C /* TDComposeReviewVC.h */,
+				EA500FB218DA9AD100F1291C /* TDComposeReviewVC.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -3759,6 +3764,7 @@
 				4C98ABFA18B91E01007FAF12 /* NSString+safe.m in Sources */,
 				4C98ABEE18B91E01007FAF12 /* NSMutableDictionary+safe.m in Sources */,
 				EAD9AA2B18D730F0002743F3 /* TDComposeStatusVC.m in Sources */,
+				EA500FB318DA9AD100F1291C /* TDComposeReviewVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

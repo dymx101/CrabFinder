@@ -91,7 +91,7 @@ const NSString *strStatusCellForHeightID = @"strStatusCellForHeightID";
     _newsFeeds = [NSMutableArray array];
     [_newsFeeds addObjectsFromArray:[self fakeDataArray]];
     
-    UIBarButtonItem *btnCompose = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"btn_compose"] style:UIBarButtonItemStylePlain target:self action:@selector(composeAction:)];//[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCompose target:self action:@selector(composeAction:)];
+    UIBarButtonItem *btnCompose = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"btn_compose"] style:UIBarButtonItemStylePlain target:self action:@selector(composeAction:)];
     self.navigationItem.rightBarButtonItem = btnCompose;
     
     [self installSearchToNavibar];

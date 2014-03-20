@@ -12,6 +12,8 @@
 #import "TDStatusDetailVC.h"
 #import <MWPhotoBrowser/MWPhotoBrowser.h>
 
+#import "TDComposeReviewVC.h"
+
 @interface TDProfileVC () <UITableViewDelegate, UITableViewDataSource, MWPhotoBrowserDelegate> {
     UITableView            *_tv;
     UIView                 *_headerView;
@@ -33,6 +35,10 @@
 {
     [super viewDidLoad];
     self.navigationItem.title = @"Profile";
+    
+    UIBarButtonItem *btnCompose = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"btn_compose"] style:UIBarButtonItemStylePlain target:self action:@selector(composeAction:)];
+    self.navigationItem.rightBarButtonItem = btnCompose;
+    
     
     [self createSubviews];
     [self layoutSubviews];
@@ -56,7 +62,7 @@
 }
 
 #pragma mark -
--(int)numberOfSectionsInTableView:(UITableView *)tableView {
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 2;
 }
 
@@ -211,10 +217,17 @@
     [self presentViewController:nc animated:YES completion:nil];
 }
 
+-(void)composeAction:(id)sender {
+    TDComposeReviewVC *vc = [TDComposeReviewVC new];
+    UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:vc];
+    [self presentViewController:nc animated:YES completion:nil];
+}
+
 #pragma delegate - 
 - (void) getProfile:(NSString *) tOken{
    
 }
+
 
 #pragma mark -
 -(NSArray *)photos {
