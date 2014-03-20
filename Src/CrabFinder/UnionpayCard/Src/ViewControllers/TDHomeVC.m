@@ -200,7 +200,8 @@ const NSString *strStatusCellForHeightID = @"strStatusCellForHeightID";
 -(void)composeAction:(id)sender {
     DLog(@"composeAction:");
     TDComposeStatusVC *vc = [TDComposeStatusVC new];
-    [self.navigationController pushViewController:vc animated:YES];
+    UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:vc];
+    [self presentViewController:nc animated:YES completion:nil];
 }
 
 @end

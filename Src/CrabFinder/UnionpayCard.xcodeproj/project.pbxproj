@@ -198,7 +198,7 @@
 		EACC181218B36F9100DD27B0 /* bg_ticket_machine_hint_cell_single@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EACC151E18B36F8600DD27B0 /* bg_ticket_machine_hint_cell_single@2x.png */; };
 		EACC181318B36F9100DD27B0 /* bg_ticket_machine_hint_cell_top@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EACC151F18B36F8600DD27B0 /* bg_ticket_machine_hint_cell_top@2x.png */; };
 		EACC181418B36F9100DD27B0 /* bg_transparent.png in Resources */ = {isa = PBXBuildFile; fileRef = EACC152018B36F8600DD27B0 /* bg_transparent.png */; };
-		EACC181518B36F9100DD27B0 /* bg_uploadimage_addimage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EACC152118B36F8600DD27B0 /* bg_uploadimage_addimage@2x.png */; };
+		EACC181518B36F9100DD27B0 /* btn_add_image@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EACC152118B36F8600DD27B0 /* btn_add_image@2x.png */; };
 		EACC181618B36F9100DD27B0 /* bg_uploadimage_addimage_takephoto@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EACC152218B36F8600DD27B0 /* bg_uploadimage_addimage_takephoto@2x.png */; };
 		EACC181718B36F9100DD27B0 /* bg_uploadimage_default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EACC152318B36F8600DD27B0 /* bg_uploadimage_default@2x.png */; };
 		EACC181818B36F9100DD27B0 /* bg_uploadImage_frame@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EACC152418B36F8600DD27B0 /* bg_uploadImage_frame@2x.png */; };
@@ -1080,7 +1080,7 @@
 		EACC151E18B36F8600DD27B0 /* bg_ticket_machine_hint_cell_single@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg_ticket_machine_hint_cell_single@2x.png"; sourceTree = "<group>"; };
 		EACC151F18B36F8600DD27B0 /* bg_ticket_machine_hint_cell_top@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg_ticket_machine_hint_cell_top@2x.png"; sourceTree = "<group>"; };
 		EACC152018B36F8600DD27B0 /* bg_transparent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_transparent.png; sourceTree = "<group>"; };
-		EACC152118B36F8600DD27B0 /* bg_uploadimage_addimage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg_uploadimage_addimage@2x.png"; sourceTree = "<group>"; };
+		EACC152118B36F8600DD27B0 /* btn_add_image@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_add_image@2x.png"; sourceTree = "<group>"; };
 		EACC152218B36F8600DD27B0 /* bg_uploadimage_addimage_takephoto@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg_uploadimage_addimage_takephoto@2x.png"; sourceTree = "<group>"; };
 		EACC152318B36F8600DD27B0 /* bg_uploadimage_default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg_uploadimage_default@2x.png"; sourceTree = "<group>"; };
 		EACC152418B36F8600DD27B0 /* bg_uploadImage_frame@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg_uploadImage_frame@2x.png"; sourceTree = "<group>"; };
@@ -2056,7 +2056,7 @@
 				EACC151E18B36F8600DD27B0 /* bg_ticket_machine_hint_cell_single@2x.png */,
 				EACC151F18B36F8600DD27B0 /* bg_ticket_machine_hint_cell_top@2x.png */,
 				EACC152018B36F8600DD27B0 /* bg_transparent.png */,
-				EACC152118B36F8600DD27B0 /* bg_uploadimage_addimage@2x.png */,
+				EACC152118B36F8600DD27B0 /* btn_add_image@2x.png */,
 				EACC152218B36F8600DD27B0 /* bg_uploadimage_addimage_takephoto@2x.png */,
 				EACC152318B36F8600DD27B0 /* bg_uploadimage_default@2x.png */,
 				EACC152418B36F8600DD27B0 /* bg_uploadImage_frame@2x.png */,
@@ -3086,7 +3086,7 @@
 				EACC181018B36F9100DD27B0 /* bg_tableViewCell_highlighted.png in Resources */,
 				EACC179718B36F9100DD27B0 /* bg_deal_moreDetail_buyAction@2x.png in Resources */,
 				EACC192118B36F9100DD27B0 /* icon_homepage_KTVCategory.png in Resources */,
-				EACC181518B36F9100DD27B0 /* bg_uploadimage_addimage@2x.png in Resources */,
+				EACC181518B36F9100DD27B0 /* btn_add_image@2x.png in Resources */,
 				EACC18C318B36F9100DD27B0 /* icon_cate_selected_0.png in Resources */,
 				EACC1A1E18B36F9200DD27B0 /* logo_share_qq.png in Resources */,
 				EACC1A5A18B36F9200DD27B0 /* share_logo_weixinFriends.png in Resources */,
