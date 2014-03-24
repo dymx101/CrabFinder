@@ -11,5 +11,5 @@ pod 'EDStarRating', '~> 1.1'
 
 #pod 'MNCalendarView', '~> 0.0.1'
 #pod 'ABCalendarPicker', '~> 1.1.2'
-pod 'MBCalendarKit', '~> 1.1.1'
+pod 'MBCalendarKit', '1.1.1'
 pod 'MWPhotoBrowser', '~> 1.4.0'

@@ -3,57 +3,57 @@
    LastUpgradeVersion = "0500"
    version = "1.3">
    <BuildAction
-      buildImplicitDependencies = "YES"
-      parallelizeBuildables = "YES">
+      parallelizeBuildables = "YES"
+      buildImplicitDependencies = "YES">
       <BuildActionEntries>
          <BuildActionEntry
-            buildForRunning = "YES"
             buildForAnalyzing = "YES"
-            buildForProfiling = "YES"
             buildForTesting = "YES"
-            buildForArchiving = "YES">
+            buildForArchiving = "YES"
+            buildForProfiling = "YES"
+            buildForRunning = "YES">
             <BuildableReference
                ReferencedContainer = "container:Pods.xcodeproj"
+               BuildableIdentifier = "primary"
                BlueprintName = "Pods-FLKAutoLayout"
-               BlueprintIdentifier = "073495E8333C4759BEED8FDB"
-               BuildableName = "libPods-FLKAutoLayout.a"
-               BuildableIdentifier = "primary">
+               BlueprintIdentifier = "83F83B82F3F242798418261E"
+               BuildableName = "libPods-FLKAutoLayout.a">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
+      buildConfiguration = "Debug"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
-      buildConfiguration = "Debug"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
    </TestAction>
    <LaunchAction
-      allowLocationSimulation = "YES"
-      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      launchStyle = "0"
-      debugDocumentVersioning = "YES"
-      ignoresPersistentStateOnLaunch = "NO"
-      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       buildConfiguration = "Debug"
-      useCustomWorkingDirectory = "NO">
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      allowLocationSimulation = "YES"
+      useCustomWorkingDirectory = "NO"
+      launchStyle = "0"
+      ignoresPersistentStateOnLaunch = "NO"
+      debugDocumentVersioning = "YES">
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
    <ProfileAction
-      savedToolIdentifier = ""
-      debugDocumentVersioning = "YES"
       buildConfiguration = "Release"
+      useCustomWorkingDirectory = "NO"
+      savedToolIdentifier = ""
       shouldUseLaunchSchemeArgsEnv = "YES"
-      useCustomWorkingDirectory = "NO">
+      debugDocumentVersioning = "YES">
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
    </AnalyzeAction>
    <ArchiveAction
-      revealArchiveInOrganizer = "YES"
-      buildConfiguration = "Release">
+      buildConfiguration = "Release"
+      revealArchiveInOrganizer = "YES">
    </ArchiveAction>
 </Scheme>

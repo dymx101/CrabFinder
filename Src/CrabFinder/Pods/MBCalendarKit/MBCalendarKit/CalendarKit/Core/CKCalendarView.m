@@ -68,6 +68,7 @@
         _table = [UITableView new];
         [_table setDelegate:self];
         [_table setDataSource:self];
+        _table.separatorStyle = UITableViewCellSeparatorStyleNone;
         
         [_table registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
         [_table registerClass:[UITableViewCell class] forCellReuseIdentifier:@"noDataCell"];
@@ -943,7 +944,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     NSInteger count = [[self events] count];
-    
+    _table.separatorStyle = (count == 0) ? UITableViewCellSeparatorStyleNone : UITableViewCellSeparatorStyleSingleLine;
     if (count == 0) {
         count = 2;
     }

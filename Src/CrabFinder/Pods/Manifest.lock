@@ -41,7 +41,7 @@ DEPENDENCIES:
   - EDColor
   - EDStarRating (~> 1.1)
   - FLKAutoLayout (~> 0.1.1)
-  - MBCalendarKit (~> 1.1.1)
+  - MBCalendarKit (= 1.1.1)
   - MWPhotoBrowser (~> 1.4.0)
   - RDVTabBarController (~> 1.1.3)
   - SDWebImage (~> 3.5.2)

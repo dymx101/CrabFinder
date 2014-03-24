@@ -9,10 +9,12 @@
 #import "TDCalenderVC.h"
 #import <MBCalendarKit/CalendarKit.h>
 #import <MBCalendarKit/NSDate+Components.h>
+#import "TDEvent.h"
 
 @interface TDCalenderVC () <CKCalendarViewDelegate, CKCalendarViewDataSource>
 {
-    CKCalendarView *_calendarView;
+    CKCalendarView  *_calendarView;
+    NSMutableArray         *_events;
 }
 
 @end
@@ -23,6 +25,33 @@
 {
     [super viewDidLoad];
     self.navigationItem.title = @"Calendar";
+    
+    _events = [NSMutableArray array];
+    
+    TDEvent *event = [TDEvent new];
+    event.name = @"Walmart";
+    event.time = [NSDate dateWithDay:18 month:3 year:2014];
+    event.rating = 3.5;
+    [_events addObject:event];
+    
+    event = [TDEvent new];
+    event.name = @"Farmer's Market Name";
+    event.time = [NSDate dateWithDay:18 month:3 year:2014];
+    event.rating = 5;
+    [_events addObject:event];
+    
+    event = [TDEvent new];
+    event.name = @"Farmer's Market Name";
+    event.time = [NSDate dateWithDay:18 month:3 year:2014];
+    event.rating = 5;
+    [_events addObject:event];
+    
+    event = [TDEvent new];
+    event.name = @"Farmer's Market Name";
+    event.time = [NSDate dateWithDay:18 month:3 year:2014];
+    event.rating = 5;
+    [_events addObject:event];
+    
     
     [self initViews];
     [self setupViews];
@@ -41,10 +70,14 @@
 
 #pragma mark -
 - (NSArray *)calendarView:(CKCalendarView *)calendarView eventsForDate:(NSDate *)date {
-    NSDate *eventDate = [NSDate dateWithDay:18 month:3 year:2014];
-    CKCalendarEvent *event1 = [CKCalendarEvent eventWithTitle:@"test1" andDate:eventDate andInfo:nil];
-    CKCalendarEvent *event2 = [CKCalendarEvent eventWithTitle:@"test2" andDate:eventDate andInfo:nil];
-    return ([eventDate timeIntervalSinceDate:date] == 0) ? @[event1, event2] : nil;
+    NSMutableArray *calenderEvents = [NSMutableArray array];
+    for (TDEvent *event in _events) {
+        if ([event.time timeIntervalSinceDate:date] == 0) {
+            CKCalendarEvent *calendarEvent = [CKCalendarEvent eventWithTitle:event.name andDate:event.time andInfo:@{@"info" : event}];
+            [calenderEvents addObject:calendarEvent];
+        }
+    }
+    return calenderEvents;
 }
 
 - (void)calendarView:(CKCalendarView *)CalendarView willSelectDate:(NSDate *)date {
