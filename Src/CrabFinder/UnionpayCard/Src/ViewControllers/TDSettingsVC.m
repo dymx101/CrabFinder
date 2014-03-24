@@ -24,7 +24,7 @@ const NSString *strSettingCellID = @"strSettingCellID";
     [super viewDidLoad];
     self.navigationItem.title = @"Settings";
     
-    [self installLogoToNavibar];
+    self.navigationItem.rightBarButtonItem = nil;
     
     [self createViews];
     [self layoutViews];
@@ -56,7 +56,7 @@ const NSString *strSettingCellID = @"strSettingCellID";
 
 
 #pragma mark -
--(int)numberOfSectionsInTableView:(UITableView *)tableView {
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return [self settingItems].count;
 }
 
@@ -69,8 +69,8 @@ const NSString *strSettingCellID = @"strSettingCellID";
     
     TDSettingCell *cell = [tableView dequeueReusableCellWithIdentifier:(NSString *)strSettingCellID];
     
-    int section = indexPath.section;
-    int row = indexPath.row;
+    NSInteger section = indexPath.section;
+    NSInteger row = indexPath.row;
     ETDCellStyle cellStyle = [TDSettingCell cellStyleWithIndexPath:indexPath tableView:tableView tableViewDataSource:self];
     [cell setStyle:cellStyle];
     cell.lblTitle.text = [self settingItems][section][row];
@@ -78,7 +78,7 @@ const NSString *strSettingCellID = @"strSettingCellID";
     return cell;
 }
 
--(float)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return [TDSettingCell HEIGHT];
 }
 
@@ -86,7 +86,7 @@ const NSString *strSettingCellID = @"strSettingCellID";
     return [UIView new];
 }
 
--(float)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
     return 20.f;
 }
 

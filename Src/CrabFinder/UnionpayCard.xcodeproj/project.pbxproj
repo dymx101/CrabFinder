@@ -840,6 +840,7 @@
 		EACFEB4318E00D9D003782BE /* TDVendorsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EACFEB4218E00D9D003782BE /* TDVendorsVC.m */; };
 		EACFEB4618E01AD9003782BE /* btn_blue_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = EACFEB4418E01AD9003782BE /* btn_blue_bg.png */; };
 		EACFEB4718E01AD9003782BE /* btn_blue_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EACFEB4518E01AD9003782BE /* btn_blue_bg@2x.png */; };
+		EACFEB8A18E02DFE003782BE /* icon_gear@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EACFEB8918E02DFE003782BE /* icon_gear@2x.png */; };
 		EAD1248D18B5EC2900C6C145 /* bg_navigationBar_tall@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EAD1248C18B5EC2900C6C145 /* bg_navigationBar_tall@2x.png */; };
 		EAD1248F18B5F1CD00C6C145 /* union_pay@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EAD1248E18B5F1CD00C6C145 /* union_pay@2x.png */; };
 		EAD1249318B5F30200C6C145 /* TDImageLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = EAD1249218B5F30200C6C145 /* TDImageLibrary.m */; };
@@ -1752,6 +1753,7 @@
 		EACFEB4218E00D9D003782BE /* TDVendorsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDVendorsVC.m; sourceTree = "<group>"; };
 		EACFEB4418E01AD9003782BE /* btn_blue_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_blue_bg.png; sourceTree = "<group>"; };
 		EACFEB4518E01AD9003782BE /* btn_blue_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_blue_bg@2x.png"; sourceTree = "<group>"; };
+		EACFEB8918E02DFE003782BE /* icon_gear@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_gear@2x.png"; sourceTree = "<group>"; };
 		EAD1248C18B5EC2900C6C145 /* bg_navigationBar_tall@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg_navigationBar_tall@2x.png"; sourceTree = "<group>"; };
 		EAD1248E18B5F1CD00C6C145 /* union_pay@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "union_pay@2x.png"; sourceTree = "<group>"; };
 		EAD1249118B5F30200C6C145 /* TDImageLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDImageLibrary.h; sourceTree = "<group>"; };
@@ -2792,6 +2794,7 @@
 		EACD0D3418B3A51F009109CB /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				EACFEB8918E02DFE003782BE /* icon_gear@2x.png */,
 				EACFEB4418E01AD9003782BE /* btn_blue_bg.png */,
 				EACFEB4518E01AD9003782BE /* btn_blue_bg@2x.png */,
 				EA500FAF18DA88BA00F1291C /* btn_compose@2x.png */,
@@ -3306,6 +3309,7 @@
 				EACC18F418B36F9100DD27B0 /* icon_deal_soldNumber_enabled@2x.png in Resources */,
 				EACC1A6E18B36F9200DD27B0 /* ump_btn_key_hidden_forcus.png in Resources */,
 				EACC183018B36F9100DD27B0 /* btn_buttonItem_disabled.png in Resources */,
+				EACFEB8A18E02DFE003782BE /* icon_gear@2x.png in Resources */,
 				EACC193318B36F9100DD27B0 /* icon_hotTopicList_redFlag@2x.png in Resources */,
 				EACC187018B36F9100DD27B0 /* btn_r.png in Resources */,
 				EACC17AC18B36F9100DD27B0 /* bg_filter_price_selected@2x.png in Resources */,

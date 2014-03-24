@@ -13,6 +13,7 @@
 #import <MWPhotoBrowser/MWPhotoBrowser.h>
 
 #import "TDComposeReviewVC.h"
+#import "TDSettingsVC.h"
 
 @interface TDProfileVC () <UITableViewDelegate, UITableViewDataSource, MWPhotoBrowserDelegate> {
     UITableView            *_tv;
@@ -38,9 +39,17 @@
     
     [self installSearchToNavibar];
     
+    UIBarButtonItem *btnSettings = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"icon_gear"] style:UIBarButtonItemStylePlain target:self action:@selector(goSettings:)];
+    self.navigationItem.rightBarButtonItem = btnSettings;
+    
     [self createSubviews];
     [self layoutSubviews];
     
+}
+
+-(void)goSettings:(id)sender {
+    TDSettingsVC *vc = [TDSettingsVC new];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 -(void)createSubviews {
