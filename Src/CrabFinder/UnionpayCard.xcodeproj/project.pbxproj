@@ -833,6 +833,7 @@
 		EACD837D18CDF5220050EEA6 /* TDDealsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EACD837C18CDF5220050EEA6 /* TDDealsVC.m */; };
 		EACD838018CDF53B0050EEA6 /* TDSeasonalCategoriesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EACD837F18CDF53B0050EEA6 /* TDSeasonalCategoriesVC.m */; };
 		EACFEB3118DFE39B003782BE /* TDEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = EACFEB3018DFE39B003782BE /* TDEvent.m */; };
+		EACFEB3518DFF9BD003782BE /* TDCalenderDayVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EACFEB3418DFF9BD003782BE /* TDCalenderDayVC.m */; };
 		EAD1248D18B5EC2900C6C145 /* bg_navigationBar_tall@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EAD1248C18B5EC2900C6C145 /* bg_navigationBar_tall@2x.png */; };
 		EAD1248F18B5F1CD00C6C145 /* union_pay@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EAD1248E18B5F1CD00C6C145 /* union_pay@2x.png */; };
 		EAD1249318B5F30200C6C145 /* TDImageLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = EAD1249218B5F30200C6C145 /* TDImageLibrary.m */; };
@@ -1734,6 +1735,8 @@
 		EACD837F18CDF53B0050EEA6 /* TDSeasonalCategoriesVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDSeasonalCategoriesVC.m; sourceTree = "<group>"; };
 		EACFEB2F18DFE39B003782BE /* TDEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDEvent.h; sourceTree = "<group>"; };
 		EACFEB3018DFE39B003782BE /* TDEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDEvent.m; sourceTree = "<group>"; };
+		EACFEB3318DFF9BD003782BE /* TDCalenderDayVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDCalenderDayVC.h; sourceTree = "<group>"; };
+		EACFEB3418DFF9BD003782BE /* TDCalenderDayVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDCalenderDayVC.m; sourceTree = "<group>"; };
 		EAD1248C18B5EC2900C6C145 /* bg_navigationBar_tall@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg_navigationBar_tall@2x.png"; sourceTree = "<group>"; };
 		EAD1248E18B5F1CD00C6C145 /* union_pay@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "union_pay@2x.png"; sourceTree = "<group>"; };
 		EAD1249118B5F30200C6C145 /* TDImageLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDImageLibrary.h; sourceTree = "<group>"; };
@@ -2694,6 +2697,7 @@
 		EACD0D1F18B3A050009109CB /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				EACFEB3218DFF988003782BE /* Calendar */,
 				EACD837118CDF5020050EEA6 /* SubVCs */,
 				EACD0D2018B3A050009109CB /* Base */,
 				EACD0D2818B3A166009109CB /* TDHomeVC.h */,
@@ -2811,6 +2815,15 @@
 				EAD3ECD218D47024001F8575 /* TDProductDetailVC.m */,
 			);
 			path = SubVCs;
+			sourceTree = "<group>";
+		};
+		EACFEB3218DFF988003782BE /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				EACFEB3318DFF9BD003782BE /* TDCalenderDayVC.h */,
+				EACFEB3418DFF9BD003782BE /* TDCalenderDayVC.m */,
+			);
+			path = Calendar;
 			sourceTree = "<group>";
 		};
 		EAD1249018B5F2E500C6C145 /* Utils */ = {
@@ -3737,6 +3750,7 @@
 				4C98ABF218B91E01007FAF12 /* NSObject+BeeNotification.m in Sources */,
 				4C98ABEF18B91E01007FAF12 /* NSMutableString+safe.m in Sources */,
 				EA10FA9D18C6F7D500D4395C /* TDNewsFeed.m in Sources */,
+				EACFEB3518DFF9BD003782BE /* TDCalenderDayVC.m in Sources */,
 				4C98AB1B18B7E13C007FAF12 /* TDJsonToDictionary.m in Sources */,
 				EACD837718CDF5020050EEA6 /* TDStatusDetailVC.m in Sources */,
 				EACD64ED18CD4D64005621EC /* TDProduct.m in Sources */,

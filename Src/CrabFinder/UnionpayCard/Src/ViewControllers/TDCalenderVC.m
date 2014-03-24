@@ -10,6 +10,7 @@
 #import <MBCalendarKit/CalendarKit.h>
 #import <MBCalendarKit/NSDate+Components.h>
 #import "TDEvent.h"
+#import "TDCalenderDayVC.h"
 
 @interface TDCalenderVC () <CKCalendarViewDelegate, CKCalendarViewDataSource>
 {
@@ -86,6 +87,11 @@
 
 - (void)calendarView:(CKCalendarView *)CalendarView didSelectDate:(NSDate *)date {
     DLog(@"date:%@ tapped", date);
+    NSArray *calendarEvents = [self calendarView:CalendarView eventsForDate:date];
+    if (calendarEvents.count > 0) {
+        TDCalenderDayVC *vc = [TDCalenderDayVC new];
+        [self.navigationController pushViewController:vc animated:YES];
+    }
 }
 
 - (void)calendarView:(CKCalendarView *)CalendarView didSelectEvent:(CKCalendarEvent *)event {
