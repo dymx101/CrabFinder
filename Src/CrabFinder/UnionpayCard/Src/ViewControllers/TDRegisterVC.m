@@ -45,7 +45,7 @@
     [self.view addSubview:_tfInput];
     
     _btnGetCode = [UIButton new];
-    [_btnGetCode setBackgroundImage:[TDImageLibrary sharedInstance].btnBgGreen forState:UIControlStateNormal];
+    [_btnGetCode setBackgroundImage:[TDImageLibrary sharedInstance].btnBg forState:UIControlStateNormal];
     [_btnGetCode setTitle:@"获取验证码" forState:UIControlStateNormal];
     _btnGetCode.titleLabel.font = [TDFontLibrary sharedInstance].fontTitleBold;
     [self.view addSubview:_btnGetCode];

@@ -835,6 +835,11 @@
 		EACFEB3118DFE39B003782BE /* TDEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = EACFEB3018DFE39B003782BE /* TDEvent.m */; };
 		EACFEB3518DFF9BD003782BE /* TDCalenderDayVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EACFEB3418DFF9BD003782BE /* TDCalenderDayVC.m */; };
 		EACFEB3818E00233003782BE /* TDDayEventCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EACFEB3718E00233003782BE /* TDDayEventCell.m */; };
+		EACFEB3F18E005E1003782BE /* TDMarketDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EACFEB3D18E005E1003782BE /* TDMarketDetailVC.m */; };
+		EACFEB4018E005E1003782BE /* TDMarketDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = EACFEB3E18E005E1003782BE /* TDMarketDetailVC.xib */; };
+		EACFEB4318E00D9D003782BE /* TDVendorsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EACFEB4218E00D9D003782BE /* TDVendorsVC.m */; };
+		EACFEB4618E01AD9003782BE /* btn_blue_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = EACFEB4418E01AD9003782BE /* btn_blue_bg.png */; };
+		EACFEB4718E01AD9003782BE /* btn_blue_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EACFEB4518E01AD9003782BE /* btn_blue_bg@2x.png */; };
 		EAD1248D18B5EC2900C6C145 /* bg_navigationBar_tall@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EAD1248C18B5EC2900C6C145 /* bg_navigationBar_tall@2x.png */; };
 		EAD1248F18B5F1CD00C6C145 /* union_pay@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EAD1248E18B5F1CD00C6C145 /* union_pay@2x.png */; };
 		EAD1249318B5F30200C6C145 /* TDImageLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = EAD1249218B5F30200C6C145 /* TDImageLibrary.m */; };
@@ -1740,6 +1745,13 @@
 		EACFEB3418DFF9BD003782BE /* TDCalenderDayVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDCalenderDayVC.m; sourceTree = "<group>"; };
 		EACFEB3618E00233003782BE /* TDDayEventCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDDayEventCell.h; sourceTree = "<group>"; };
 		EACFEB3718E00233003782BE /* TDDayEventCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDDayEventCell.m; sourceTree = "<group>"; };
+		EACFEB3C18E005E1003782BE /* TDMarketDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDMarketDetailVC.h; sourceTree = "<group>"; };
+		EACFEB3D18E005E1003782BE /* TDMarketDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDMarketDetailVC.m; sourceTree = "<group>"; };
+		EACFEB3E18E005E1003782BE /* TDMarketDetailVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TDMarketDetailVC.xib; sourceTree = "<group>"; };
+		EACFEB4118E00D9D003782BE /* TDVendorsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDVendorsVC.h; sourceTree = "<group>"; };
+		EACFEB4218E00D9D003782BE /* TDVendorsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDVendorsVC.m; sourceTree = "<group>"; };
+		EACFEB4418E01AD9003782BE /* btn_blue_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_blue_bg.png; sourceTree = "<group>"; };
+		EACFEB4518E01AD9003782BE /* btn_blue_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_blue_bg@2x.png"; sourceTree = "<group>"; };
 		EAD1248C18B5EC2900C6C145 /* bg_navigationBar_tall@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg_navigationBar_tall@2x.png"; sourceTree = "<group>"; };
 		EAD1248E18B5F1CD00C6C145 /* union_pay@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "union_pay@2x.png"; sourceTree = "<group>"; };
 		EAD1249118B5F30200C6C145 /* TDImageLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDImageLibrary.h; sourceTree = "<group>"; };
@@ -2780,6 +2792,8 @@
 		EACD0D3418B3A51F009109CB /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				EACFEB4418E01AD9003782BE /* btn_blue_bg.png */,
+				EACFEB4518E01AD9003782BE /* btn_blue_bg@2x.png */,
 				EA500FAF18DA88BA00F1291C /* btn_compose@2x.png */,
 				EACA29A318D5BDBC009BCEA5 /* btn_add@2x.png */,
 				EACC59BE18D5A29600759CDE /* default_image@2x.png */,
@@ -2827,6 +2841,11 @@
 			children = (
 				EACFEB3318DFF9BD003782BE /* TDCalenderDayVC.h */,
 				EACFEB3418DFF9BD003782BE /* TDCalenderDayVC.m */,
+				EACFEB3C18E005E1003782BE /* TDMarketDetailVC.h */,
+				EACFEB3D18E005E1003782BE /* TDMarketDetailVC.m */,
+				EACFEB3E18E005E1003782BE /* TDMarketDetailVC.xib */,
+				EACFEB4118E00D9D003782BE /* TDVendorsVC.h */,
+				EACFEB4218E00D9D003782BE /* TDVendorsVC.m */,
 			);
 			path = Calendar;
 			sourceTree = "<group>";
@@ -2936,6 +2955,7 @@
 				EACC17DE18B36F9100DD27B0 /* bg_myCoupon_barcode.png in Resources */,
 				EACC146A18B36EE900DD27B0 /* InfoPlist.strings in Resources */,
 				EACC1A5B18B36F9200DD27B0 /* share_logo_weixinFriends@2x.png in Resources */,
+				EACFEB4718E01AD9003782BE /* btn_blue_bg@2x.png in Resources */,
 				EACC1A7518B36F9200DD27B0 /* ump_icon_back.png in Resources */,
 				EA098BD018B9B1E40034E0CF /* tableCellBottomBg@2x.png in Resources */,
 				EA098BD118B9B1E40034E0CF /* tableCellMiddleBg@2x.png in Resources */,
@@ -3033,6 +3053,7 @@
 				EACC178518B36F9100DD27B0 /* Add_to_Passbook_CN@2x.png in Resources */,
 				EACC18D318B36F9100DD27B0 /* icon_cellImageView_maskToBound@2x.png in Resources */,
 				EACC189D18B36F9100DD27B0 /* ic_deal_new@2x.png in Resources */,
+				EACFEB4618E01AD9003782BE /* btn_blue_bg.png in Resources */,
 				EACC188918B36F9100DD27B0 /* cell_single_selected@2x.png in Resources */,
 				EACC17FC18B36F9100DD27B0 /* bg_search_button_hotword@2x.png in Resources */,
 				EACC199518B36F9100DD27B0 /* icon_morepage_lifeService.png in Resources */,
@@ -3580,6 +3601,7 @@
 				EACC19D918B36F9100DD27B0 /* icon_refund_notChecked.png in Resources */,
 				EACC1A3718B36F9200DD27B0 /* mc_log_animation2.png in Resources */,
 				EACC1A6618B36F9200DD27B0 /* ump_bg_order.png in Resources */,
+				EACFEB4018E005E1003782BE /* TDMarketDetailVC.xib in Resources */,
 				EACC188018B36F9100DD27B0 /* button_dealsmap_cate_normal.png in Resources */,
 				EACC1A3318B36F9200DD27B0 /* mapTabRightButtonSelected@2x.png in Resources */,
 				EACC17AD18B36F9100DD27B0 /* bg_homeHotTopic_default.png in Resources */,
@@ -3741,6 +3763,7 @@
 				EACFEB3118DFE39B003782BE /* TDEvent.m in Sources */,
 				EAA843F518D8482C003F5032 /* TDCalenderVC.m in Sources */,
 				EAC7DCCA18C61D930076E32A /* TDBaseModel.m in Sources */,
+				EACFEB3F18E005E1003782BE /* TDMarketDetailVC.m in Sources */,
 				EAD1249618B5F33300C6C145 /* FDDefine.m in Sources */,
 				EACC59C218D5A6D700759CDE /* TDProductVendorCell.m in Sources */,
 				EACFEB3818E00233003782BE /* TDDayEventCell.m in Sources */,
@@ -3774,6 +3797,7 @@
 				EAC9D88418B888CF0096D555 /* TDForgetPasswordVC.m in Sources */,
 				EA901B0618B6491700B1E20F /* TDUtil.m in Sources */,
 				EAD9AA2818D72A2E002743F3 /* TDReviewCell.m in Sources */,
+				EACFEB4318E00D9D003782BE /* TDVendorsVC.m in Sources */,
 				4C98ABF018B91E01007FAF12 /* NSNumber+otsCopy.m in Sources */,
 				EACD837D18CDF5220050EEA6 /* TDDealsVC.m in Sources */,
 				EAC7DCCD18C61E0C0076E32A /* TDUser.m in Sources */,

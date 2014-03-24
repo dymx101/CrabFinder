@@ -96,7 +96,7 @@
     [_loginInputView addSubview:_tfPwd];
     
     _btnLogin = [UIButton new];
-    [_btnLogin setBackgroundImage:[TDImageLibrary sharedInstance].btnBgGreen forState:UIControlStateNormal];
+    [_btnLogin setBackgroundImage:[TDImageLibrary sharedInstance].btnBg forState:UIControlStateNormal];
     [_btnLogin setTitle:@"Login" forState:UIControlStateNormal];
     _btnLogin.titleLabel.font = [TDFontLibrary sharedInstance].fontTitleBold;
     [_btnLogin addTarget:self action:@selector(loginAction:) forControlEvents:UIControlEventTouchUpInside];

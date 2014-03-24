@@ -29,7 +29,7 @@ DEF_SINGLETON(TDImageLibrary)
     _btnBgGrayRound = [[UIImage imageNamed:@"button_dealsmap_buttonBack_normal"] resizableImageWithCapInsets:UIEdgeInsetsMake(5, 5, 5, 5)];
     _btnBackArrow = [UIImage imageNamed:@"btn_backItem"];
     _bgLoginInput = [[UIImage imageNamed:@"bg_login_inputView"] resizableImageWithCapInsets:UIEdgeInsetsMake(5, 5, 5, 5)];
-    _btnBgGreen = [[UIImage imageNamed:@"btn_green"] resizableImageWithCapInsets:UIEdgeInsetsMake(5, 5, 5, 5)];
+    _btnBg = [[UIImage imageNamed:@"btn_blue_bg"] resizableImageWithCapInsets:UIEdgeInsetsMake(5, 5, 5, 5)];
     _btnAdd = [UIImage imageNamed:@"btn_add"];
     _blank = [[UIImage imageNamed:@"blank"] resizableImageWithCapInsets:UIEdgeInsetsMake(5, 5, 5, 5)];
     

@@ -40,6 +40,7 @@
     _viewRating.editable = NO;
     _viewRating.displayMode = EDStarRatingDisplayFull;
     _viewRating.rating= 3;
+    _viewRating.userInteractionEnabled = NO;
     [self.contentView addSubview:_viewRating];
 }
 
