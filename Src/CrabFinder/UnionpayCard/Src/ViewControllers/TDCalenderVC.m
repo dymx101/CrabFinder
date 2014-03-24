@@ -53,6 +53,8 @@
     event.rating = 5;
     [_events addObject:event];
     
+    [self installSearchToNavibar];
+    
     
     [self initViews];
     [self setupViews];

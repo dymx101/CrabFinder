@@ -68,7 +68,7 @@
     return cell;
 }
 
--(float)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     TDNotificationCell *cell = _cellForHeight;
     cell.frame = tableView.bounds;
     

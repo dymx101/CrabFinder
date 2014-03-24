@@ -14,6 +14,7 @@
 -(void)installLogoToNavibar;
 -(void)installSearchToNavibar;
 -(void)installBackArrowToNavibar;
+-(void)installComposeButtonToNavi;
 
 -(void)naviToVC:(Class)aClass;
 

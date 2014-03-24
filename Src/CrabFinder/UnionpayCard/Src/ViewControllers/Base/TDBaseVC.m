@@ -7,6 +7,7 @@
 //
 
 #import "TDBaseVC.h"
+#import "TDComposeStatusVC.h"
 
 @interface TDBaseVC () {
     UIButton *_btnSearch;
@@ -46,6 +47,9 @@
     _scrollView.showsVerticalScrollIndicator = NO;
     [self.view addSubview:_scrollView];
     [_scrollView alignToView:self.view];
+
+
+    [self installComposeButtonToNavi];
 }
 
 
@@ -101,6 +105,18 @@
 
 -(void)installSearchToNavibar {
     self.navigationItem.leftBarButtonItem = [self searchButtonItem];
+}
+
+-(void)installComposeButtonToNavi {
+    UIBarButtonItem *btnCompose = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"btn_compose"] style:UIBarButtonItemStylePlain target:self action:@selector(composeAction:)];
+    self.navigationItem.rightBarButtonItem = btnCompose;
+}
+
+-(void)composeAction:(id)sender {
+    DLog(@"composeAction:");
+    TDComposeStatusVC *vc = [TDComposeStatusVC new];
+    UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:vc];
+    [self presentViewController:nc animated:YES completion:nil];
 }
 
 -(void)installBackArrowToNavibar {

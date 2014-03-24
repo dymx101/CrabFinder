@@ -91,9 +91,6 @@ const NSString *strStatusCellForHeightID = @"strStatusCellForHeightID";
     _newsFeeds = [NSMutableArray array];
     [_newsFeeds addObjectsFromArray:[self fakeDataArray]];
     
-    UIBarButtonItem *btnCompose = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"btn_compose"] style:UIBarButtonItemStylePlain target:self action:@selector(composeAction:)];
-    self.navigationItem.rightBarButtonItem = btnCompose;
-    
     [self installSearchToNavibar];
 	
     [self createSubviews];
@@ -197,11 +194,5 @@ const NSString *strStatusCellForHeightID = @"strStatusCellForHeightID";
 }
 
 #pragma mark - actions
--(void)composeAction:(id)sender {
-    DLog(@"composeAction:");
-    TDComposeStatusVC *vc = [TDComposeStatusVC new];
-    UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:vc];
-    [self presentViewController:nc animated:YES completion:nil];
-}
 
 @end

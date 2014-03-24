@@ -36,14 +36,11 @@
     [super viewDidLoad];
     self.navigationItem.title = @"Profile";
     
-    UIBarButtonItem *btnCompose = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"btn_compose"] style:UIBarButtonItemStylePlain target:self action:@selector(composeAction:)];
-    self.navigationItem.rightBarButtonItem = btnCompose;
-    
+    [self installSearchToNavibar];
     
     [self createSubviews];
     [self layoutSubviews];
     
-    [self installSearchToNavibar];
 }
 
 -(void)createSubviews {
@@ -217,11 +214,7 @@
     [self presentViewController:nc animated:YES completion:nil];
 }
 
--(void)composeAction:(id)sender {
-    TDComposeReviewVC *vc = [TDComposeReviewVC new];
-    UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:vc];
-    [self presentViewController:nc animated:YES completion:nil];
-}
+
 
 #pragma delegate - 
 - (void) getProfile:(NSString *) tOken{

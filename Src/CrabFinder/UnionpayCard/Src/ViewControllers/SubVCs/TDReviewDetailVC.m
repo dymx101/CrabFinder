@@ -8,6 +8,7 @@
 
 #import "TDReviewDetailVC.h"
 #import "TDCommentCell.h"
+#import "TDComposeReviewVC.h"
 
 #define STR_CELL_ID     @"STR_CELL_ID"
 
@@ -150,6 +151,13 @@
     _headerView.frame = CGRectMake(0, 0, rc.size.width, size.height);
     
     return _headerView;
+}
+
+
+-(void)composeAction:(id)sender {
+    TDComposeReviewVC *vc = [TDComposeReviewVC new];
+    UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:vc];
+    [self presentViewController:nc animated:YES completion:nil];
 }
 
 @end
