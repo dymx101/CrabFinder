@@ -9,6 +9,7 @@
 #import "TDCalenderDayVC.h"
 #import "TDEvent.h"
 #import <MBCalendarKit/CKCalendarEvent.h>
+#import "TDDayEventCell.h"
 
 #define STR_CELL_ID @"STR_CELL_ID"
 
@@ -28,7 +29,7 @@
     _tv = [UITableView new];
     _tv.dataSource = self;
     _tv.delegate = self;
-    [_tv registerClass:[UITableViewCell class] forCellReuseIdentifier:STR_CELL_ID];
+    [_tv registerClass:[TDDayEventCell class] forCellReuseIdentifier:STR_CELL_ID];
     [self.view addSubview:_tv];
     [_tv alignToView:self.view];
 }
@@ -39,12 +40,19 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:STR_CELL_ID forIndexPath:indexPath];
+    TDDayEventCell *cell = [tableView dequeueReusableCellWithIdentifier:STR_CELL_ID forIndexPath:indexPath];
+    
     CKCalendarEvent *calendarEvent = _calendarEvents[indexPath.row];
     TDEvent *event = [calendarEvent.info objectForKey:@"info"];
-    cell.textLabel.text = event.name;
+    cell.lblTitle.text = event.name;
+    cell.lblMessage.text = event.time.description;
+    cell.viewRating.rating = event.rating;
     
     return cell;
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return [TDDayEventCell cellHeight];
 }
 
 @end
