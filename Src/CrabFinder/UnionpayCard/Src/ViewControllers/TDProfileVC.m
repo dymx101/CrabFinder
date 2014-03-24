@@ -14,6 +14,13 @@
 
 #import "TDComposeReviewVC.h"
 #import "TDSettingsVC.h"
+#import "TDReviewCell.h"
+#import "TDStatusFeedCell.h"
+#import "TDReview.h"
+
+#define REVIEW_CELL_ID              @"TDReviewCell"
+#define STATUS_CELL_ID              @"TDStatusFeedCell"
+#define STATUS_CELL_HEIGHT_ID       @"TDStatusFeedCell_HEIGHT"
 
 @interface TDProfileVC () <UITableViewDelegate, UITableViewDataSource, MWPhotoBrowserDelegate> {
     UITableView            *_tv;
@@ -25,7 +32,12 @@
     
     UIScrollView            *_horizontalScrollView;
     NSLayoutConstraint      *_lastImageTrailingConstraint;
+    
+    NSMutableArray          *_statusArray;
+    NSMutableArray          *_reviewsArray;
 }
+
+@property(nonatomic, strong)    TDStatusFeedCell		*sizingCell;
 
 @end
 
@@ -36,6 +48,29 @@
 {
     [super viewDidLoad];
     self.navigationItem.title = @"Profile";
+    
+    _statusArray = [NSMutableArray array];
+    
+    TDStatusUpdate *status = [TDStatusUpdate new];
+    status.title = @"Romulan Commander: Humans have a way of showing up when you least expect them.";
+    [_statusArray addObject:status];
+    status = [TDStatusUpdate new];
+    status.title = @"Romulan Commander: Humans have a way of showing up when you least expect them.";
+    [_statusArray addObject:status];
+
+    
+    _reviewsArray = [NSMutableArray array];
+    
+    TDReview *review = [TDReview new];
+    review.title = @"Romulan Commander Reviewed Kirk";
+    review.content = @"Humans have a way of showing up when you least expect them.";
+    review.rating = 3.5;
+    [_reviewsArray addObject:review];
+    review = [TDReview new];
+    review.title = @"Romulan Commander Reviewed Kirk";
+    review.content = @"Humans have a way of showing up when you least expect them.";
+    review.rating = 5;
+    [_reviewsArray addObject:review];
     
     [self installSearchToNavibar];
     
@@ -57,8 +92,13 @@
     _tv = [UITableView new];
     _tv.delegate = self;
     _tv.dataSource = self;
-
+    _tv.tableHeaderView = [self tableHeaderView];
+    [_tv registerClass:[TDReviewCell class] forCellReuseIdentifier:REVIEW_CELL_ID];
+    [_tv registerClass:[TDStatusFeedCell class] forCellReuseIdentifier:STATUS_CELL_ID];
+    [_tv registerClass:[TDStatusFeedCell class] forCellReuseIdentifier:STATUS_CELL_HEIGHT_ID];
     [self.view addSubview:_tv];
+    
+    _sizingCell = [_tv dequeueReusableCellWithIdentifier:STATUS_CELL_HEIGHT_ID];
 }
 
 -(void)layoutSubviews {
@@ -73,20 +113,54 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 2;
+    if (section == 0) {
+        return _statusArray.count;
+    } else {
+        return _reviewsArray.count;
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *cellIDStr = @"cellID";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIDStr];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:0 reuseIdentifier:cellIDStr];
+
+    if (indexPath.section == 0) {
+        
+        TDStatusFeedCell *cell = [tableView dequeueReusableCellWithIdentifier:STATUS_CELL_ID forIndexPath:indexPath];
+        
+        TDStatusUpdate *status = _statusArray[indexPath.row];
+        cell.lblTitle.text = status.title;
+        return cell;
+        
+    } else {
+        
+        TDReviewCell *cell = [tableView dequeueReusableCellWithIdentifier:REVIEW_CELL_ID forIndexPath:indexPath];
+        
+        TDReview *review = _reviewsArray[indexPath.row];
+        cell.lblTitle.text = review.title;
+        cell.lblMessage.text = review.content;
+        cell.viewRating.rating = review.rating;
+        
+        return cell;
     }
     
-    cell.imageView.image = [UIImage imageNamed:@"crab_boss"];
-    cell.textLabel.text = (indexPath.section == 0) ? @"Status goes here" : @"Review goes heres";
+    return nil;
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.section == 0) {
+        
+        TDStatusUpdate *status = _statusArray[indexPath.row];
+        
+        _sizingCell.frame = tableView.bounds;
+        
+        _sizingCell.lblTitle.text = status.title;
+        [_sizingCell setNeedsLayout];
+        [_sizingCell layoutIfNeeded];
+        CGSize size = [self.sizingCell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
+        return size.height + 1;
+        
+    }
     
-    return cell;
+    return [TDReviewCell cellHeight];
 }
 
 -(UIView *)tableHeaderView {
@@ -96,11 +170,7 @@
     }
     
 
-    _headerView = [UIView new];
-    
-//    UIImageView *ivBg = [[UIImageView alloc] initWithImage:[TDImageLibrary sharedInstance].mineAccountBg];
-//    [_headerView addSubview:ivBg];
-//    [ivBg alignToView:_headerView];
+    _headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 220)];
     
     _ivPhoto = [UIImageView new];
     _ivPhoto.image = [UIImage imageNamed:@"avatar_default"];
@@ -125,9 +195,10 @@
     _lblBio.font = [TDFontLibrary sharedInstance].fontNormal;
     [_headerView addSubview:_lblBio];
     // layout
-    [_lblBio alignLeadingEdgeWithView:_lblUserName predicate:nil];
-    [_lblBio constrainTopSpaceToView:_lblUserName predicate:@"5"];
-    [_lblBio constrainWidthToView:_headerView predicate:@"-100"];
+    //[_lblBio alignLeadingEdgeWithView:_lblUserName predicate:nil];
+    [_lblBio constrainTopSpaceToView:_ivPhoto predicate:@"10"];
+    [_lblBio alignCenterXWithView:_headerView predicate:nil];
+    [_lblBio constrainWidth:@"280"];
     
     //
     _horizontalScrollView = [UIScrollView new];
@@ -135,7 +206,7 @@
     _horizontalScrollView.showsHorizontalScrollIndicator = NO;
     [_headerView addSubview:_horizontalScrollView];
     // layout
-    [_horizontalScrollView constrainTopSpaceToView:_lblBio predicate:@"20"];
+    [_horizontalScrollView constrainTopSpaceToView:_lblBio predicate:@"10"];
     [_horizontalScrollView constrainWidthToView:_headerView predicate:nil];
     [_horizontalScrollView alignCenterXWithView:_headerView predicate:nil];
     [_horizontalScrollView constrainHeight:@"80"];
@@ -148,20 +219,21 @@
     return _headerView;
 }
 
--(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+//-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+//    return [UIView new];
+//}
+
+-(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
     if (section == 0) {
-        return [self tableHeaderView];
+        return @"Status";
     }
     
-    return nil;
+    return @"Reviews";
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    if (section == 0) {
-        return 210;
-    }
     
-    return 20;
+    return 30;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
