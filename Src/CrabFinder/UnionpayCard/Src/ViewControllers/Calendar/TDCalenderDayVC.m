@@ -7,8 +7,14 @@
 //
 
 #import "TDCalenderDayVC.h"
+#import "TDEvent.h"
+#import <MBCalendarKit/CKCalendarEvent.h>
 
-@interface TDCalenderDayVC ()
+#define STR_CELL_ID @"STR_CELL_ID"
+
+@interface TDCalenderDayVC () <UITableViewDelegate, UITableViewDataSource> {
+    UITableView *_tv;
+}
 
 @end
 
@@ -18,6 +24,27 @@
 {
     [super viewDidLoad];
     self.navigationItem.title = @"Day";
+    
+    _tv = [UITableView new];
+    _tv.dataSource = self;
+    _tv.delegate = self;
+    [_tv registerClass:[UITableViewCell class] forCellReuseIdentifier:STR_CELL_ID];
+    [self.view addSubview:_tv];
+    [_tv alignToView:self.view];
+}
+
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return _calendarEvents.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:STR_CELL_ID forIndexPath:indexPath];
+    CKCalendarEvent *calendarEvent = _calendarEvents[indexPath.row];
+    TDEvent *event = [calendarEvent.info objectForKey:@"info"];
+    cell.textLabel.text = event.name;
+    
+    return cell;
 }
 
 @end

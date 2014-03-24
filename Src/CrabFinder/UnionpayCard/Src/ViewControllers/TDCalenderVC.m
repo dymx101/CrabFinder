@@ -90,6 +90,7 @@
     NSArray *calendarEvents = [self calendarView:CalendarView eventsForDate:date];
     if (calendarEvents.count > 0) {
         TDCalenderDayVC *vc = [TDCalenderDayVC new];
+        vc.calendarEvents = calendarEvents;
         [self.navigationController pushViewController:vc animated:YES];
     }
 }

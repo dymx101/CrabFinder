@@ -9,5 +9,5 @@
 #import "TDBaseVC.h"
 
 @interface TDCalenderDayVC : TDBaseVC
-
+@property (nonatomic, strong) NSArray   *calendarEvents;
 @end
