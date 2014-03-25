@@ -18,4 +18,6 @@
 
 -(void)naviToVC:(Class)aClass;
 
+-(void)dismissAction:(id)aSender;
+
 @end

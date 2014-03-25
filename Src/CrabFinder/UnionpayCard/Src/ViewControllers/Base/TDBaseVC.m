@@ -8,6 +8,7 @@
 
 #import "TDBaseVC.h"
 #import "TDComposeStatusVC.h"
+#import "TDSearchVC.h"
 
 @interface TDBaseVC () {
     UIButton *_btnSearch;
@@ -99,8 +100,16 @@
     
 }
 
+-(void)dismissAction:(id)aSender
+{
+    UIViewController *vc = self.presentingViewController;
+    [vc dismissViewControllerAnimated:YES completion:nil];
+}
+
 -(void)searchAction:(id)sender {
-    
+    TDSearchVC *vc = [TDSearchVC new];
+    UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:vc];
+    [self presentViewController:nc animated:YES completion:nil];
 }
 
 -(void)installSearchToNavibar {

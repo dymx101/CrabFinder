@@ -41,6 +41,7 @@
 		EAC5DBB318E11D1E00E553D2 /* TDProfileHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC5DBB218E11D1E00E553D2 /* TDProfileHeaderView.m */; };
 		EAC5DBB618E1201400E553D2 /* TDStatusListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC5DBB518E1201400E553D2 /* TDStatusListVC.m */; };
 		EAC5DBB918E1206000E553D2 /* TDReviewsListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC5DBB818E1206000E553D2 /* TDReviewsListVC.m */; };
+		EAC5DBBC18E12B6700E553D2 /* TDSearchVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC5DBBB18E12B6700E553D2 /* TDSearchVC.m */; };
 		EAC7DCCA18C61D930076E32A /* TDBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC7DCC918C61D930076E32A /* TDBaseModel.m */; };
 		EAC7DCCD18C61E0C0076E32A /* TDUser.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC7DCCC18C61E0C0076E32A /* TDUser.m */; };
 		EAC7DCD018C61F160076E32A /* TDVendor.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC7DCCF18C61F160076E32A /* TDVendor.m */; };
@@ -924,6 +925,8 @@
 		EAC5DBB518E1201400E553D2 /* TDStatusListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDStatusListVC.m; sourceTree = "<group>"; };
 		EAC5DBB718E1206000E553D2 /* TDReviewsListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDReviewsListVC.h; sourceTree = "<group>"; };
 		EAC5DBB818E1206000E553D2 /* TDReviewsListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDReviewsListVC.m; sourceTree = "<group>"; };
+		EAC5DBBA18E12B6700E553D2 /* TDSearchVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDSearchVC.h; sourceTree = "<group>"; };
+		EAC5DBBB18E12B6700E553D2 /* TDSearchVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDSearchVC.m; sourceTree = "<group>"; };
 		EAC7DCC818C61D930076E32A /* TDBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDBaseModel.h; sourceTree = "<group>"; };
 		EAC7DCC918C61D930076E32A /* TDBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDBaseModel.m; sourceTree = "<group>"; };
 		EAC7DCCB18C61E0C0076E32A /* TDUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDUser.h; sourceTree = "<group>"; };
@@ -2858,6 +2861,8 @@
 				EAC5DBB518E1201400E553D2 /* TDStatusListVC.m */,
 				EAC5DBB718E1206000E553D2 /* TDReviewsListVC.h */,
 				EAC5DBB818E1206000E553D2 /* TDReviewsListVC.m */,
+				EAC5DBBA18E12B6700E553D2 /* TDSearchVC.h */,
+				EAC5DBBB18E12B6700E553D2 /* TDSearchVC.m */,
 			);
 			path = SubVCs;
 			sourceTree = "<group>";
@@ -3818,6 +3823,7 @@
 				4C98ABF118B91E01007FAF12 /* NSNumber+safe.m in Sources */,
 				EACD0D2318B3A09E009109CB /* TDBaseVC.m in Sources */,
 				EA2C603A18C59EBF007E83D1 /* TDStatusFeedCell.m in Sources */,
+				EAC5DBBC18E12B6700E553D2 /* TDSearchVC.m in Sources */,
 				4C98ABE918B91E01007FAF12 /* NSArray+safe.m in Sources */,
 				EACD64F018CD5371005621EC /* TDAlert.m in Sources */,
 				EACCBC0F18D091940084186B /* TDNotification.m in Sources */,
