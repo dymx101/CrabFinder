@@ -215,9 +215,22 @@
     [_horizontalScrollView constrainHeight:@"80"];
     
     //
-    UIImage *crabImg = [UIImage imageNamed:@"crab_icon"];
-
-    [self addImageArray:@[crabImg, crabImg, crabImg, crabImg, crabImg, crabImg, crabImg]];
+    NSMutableArray *contentViews = [NSMutableArray array];
+    for (int i = 0; i < 3; i++) {
+        UIImageView *ivPic = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"crab_icon"]];
+        ivPic.tag = i;
+        [contentViews addObject:ivPic];
+        
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(imageTapped:)];
+        [ivPic addGestureRecognizer:tap];
+    }
+    
+    UIButton  *btnMorePic = [UIButton new];
+    [btnMorePic setImage:[UIImage imageNamed:@"icon_deal_arrow"] forState:UIControlStateNormal];
+    [btnMorePic addTarget:self action:@selector(moreImagesTapped:) forControlEvents:UIControlEventTouchUpInside];
+    [contentViews addObject:btnMorePic];
+    
+    [self addScrollContent:contentViews];
     
     return _headerView;
 }
@@ -270,41 +283,51 @@
 
 #define IMAGE_MARGIN    (20)
 #define IMAGE_SIZE      (60)
--(void)addImageArray:(NSArray *)aImages {
+-(void)addScrollContent:(NSArray *)aContentViews {
     [_horizontalScrollView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
     [_horizontalScrollView removeConstraint:_lastImageTrailingConstraint];
     
     int i = 0;
-    for (UIImage *image in aImages) {
-        UIImageView *iv = [[UIImageView alloc] initWithImage:image];
-        iv.userInteractionEnabled = YES;
+    for (UIView *contentView in aContentViews) {
+        contentView.userInteractionEnabled = YES;
         
-        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(imageTapped:)];
-        [iv addGestureRecognizer:tap];
+        [contentView applyEffectBorder];
+        [_horizontalScrollView addSubview:contentView];
         
-        [iv applyEffectBorder];
-        [_horizontalScrollView addSubview:iv];
-        [iv constrainWidth:@(IMAGE_SIZE).stringValue height:@(IMAGE_SIZE).stringValue];
-        [iv alignTopEdgeWithView:_horizontalScrollView predicate:@"10"];
+        [contentView constrainWidth:@(IMAGE_SIZE).stringValue height:@(IMAGE_SIZE).stringValue];
+        [contentView alignTopEdgeWithView:_horizontalScrollView predicate:@"10"];
         float leading = IMAGE_MARGIN * (i + 1) + IMAGE_SIZE * i;
-        [iv alignLeadingEdgeWithView:_horizontalScrollView predicate:@(leading).stringValue];
+        [contentView alignLeadingEdgeWithView:_horizontalScrollView predicate:@(leading).stringValue];
         
-        if (i == aImages.count - 1) {
-            _lastImageTrailingConstraint = [iv alignTrailingEdgeWithView:_horizontalScrollView predicate:@(-IMAGE_MARGIN).stringValue].firstObject;
+        if (i == aContentViews.count - 1) {
+            _lastImageTrailingConstraint = [contentView alignTrailingEdgeWithView:_horizontalScrollView predicate:@(-IMAGE_MARGIN).stringValue].firstObject;
         }
         
         i++;
     }
 }
 
--(void)imageTapped:(id)sender {
+-(void)imageTapped:(UITapGestureRecognizer *)sender {
+    MWPhotoBrowser *vc = [[MWPhotoBrowser alloc] initWithDelegate:self];
+    vc.enableGrid = NO;
+    vc.startOnGrid = NO;
+    [vc setCurrentPhotoIndex:sender.view.tag];
+    
+    vc.displayActionButton = YES;
+    vc.displayNavArrows = YES;
+
+    UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:vc];
+    [self presentViewController:nc animated:YES completion:nil];
+}
+
+-(void)moreImagesTapped:(id)sender {
     MWPhotoBrowser *vc = [[MWPhotoBrowser alloc] initWithDelegate:self];
     vc.enableGrid = YES;
     vc.startOnGrid = YES;
     
     vc.displayActionButton = YES;
     vc.displayNavArrows = YES;
-
+    
     UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:vc];
     [self presentViewController:nc animated:YES completion:nil];
 }
