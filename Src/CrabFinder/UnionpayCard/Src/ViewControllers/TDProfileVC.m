@@ -18,6 +18,9 @@
 #import "TDStatusFeedCell.h"
 #import "TDReview.h"
 #import "TDReviewDetailVC.h"
+#import "TDProfileHeaderView.h"
+#import "TDReviewsListVC.h"
+#import "TDStatusListVC.h"
 
 #define REVIEW_CELL_ID              @"TDReviewCell"
 #define STATUS_CELL_ID              @"TDStatusFeedCell"
@@ -195,15 +198,14 @@
     _lblBio.numberOfLines = 0;
     _lblBio.font = [TDFontLibrary sharedInstance].fontNormal;
     [_headerView addSubview:_lblBio];
+    
     // layout
-    //[_lblBio alignLeadingEdgeWithView:_lblUserName predicate:nil];
     [_lblBio constrainTopSpaceToView:_ivPhoto predicate:@"10"];
     [_lblBio alignCenterXWithView:_headerView predicate:nil];
     [_lblBio constrainWidth:@"280"];
     
     //
     _horizontalScrollView = [UIScrollView new];
-    //_horizontalScrollView.backgroundColor = [UIColor redColor];
     _horizontalScrollView.showsHorizontalScrollIndicator = NO;
     [_headerView addSubview:_horizontalScrollView];
     // layout
@@ -220,21 +222,31 @@
     return _headerView;
 }
 
-//-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-//    return [UIView new];
-//}
+-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    TDProfileHeaderView *view = [TDProfileHeaderView new];
 
--(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
     if (section == 0) {
-        return @"Status";
+        view.lblTitle.text = @"Status";
+        [view.btnMore addTarget:self action:@selector(viewMoreStatusAction:) forControlEvents:UIControlEventTouchUpInside];
+    } else {
+        view.lblTitle.text = @"Reviews";
+        [view.btnMore addTarget:self action:@selector(viewMoreReviewsAction:) forControlEvents:UIControlEventTouchUpInside];
     }
     
-    return @"Reviews";
+    return view;
 }
+
+//-(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+//    if (section == 0) {
+//        return @"Status";
+//    }
+//    
+//    return @"Reviews";
+//}
 
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
     
-    return 30;
+    return [TDProfileHeaderView viewHeight];
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -297,20 +309,17 @@
     [self presentViewController:nc animated:YES completion:nil];
 }
 
-#pragma mark - 
--(void)loginAction:(id)sender {
-    TDLoginVC *vc = [TDLoginVC new];
-    UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:vc];
-    [self presentViewController:nc animated:YES completion:nil];
+#pragma mark - actions
+
+-(void)viewMoreStatusAction:(id)sender {
+    TDStatusListVC *vc = [TDStatusListVC new];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
-
-
-#pragma delegate - 
-- (void) getProfile:(NSString *) tOken{
-   
+-(void)viewMoreReviewsAction:(id)sender {
+    TDReviewsListVC *vc = [TDReviewsListVC new];
+    [self.navigationController pushViewController:vc animated:YES];
 }
-
 
 #pragma mark -
 -(NSArray *)photos {

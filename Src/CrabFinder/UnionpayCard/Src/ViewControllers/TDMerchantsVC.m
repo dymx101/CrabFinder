@@ -62,7 +62,7 @@
     
     //
     _btnItems = [UIButton new];
-    _btnItems.backgroundColor = [FDColor sharedInstance].orangeRed;
+    _btnItems.backgroundColor = [FDColor sharedInstance].blueSapphire;
     [_btnItems setTitle:@"Seasonal Items" forState:UIControlStateNormal];
     _btnItems.titleLabel.font = [TDFontLibrary sharedInstance].fontTitleBold;
     [_btnItems setTitleColor:[FDColor sharedInstance].white forState:UIControlStateNormal];

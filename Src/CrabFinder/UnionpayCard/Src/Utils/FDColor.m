@@ -25,9 +25,12 @@ DEF_SINGLETON(FDColor)
         _magicMint = [UIColor colorWithCrayola:@"Magic Mint"];
         _midnightBlue = [UIColor colorWithCrayola:@"Midnight Blue"];
         _orangeRed = [UIColor colorWithCrayola:@"Orange Red"];
-        _caribbeanGreen = [UIColor colorWithCrayola:@"Caribbean Green"];
+        _themeBlue = [UIColor colorWithRed:(20 / 255.f) green:(155 / 255.f) blue:(201 / 255.f) alpha:1.f];
+        _caribbeanGreen = _themeBlue;//[UIColor colorWithCrayola:@"Caribbean Green"];
+
         _desertSand = [UIColor colorWithCrayola:@"Desert Sand"];
         _purpleHeart = [UIColor colorWithCrayola:@"Purple Heart"];
+        _blueSapphire = [UIColor colorWithHexString:@"2D5DA1"];
         
         _black = [UIColor blackColor];
         _white = [UIColor whiteColor];

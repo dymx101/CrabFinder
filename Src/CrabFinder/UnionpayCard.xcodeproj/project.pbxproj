@@ -38,6 +38,9 @@
 		EA901B0618B6491700B1E20F /* TDUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = EA901B0518B6491700B1E20F /* TDUtil.m */; };
 		EAA843F518D8482C003F5032 /* TDCalenderVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA843F418D8482C003F5032 /* TDCalenderVC.m */; };
 		EAAED84318D1AD9400DA54F2 /* TDDeal.m in Sources */ = {isa = PBXBuildFile; fileRef = EAAED84218D1AD9400DA54F2 /* TDDeal.m */; };
+		EAC5DBB318E11D1E00E553D2 /* TDProfileHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC5DBB218E11D1E00E553D2 /* TDProfileHeaderView.m */; };
+		EAC5DBB618E1201400E553D2 /* TDStatusListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC5DBB518E1201400E553D2 /* TDStatusListVC.m */; };
+		EAC5DBB918E1206000E553D2 /* TDReviewsListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC5DBB818E1206000E553D2 /* TDReviewsListVC.m */; };
 		EAC7DCCA18C61D930076E32A /* TDBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC7DCC918C61D930076E32A /* TDBaseModel.m */; };
 		EAC7DCCD18C61E0C0076E32A /* TDUser.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC7DCCC18C61E0C0076E32A /* TDUser.m */; };
 		EAC7DCD018C61F160076E32A /* TDVendor.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC7DCCF18C61F160076E32A /* TDVendor.m */; };
@@ -915,6 +918,12 @@
 		EAA843F418D8482C003F5032 /* TDCalenderVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDCalenderVC.m; sourceTree = "<group>"; };
 		EAAED84118D1AD9400DA54F2 /* TDDeal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDDeal.h; sourceTree = "<group>"; };
 		EAAED84218D1AD9400DA54F2 /* TDDeal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDDeal.m; sourceTree = "<group>"; };
+		EAC5DBB118E11D1E00E553D2 /* TDProfileHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDProfileHeaderView.h; sourceTree = "<group>"; };
+		EAC5DBB218E11D1E00E553D2 /* TDProfileHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDProfileHeaderView.m; sourceTree = "<group>"; };
+		EAC5DBB418E1201400E553D2 /* TDStatusListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDStatusListVC.h; sourceTree = "<group>"; };
+		EAC5DBB518E1201400E553D2 /* TDStatusListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDStatusListVC.m; sourceTree = "<group>"; };
+		EAC5DBB718E1206000E553D2 /* TDReviewsListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDReviewsListVC.h; sourceTree = "<group>"; };
+		EAC5DBB818E1206000E553D2 /* TDReviewsListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDReviewsListVC.m; sourceTree = "<group>"; };
 		EAC7DCC818C61D930076E32A /* TDBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDBaseModel.h; sourceTree = "<group>"; };
 		EAC7DCC918C61D930076E32A /* TDBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDBaseModel.m; sourceTree = "<group>"; };
 		EAC7DCCB18C61E0C0076E32A /* TDUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDUser.h; sourceTree = "<group>"; };
@@ -1798,6 +1807,7 @@
 		EA098BD418B9B4320034E0CF /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				EAC5DBB018E11CF800E553D2 /* CustomViews */,
 				EA098BD518B9B4320034E0CF /* TableCells */,
 			);
 			path = Views;
@@ -1822,6 +1832,15 @@
 				EACFEB3718E00233003782BE /* TDDayEventCell.m */,
 			);
 			path = TableCells;
+			sourceTree = "<group>";
+		};
+		EAC5DBB018E11CF800E553D2 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				EAC5DBB118E11D1E00E553D2 /* TDProfileHeaderView.h */,
+				EAC5DBB218E11D1E00E553D2 /* TDProfileHeaderView.m */,
+			);
+			path = CustomViews;
 			sourceTree = "<group>";
 		};
 		EAC7DCC718C61D840076E32A /* Models */ = {
@@ -2835,6 +2854,10 @@
 				EAD24B1718D1E43E00291003 /* TDSeasonalProductsVC.m */,
 				EAD3ECD118D47024001F8575 /* TDProductDetailVC.h */,
 				EAD3ECD218D47024001F8575 /* TDProductDetailVC.m */,
+				EAC5DBB418E1201400E553D2 /* TDStatusListVC.h */,
+				EAC5DBB518E1201400E553D2 /* TDStatusListVC.m */,
+				EAC5DBB718E1206000E553D2 /* TDReviewsListVC.h */,
+				EAC5DBB818E1206000E553D2 /* TDReviewsListVC.m */,
 			);
 			path = SubVCs;
 			sourceTree = "<group>";
@@ -3812,11 +3835,14 @@
 				EACA42A718D9CB3200916F8C /* TDCommentCell.m in Sources */,
 				4C98ABF318B91E01007FAF12 /* NSObject+Coder.m in Sources */,
 				EACD837618CDF5020050EEA6 /* TDReviewDetailVC.m in Sources */,
+				EAC5DBB618E1201400E553D2 /* TDStatusListVC.m in Sources */,
 				EA098BCB18B98E590034E0CF /* TDRegisterNoAccountVC.m in Sources */,
 				EAD6ACC618B79BC00003B24E /* TDLoginVC.m in Sources */,
 				EACD837A18CDF5140050EEA6 /* TDNotificationsVC.m in Sources */,
 				4C98ABFA18B91E01007FAF12 /* NSString+safe.m in Sources */,
 				4C98ABEE18B91E01007FAF12 /* NSMutableDictionary+safe.m in Sources */,
+				EAC5DBB918E1206000E553D2 /* TDReviewsListVC.m in Sources */,
+				EAC5DBB318E11D1E00E553D2 /* TDProfileHeaderView.m in Sources */,
 				EAD9AA2B18D730F0002743F3 /* TDComposeStatusVC.m in Sources */,
 				EA500FB318DA9AD100F1291C /* TDComposeReviewVC.m in Sources */,
 			);

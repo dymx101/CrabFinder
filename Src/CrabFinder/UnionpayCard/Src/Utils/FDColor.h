@@ -15,6 +15,10 @@ AS_SINGLETON(FDColor)
 @property (nonatomic, strong) UIColor *midnightBlue;
 @property (nonatomic, strong) UIColor *orangeRed;
 @property (nonatomic, strong) UIColor *caribbeanGreen;
+@property (nonatomic, strong) UIColor *themeBlue;
+@property (nonatomic, strong) UIColor *blueSapphire;
+
+
 @property (nonatomic, strong) UIColor *desertSand;
 @property (nonatomic, strong) UIColor *purpleHeart;
 
