@@ -146,10 +146,6 @@
 }
 
 
--(void)composeAction:(id)sender {
-    TDComposeReviewVC *vc = [TDComposeReviewVC new];
-    UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:vc];
-    [self presentViewController:nc animated:YES completion:nil];
-}
+
 
 @end

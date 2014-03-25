@@ -38,7 +38,11 @@
     _ivPhoto = [UIImageView new];
     _ivPhoto.image = [TDImageLibrary sharedInstance].avatar;
     [self.contentView addSubview:_ivPhoto];
-    [_ivPhoto applyEffectBorder];
+    [_ivPhoto applyEffectRoundRectSilverBorder];
+    
+    _lblName = [UILabel new];
+    _lblName.font = [TDFontLibrary sharedInstance].fontNormalBold;
+    [self.contentView addSubview:_lblName];
     
     _lblTitle = [UILabel new];
     _lblTitle.font = [TDFontLibrary sharedInstance].fontNormal;
@@ -63,13 +67,14 @@
     self.contentView.autoresizingMask = UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth;
     _ivPhoto.translatesAutoresizingMaskIntoConstraints = NO;
     _lblTitle.translatesAutoresizingMaskIntoConstraints = NO;
+    _lblName.translatesAutoresizingMaskIntoConstraints = NO;
     _imageContainerView.translatesAutoresizingMaskIntoConstraints = NO;
     
     
     NSLayoutConstraint *constraint = [NSLayoutConstraint constraintWithItem:_ivPhoto attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1 constant:40];
     [self.contentView addConstraint:constraint];
     
-    constraint = [NSLayoutConstraint constraintWithItem:_ivPhoto attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1 constant:45];
+    constraint = [NSLayoutConstraint constraintWithItem:_ivPhoto attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1 constant:40];
     [self.contentView addConstraint:constraint];
     
     constraint = [NSLayoutConstraint constraintWithItem:_ivPhoto attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self.contentView attribute:NSLayoutAttributeLeading multiplier:1 constant:10];
@@ -78,19 +83,28 @@
     constraint = [NSLayoutConstraint constraintWithItem:_ivPhoto attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.contentView attribute:NSLayoutAttributeLeading multiplier:1 constant:10];
     [self.contentView addConstraint:constraint];
     
+    //
+    constraint = [NSLayoutConstraint constraintWithItem:_lblName attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self.contentView attribute:NSLayoutAttributeLeading multiplier:1 constant:60];
+    [self.contentView addConstraint:constraint];
+    
+    constraint = [NSLayoutConstraint constraintWithItem:_lblName attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:self.contentView attribute:NSLayoutAttributeTrailing multiplier:1 constant:-10];
+    [self.contentView addConstraint:constraint];
+    
+    //
     constraint = [NSLayoutConstraint constraintWithItem:_lblTitle attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self.contentView attribute:NSLayoutAttributeLeading multiplier:1 constant:60];
     [self.contentView addConstraint:constraint];
     
     constraint = [NSLayoutConstraint constraintWithItem:_lblTitle attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:self.contentView attribute:NSLayoutAttributeTrailing multiplier:1 constant:-10];
     [self.contentView addConstraint:constraint];
     
+    //
     constraint = [NSLayoutConstraint constraintWithItem:_imageContainerView attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:self.contentView attribute:NSLayoutAttributeTrailing multiplier:1 constant:-10];
     [self.contentView addConstraint:constraint];
     
     constraint = [NSLayoutConstraint constraintWithItem:_imageContainerView attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:_lblTitle attribute:NSLayoutAttributeLeading multiplier:1 constant:0];
     [self.contentView addConstraint:constraint];
     
-    NSArray *verticalConstriants = [NSLayoutConstraint constraintsWithVisualFormat:@"V:|-5-[_lblTitle]-3-[_imageContainerView(40@1000)]-5-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_lblTitle, _imageContainerView)];
+    NSArray *verticalConstriants = [NSLayoutConstraint constraintsWithVisualFormat:@"V:|-5-[_lblName]-3-[_lblTitle]-[_imageContainerView(40@1000)]-5-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_lblTitle, _imageContainerView, _lblName)];
     [self.contentView addConstraints:verticalConstriants];
     
     //
@@ -106,6 +120,7 @@
 - (void)layoutSubviews
 {
     CGRect bounds = self.bounds;
+    _lblName.preferredMaxLayoutWidth = bounds.size.width - (60 + 10);
     _lblTitle.preferredMaxLayoutWidth = bounds.size.width - (60 + 10);
     
     [super layoutSubviews];

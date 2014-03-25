@@ -16,6 +16,8 @@
 #import "TDComposeStatusVC.h"
 #import "TDReviewDetailVC.h"
 
+#import "TDProfileVC.h"
+
 typedef enum {
     kVcRegister = 1000
     , kVcCardList
@@ -46,7 +48,8 @@ const NSString *strStatusCellForHeightID = @"strStatusCellForHeightID";
     NSMutableArray *arr = [NSMutableArray array];
     TDNewsFeed *feed = [TDNewsFeed new];
     feed.status = [TDStatusUpdate new];
-    feed.status.title = @"Romulan Commander: Humans have a way of showing up when you least expect them.";
+    feed.status.userName = @"Romulan Commander";
+    feed.status.title = @"Humans have a way of showing up when you least expect them.";
     [arr addObject:feed];
     
     feed = [TDNewsFeed new];
@@ -65,12 +68,14 @@ const NSString *strStatusCellForHeightID = @"strStatusCellForHeightID";
     
     feed = [TDNewsFeed new];
     feed.status = [TDStatusUpdate new];
-    feed.status.title = @"Spock: Excuse me, there is a multi-legged creature crawling up your shoulder.";
+    feed.status.userName = @"Spock";
+    feed.status.title = @"Excuse me, there is a multi-legged creature crawling up your shoulder.";
     [arr addObject:feed];
     
     feed = [TDNewsFeed new];
     feed.status = [TDStatusUpdate new];
-    feed.status.title = @"Kirk Reviewed Spock: \nAh, my old friend Kirk, do you know the Klingon proverb that says revenge is a dish best served cold? It is very cold in space.He tasks me. He tasks me, and I shall have him. I'll chase him 'round the moons of Nibia and 'round the Antares Maelstrom and 'round perdition's flame before I give him up!";
+    feed.status.userName = @"Spock";
+    feed.status.title = @"Ah, my old friend Kirk, do you know the Klingon proverb that says revenge is a dish best served cold? It is very cold in space.He tasks me. He tasks me, and I shall have him. I'll chase him 'round the moons of Nibia and 'round the Antares Maelstrom and 'round perdition's flame before I give him up!";
     [arr addObject:feed];
     
     
@@ -150,6 +155,19 @@ const NSString *strStatusCellForHeightID = @"strStatusCellForHeightID";
         TDStatusFeedCell *cell = [tableView dequeueReusableCellWithIdentifier:(NSString *)strStatusCellID forIndexPath:indexPath];
         
         cell.lblTitle.text = [feed title];
+        cell.lblName.text = feed.status.userName;
+        
+        [cell.ivPhoto removeAllGestures];
+        cell.ivPhoto.tag = indexPath.row;
+        cell.ivPhoto.userInteractionEnabled = YES;
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(goUserProfile:)];
+        [cell.ivPhoto addGestureRecognizer:tap];
+        
+        [cell.lblName removeAllGestures];
+        cell.lblName.tag = indexPath.row;
+        cell.lblName.userInteractionEnabled = YES;
+        tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(goUserProfile:)];
+        [cell.lblName addGestureRecognizer:tap];
         
         [cell setNeedsLayout];
         [cell layoutIfNeeded];
@@ -165,12 +183,22 @@ const NSString *strStatusCellForHeightID = @"strStatusCellForHeightID";
     return cell;
 }
 
+-(void)goUserProfile:(UIGestureRecognizer *)gest {
+    
+    TDProfileVC *vc = [TDProfileVC new];
+    NSInteger row = gest.view.tag;
+    TDNewsFeed *feed = _newsFeeds[row];
+    vc.userID = feed.status.userID;
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     TDNewsFeed *feed = _newsFeeds[indexPath.row];
     if (feed.status) {
         _sizingCell.frame = tableView.bounds;
         
         _sizingCell.lblTitle.text = [feed title];
+        _sizingCell.lblName.text = feed.status.userName;
         [_sizingCell setNeedsLayout];
         [_sizingCell layoutIfNeeded];
         CGSize size = [self.sizingCell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];

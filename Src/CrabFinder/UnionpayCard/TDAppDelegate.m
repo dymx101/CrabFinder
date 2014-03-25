@@ -31,7 +31,7 @@
     NSArray *viewControllers = @[[self ncWithVC:[TDHomeVC new]]
                                  , [self ncWithVC:[TDMerchantsVC new]]
                                  , [self ncWithVC:[TDCalenderVC new]]
-                                 , [self ncWithVC:[TDProfileVC new]]];
+                                 , [self ncWithVC:[TDProfileVC newForMyProfile]]];
     _tabbarController.viewControllers = viewControllers;
     [self customizeTabBarForController:_tabbarController];
     

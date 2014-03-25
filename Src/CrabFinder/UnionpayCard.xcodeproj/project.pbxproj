@@ -42,6 +42,8 @@
 		EAC5DBB618E1201400E553D2 /* TDStatusListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC5DBB518E1201400E553D2 /* TDStatusListVC.m */; };
 		EAC5DBB918E1206000E553D2 /* TDReviewsListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC5DBB818E1206000E553D2 /* TDReviewsListVC.m */; };
 		EAC5DBBC18E12B6700E553D2 /* TDSearchVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC5DBBB18E12B6700E553D2 /* TDSearchVC.m */; };
+		EAC5DBBE18E12E0000E553D2 /* super_sponge.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EAC5DBBD18E12E0000E553D2 /* super_sponge.jpg */; };
+		EAC5DBC118E1341A00E553D2 /* TDImageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC5DBC018E1341A00E553D2 /* TDImageVC.m */; };
 		EAC7DCCA18C61D930076E32A /* TDBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC7DCC918C61D930076E32A /* TDBaseModel.m */; };
 		EAC7DCCD18C61E0C0076E32A /* TDUser.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC7DCCC18C61E0C0076E32A /* TDUser.m */; };
 		EAC7DCD018C61F160076E32A /* TDVendor.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC7DCCF18C61F160076E32A /* TDVendor.m */; };
@@ -927,6 +929,9 @@
 		EAC5DBB818E1206000E553D2 /* TDReviewsListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDReviewsListVC.m; sourceTree = "<group>"; };
 		EAC5DBBA18E12B6700E553D2 /* TDSearchVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDSearchVC.h; sourceTree = "<group>"; };
 		EAC5DBBB18E12B6700E553D2 /* TDSearchVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDSearchVC.m; sourceTree = "<group>"; };
+		EAC5DBBD18E12E0000E553D2 /* super_sponge.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = super_sponge.jpg; sourceTree = "<group>"; };
+		EAC5DBBF18E1341A00E553D2 /* TDImageVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDImageVC.h; sourceTree = "<group>"; };
+		EAC5DBC018E1341A00E553D2 /* TDImageVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDImageVC.m; sourceTree = "<group>"; };
 		EAC7DCC818C61D930076E32A /* TDBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDBaseModel.h; sourceTree = "<group>"; };
 		EAC7DCC918C61D930076E32A /* TDBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDBaseModel.m; sourceTree = "<group>"; };
 		EAC7DCCB18C61E0C0076E32A /* TDUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDUser.h; sourceTree = "<group>"; };
@@ -2816,6 +2821,7 @@
 		EACD0D3418B3A51F009109CB /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				EAC5DBBD18E12E0000E553D2 /* super_sponge.jpg */,
 				EACFEB8918E02DFE003782BE /* icon_gear@2x.png */,
 				EACFEB4418E01AD9003782BE /* btn_blue_bg.png */,
 				EACFEB4518E01AD9003782BE /* btn_blue_bg@2x.png */,
@@ -2863,6 +2869,8 @@
 				EAC5DBB818E1206000E553D2 /* TDReviewsListVC.m */,
 				EAC5DBBA18E12B6700E553D2 /* TDSearchVC.h */,
 				EAC5DBBB18E12B6700E553D2 /* TDSearchVC.m */,
+				EAC5DBBF18E1341A00E553D2 /* TDImageVC.h */,
+				EAC5DBC018E1341A00E553D2 /* TDImageVC.m */,
 			);
 			path = SubVCs;
 			sourceTree = "<group>";
@@ -3441,6 +3449,7 @@
 				EACC187A18B36F9100DD27B0 /* button_actionSheet_normal.png in Resources */,
 				EACC19B718B36F9100DD27B0 /* icon_orderReview_unchecked@2x.png in Resources */,
 				EACC1A6518B36F9200DD27B0 /* ump_bg_input_warning.png in Resources */,
+				EAC5DBBE18E12E0000E553D2 /* super_sponge.jpg in Resources */,
 				EACC194E18B36F9100DD27B0 /* icon_map_line.png in Resources */,
 				EACC189618B36F9100DD27B0 /* ic_choosed.png in Resources */,
 				EACC19E118B36F9100DD27B0 /* icon_route_bus@2x.png in Resources */,
@@ -3786,6 +3795,7 @@
 			files = (
 				EACC147018B36EE900DD27B0 /* TDAppDelegate.m in Sources */,
 				4C98ABF818B91E01007FAF12 /* NSString+MD5Addition.m in Sources */,
+				EAC5DBC118E1341A00E553D2 /* TDImageVC.m in Sources */,
 				4C98AC1518B9246F007FAF12 /* NSObject+JsonToVO.m in Sources */,
 				EAD3ECD318D47024001F8575 /* TDProductDetailVC.m in Sources */,
 				EA098BC818B98E1C0034E0CF /* TDRegisterVC.m in Sources */,

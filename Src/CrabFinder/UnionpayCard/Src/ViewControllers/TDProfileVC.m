@@ -42,11 +42,17 @@
 }
 
 @property(nonatomic, strong)    TDStatusFeedCell		*sizingCell;
+@property (nonatomic, assign) BOOL  isMyProfile;
 
 @end
 
 @implementation TDProfileVC
 
++(TDProfileVC *)newForMyProfile {
+    TDProfileVC *me = [TDProfileVC new];
+    me.isMyProfile = YES;
+    return me;
+}
 
 - (void)viewDidLoad
 {
@@ -76,10 +82,12 @@
     review.rating = 5;
     [_reviewsArray addObject:review];
     
-    [self installSearchToNavibar];
-    
-    UIBarButtonItem *btnSettings = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"icon_gear"] style:UIBarButtonItemStylePlain target:self action:@selector(goSettings:)];
-    self.navigationItem.rightBarButtonItem = btnSettings;
+    if (_isMyProfile) {
+        [self installSearchToNavibar];
+        
+        UIBarButtonItem *btnSettings = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"icon_gear"] style:UIBarButtonItemStylePlain target:self action:@selector(goSettings:)];
+        self.navigationItem.rightBarButtonItem = btnSettings;
+    }
     
     [self createSubviews];
     [self layoutSubviews];
@@ -322,7 +330,7 @@
     
     vc.displayActionButton = YES;
     vc.displayNavArrows = YES;
-
+    
     UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:vc];
     [self presentViewController:nc animated:YES completion:nil];
 }
@@ -351,7 +359,13 @@
     [self.navigationController pushViewController:vc animated:YES];
 }
 
-#pragma mark -
+-(void)composeAction:(id)sender {
+    TDComposeReviewVC *vc = [TDComposeReviewVC new];
+    UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:vc];
+    [self presentViewController:nc animated:YES completion:nil];
+}
+
+#pragma mark - MWPhotoBrowser delegate
 -(NSArray *)photos {
     static NSMutableArray *photos;
     if (photos == nil) {
@@ -390,5 +404,6 @@
 - (id <MWPhoto>)photoBrowser:(MWPhotoBrowser *)photoBrowser thumbPhotoAtIndex:(NSUInteger)index {
     return [self thumbs][index];
 }
+
 
 @end

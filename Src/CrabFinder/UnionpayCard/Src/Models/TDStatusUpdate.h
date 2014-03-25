@@ -10,6 +10,7 @@
 
 @interface TDStatusUpdate : TDBaseModel
 @property (nonatomic, assign) long long         userID;
+@property (nonatomic, copy) NSString            *userName;
 @property (nonatomic, copy) NSString            *title;
 @property (nonatomic, copy) NSString            *content;
 @property (nonatomic, strong) NSMutableArray    *photos;

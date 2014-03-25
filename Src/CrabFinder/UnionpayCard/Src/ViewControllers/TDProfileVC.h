@@ -10,5 +10,7 @@
 #import "TDBaseVC.h"
 
 @interface TDProfileVC : TDBaseVC
++(TDProfileVC *)newForMyProfile;
+@property (nonatomic, assign) long long userID;
 
 @end

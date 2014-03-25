@@ -14,16 +14,16 @@
 -(void)applyEffectCircleSilverBorder
 {
     self.layer.cornerRadius = self.frame.size.width / 2;
-    self.layer.borderColor = [FDColor sharedInstance].silver.CGColor;
-    self.layer.borderWidth = 1.f;
+    [self applyEffectBorder];
+    
     self.layer.masksToBounds = YES;
 }
 
 -(void)applyEffectRoundRectSilverBorder
 {
-    self.layer.cornerRadius = 5;
-    self.layer.borderColor = [FDColor sharedInstance].silver.CGColor;
-    self.layer.borderWidth = 1;
+    self.layer.cornerRadius = 8;
+    [self applyEffectBorder];
+    
     self.layer.masksToBounds = YES;
 }
 
@@ -56,6 +56,13 @@
     self.layer.shadowOffset = CGSizeMake(0, 1);
     self.layer.shadowRadius = 2;
     self.layer.cornerRadius = 0.f;
+}
+
+
+-(void)removeAllGestures {
+    for (UIGestureRecognizer *gest in self.gestureRecognizers) {
+        [self removeGestureRecognizer:gest];
+    }
 }
 
 @end

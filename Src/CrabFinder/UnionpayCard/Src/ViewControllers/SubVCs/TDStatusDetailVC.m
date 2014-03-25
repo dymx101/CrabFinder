@@ -37,7 +37,7 @@
     [self.view addSubview:_ivPhoto];
     
     _lblName = [UILabel new];
-    _lblName.text = @"Barack Obama";
+    _lblName.text = _statusUpdate.userName;
     [self.view addSubview:_lblName];
     
     _lblTitle = [UILabel new];
@@ -53,6 +53,11 @@
     for (int i = 0; i < 4; i++) {
         UIImageView *iv = [UIImageView new];
         iv.image = [TDImageLibrary sharedInstance].farmersMarket;
+        iv.userInteractionEnabled = YES;
+        iv.contentMode = UIViewContentModeScaleAspectFit;
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(openImageWithURL:)];
+        [iv addGestureRecognizer:tap];
+        
         [_pictureContainer addSubview:iv];
         [_pictureViews addObject:iv];
     }

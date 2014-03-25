@@ -18,4 +18,6 @@
 -(void)applyEffectBorder;
 -(void)applyEffectShadow;
 
+-(void)removeAllGestures;
+
 @end

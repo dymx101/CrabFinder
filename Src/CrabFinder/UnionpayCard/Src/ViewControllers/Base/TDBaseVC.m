@@ -9,6 +9,7 @@
 #import "TDBaseVC.h"
 #import "TDComposeStatusVC.h"
 #import "TDSearchVC.h"
+#import "TDImageVC.h"
 
 @interface TDBaseVC () {
     UIButton *_btnSearch;
@@ -98,6 +99,12 @@
 
 -(void)mapAction:(id)sender {
     
+}
+
+-(void)openImageWithURL:(id)sender {
+    TDImageVC *vc = [TDImageVC newWithURL:[NSURL URLWithString:SPONGE_BOB_URL]];
+    UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:vc];
+    [self presentViewController:nc animated:YES completion:nil];
 }
 
 -(void)dismissAction:(id)aSender

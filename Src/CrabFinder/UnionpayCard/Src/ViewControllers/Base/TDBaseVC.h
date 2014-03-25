@@ -20,4 +20,6 @@
 
 -(void)dismissAction:(id)aSender;
 
+-(void)openImageWithURL:(NSURL *)aImageURL;
+
 @end

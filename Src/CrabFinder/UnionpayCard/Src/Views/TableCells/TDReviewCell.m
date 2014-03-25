@@ -23,7 +23,7 @@
 -(void)initViews {
     _ivPhoto = [UIImageView new];
     _ivPhoto.image = SharedImage.avatar;
-    [_ivPhoto applyEffectBorder];
+    [_ivPhoto applyEffectRoundRectSilverBorder];
     [self.contentView addSubview:_ivPhoto];
     
     _lblTitle = [UILabel new];

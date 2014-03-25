@@ -10,6 +10,7 @@
 
 @interface TDStatusFeedCell : UITableViewCell
 @property (nonatomic, strong) UIImageView       *ivPhoto;
+@property (nonatomic, strong) UILabel           *lblName;
 @property (nonatomic, strong) UILabel           *lblTitle;
 
 @end
