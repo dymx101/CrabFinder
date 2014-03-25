@@ -102,6 +102,8 @@
 }
 
 -(void)openImageWithURL:(id)sender {
+    UITapGestureRecognizer *tap = sender;
+    DLog(@"%@", tap.view.tagObject);
     TDImageVC *vc = [TDImageVC newWithURL:[NSURL URLWithString:SPONGE_BOB_URL]];
     UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:vc];
     [self presentViewController:nc animated:YES completion:nil];

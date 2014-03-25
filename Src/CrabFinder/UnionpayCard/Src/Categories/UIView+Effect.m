@@ -8,8 +8,11 @@
 
 #import "UIView+Effect.h"
 #import "FDColor.h"
+#import <objc/runtime.h>
 
 @implementation UIView (Effect)
+
+ADD_DYNAMIC_PROPERTY(id, tagObject, setTagObject);
 
 -(void)applyEffectCircleSilverBorder
 {

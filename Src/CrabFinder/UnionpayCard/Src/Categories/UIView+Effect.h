@@ -10,6 +10,8 @@
 
 @interface UIView (Effect)
 
+@property (nonatomic, strong) id tagObject;
+
 -(void)applyEffectCircleSilverBorder;
 -(void)applyEffectRoundRectSilverBorder;
 -(void)applyEffectRoundRectShadow;

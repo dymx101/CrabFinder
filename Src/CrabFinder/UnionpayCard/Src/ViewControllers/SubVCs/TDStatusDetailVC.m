@@ -58,6 +58,9 @@
         UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(openImageWithURL:)];
         [iv addGestureRecognizer:tap];
         
+#warning TODO: set tagObject with ImageURL
+        iv.tagObject = @"aaaaaa";
+        
         [_pictureContainer addSubview:iv];
         [_pictureViews addObject:iv];
     }
