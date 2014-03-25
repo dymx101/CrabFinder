@@ -204,12 +204,19 @@
     [_lblBio alignCenterXWithView:_headerView predicate:nil];
     [_lblBio constrainWidth:@"280"];
     
+    UIView  *seperator = [UIView new];
+    seperator.backgroundColor = [FDColor sharedInstance].lightGray;
+    [_headerView addSubview:seperator];
+    [seperator constrainHeight:@"0.5"];
+    [seperator alignLeading:@"0" trailing:@"0" toView:_headerView];
+    [seperator constrainTopSpaceToView:_lblBio predicate:@"15"];
+    
     //
     _horizontalScrollView = [UIScrollView new];
     _horizontalScrollView.showsHorizontalScrollIndicator = NO;
     [_headerView addSubview:_horizontalScrollView];
     // layout
-    [_horizontalScrollView constrainTopSpaceToView:_lblBio predicate:@"10"];
+    [_horizontalScrollView constrainTopSpaceToView:seperator predicate:@"0"];
     [_horizontalScrollView constrainWidthToView:_headerView predicate:nil];
     [_horizontalScrollView alignCenterXWithView:_headerView predicate:nil];
     [_horizontalScrollView constrainHeight:@"80"];

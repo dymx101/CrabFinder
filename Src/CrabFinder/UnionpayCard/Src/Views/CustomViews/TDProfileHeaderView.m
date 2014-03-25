@@ -16,6 +16,13 @@
     if (self) {
         self.backgroundColor = [FDColor sharedInstance].silver;
         
+        UIView  *seperator = [UIView new];
+        seperator.backgroundColor = [FDColor sharedInstance].lightGray;
+        [self addSubview:seperator];
+        [seperator constrainHeight:@"0.5"];
+        [seperator alignLeading:@"0" trailing:@"0" toView:self];
+        [seperator alignTopEdgeWithView:seperator predicate:@"0"];
+        
         _lblTitle = [UILabel new];
         _lblTitle.font = [TDFontLibrary sharedInstance].fontNormalBold;
         [self addSubview:_lblTitle];
