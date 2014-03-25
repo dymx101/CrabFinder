@@ -28,4 +28,22 @@
     }
 
 }
+
++(EDStarRating *)ratingViewEnabled:(BOOL)aEnabled rating:(CGFloat)aRating {
+    
+    EDStarRating *viewRating = [EDStarRating new];
+    viewRating.backgroundColor = [FDColor sharedInstance].clear;
+    viewRating.starImage = SharedImage.ratingStarEmpty;
+    viewRating.starHighlightedImage = SharedImage.ratingStarFull;
+    viewRating.horizontalMargin = 0;
+    viewRating.displayMode = EDStarRatingDisplayFull;
+    
+    viewRating.editable = aEnabled;
+    viewRating.userInteractionEnabled = aEnabled;
+    
+    viewRating.maxRating = 5;
+    viewRating.rating= aRating;
+    
+    return viewRating;
+}
 @end

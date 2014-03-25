@@ -10,4 +10,5 @@
 
 @interface TDUtil : NSObject
 +(void)findFonts;
++(EDStarRating *)ratingViewEnabled:(BOOL)aEnabled rating:(CGFloat)aRating;
 @end

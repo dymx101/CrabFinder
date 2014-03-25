@@ -47,15 +47,7 @@
     _textView.layer.borderColor = [FDColor sharedInstance].lightGray.CGColor;
     [self.view addSubview:_textView];
     
-    _viewRating = [EDStarRating new];
-    _viewRating.backgroundColor = [FDColor sharedInstance].clear;
-    _viewRating.starImage = SharedImage.ratingStarEmpty;
-    _viewRating.starHighlightedImage = SharedImage.ratingStarFull;
-    _viewRating.maxRating = 5;
-    _viewRating.horizontalMargin = 0;
-    _viewRating.editable = YES;
-    _viewRating.displayMode = EDStarRatingDisplayFull;
-    _viewRating.rating= 3;
+    _viewRating = [TDUtil ratingViewEnabled:YES rating:3];
     [self.view addSubview:_viewRating];
     
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(endEditAction:)];

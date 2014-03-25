@@ -17,6 +17,7 @@
 #import "TDReviewCell.h"
 #import "TDStatusFeedCell.h"
 #import "TDReview.h"
+#import "TDReviewDetailVC.h"
 
 #define REVIEW_CELL_ID              @"TDReviewCell"
 #define STATUS_CELL_ID              @"TDStatusFeedCell"
@@ -238,11 +239,19 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 0) {
-        TDStatusDetailVC *vc = [TDStatusDetailVC new];
-        TDStatusUpdate *status = [TDStatusUpdate new];
-        status.title = @"I am endevoring to construct a pneumonic memory circuit using stone knives and bear skins.";
-        vc.statusUpdate = status;
         
+        TDStatusUpdate *status = _statusArray[indexPath.row];
+        
+        TDStatusDetailVC *vc = [TDStatusDetailVC new];
+        vc.statusUpdate = status;
+        [self.navigationController pushViewController:vc animated:YES];
+        
+    } else {
+        
+        TDReview *review = _reviewsArray[indexPath.row];
+        
+        TDReviewDetailVC *vc = [TDReviewDetailVC new];
+        vc.review = review;
         [self.navigationController pushViewController:vc animated:YES];
     }
 }

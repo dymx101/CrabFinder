@@ -38,15 +38,7 @@
         _ivPhoto.image = SharedImage.avatar;
         [self addSubview:_ivPhoto];
         
-        _viewRating = [EDStarRating new];
-        _viewRating.backgroundColor = [FDColor sharedInstance].clear;
-        _viewRating.starImage = SharedImage.ratingStarEmpty;
-        _viewRating.starHighlightedImage = SharedImage.ratingStarFull;
-        _viewRating.maxRating = 5;
-        _viewRating.horizontalMargin = 0;
-        _viewRating.editable = NO;
-        _viewRating.displayMode = EDStarRatingDisplayFull;
-        _viewRating.rating= 3;
+        _viewRating = [TDUtil ratingViewEnabled:NO rating:3];
         [self addSubview:_viewRating];
         
         UIView *bottomLine = [UIView new];
