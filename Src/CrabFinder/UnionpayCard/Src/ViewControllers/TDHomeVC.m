@@ -49,18 +49,21 @@ const NSString *strStatusCellForHeightID = @"strStatusCellForHeightID";
     TDNewsFeed *feed = [TDNewsFeed new];
     feed.status = [TDStatusUpdate new];
     feed.status.userName = @"Romulan Commander";
+    feed.status.userPhoto = @"https://pbs.twimg.com/profile_images/3469829141/a1a8f0bb4a721acbe33a8257842737da.jpeg";
     feed.status.title = @"Humans have a way of showing up when you least expect them.";
     [arr addObject:feed];
     
     feed = [TDNewsFeed new];
     feed.review = [TDReview new];
     feed.review.title = @"Romulan Commander Reviewed Kirk";
+    feed.review.userPhoto = @"http://30a.com/wp-content/uploads/2013/08/2a5dbf935782cd137459b1a4c8a51c53.jpeg";
     feed.review.content = @"Humans have a way of showing up when you least expect them.";
     feed.review.rating = 3;
     [arr addObject:feed];
     
     feed = [TDNewsFeed new];
     feed.review = [TDReview new];
+    feed.review.userPhoto = @"http://www.bestfishingrigs.com/images/Red_Drum_Wiki_4x6.jpg";
     feed.review.title = @"Romulan Commander Reviewed Kirk";
     feed.review.content = @"Humans have a way of showing up when you least expect them.";
     feed.review.rating = 5;
@@ -69,12 +72,14 @@ const NSString *strStatusCellForHeightID = @"strStatusCellForHeightID";
     feed = [TDNewsFeed new];
     feed.status = [TDStatusUpdate new];
     feed.status.userName = @"Spock";
+    feed.status.userPhoto = @"https://pbs.twimg.com/profile_images/3469829141/a1a8f0bb4a721acbe33a8257842737da.jpeg";
     feed.status.title = @"Excuse me, there is a multi-legged creature crawling up your shoulder.";
     [arr addObject:feed];
     
     feed = [TDNewsFeed new];
     feed.status = [TDStatusUpdate new];
     feed.status.userName = @"Spock";
+    feed.status.userPhoto = @"https://pbs.twimg.com/profile_images/3469829141/a1a8f0bb4a721acbe33a8257842737da.jpeg";
     feed.status.title = @"Ah, my old friend Kirk, do you know the Klingon proverb that says revenge is a dish best served cold? It is very cold in space.He tasks me. He tasks me, and I shall have him. I'll chase him 'round the moons of Nibia and 'round the Antares Maelstrom and 'round perdition's flame before I give him up!";
     [arr addObject:feed];
     
@@ -82,6 +87,7 @@ const NSString *strStatusCellForHeightID = @"strStatusCellForHeightID";
     feed = [TDNewsFeed new];
     feed.review = [TDReview new];
     feed.review.title = @"Romulan Commander Reviewed Kirk";
+    feed.review.userPhoto = @"http://www.bestfishingrigs.com/images/Red_Drum_Wiki_4x6.jpg";
     feed.review.content = @"Humans have a way of showing up when you least expect them.";
     feed.review.rating = 2;
     [arr addObject:feed];
@@ -160,6 +166,7 @@ const NSString *strStatusCellForHeightID = @"strStatusCellForHeightID";
         [cell.ivPhoto removeAllGestures];
         cell.ivPhoto.tag = indexPath.row;
         cell.ivPhoto.userInteractionEnabled = YES;
+        [cell.ivPhoto setImageWithURL:[NSURL URLWithString:feed.status.userPhoto] placeholderImage:SharedImage.avatar];
         UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(goUserProfile:)];
         [cell.ivPhoto addGestureRecognizer:tap];
         
@@ -179,6 +186,7 @@ const NSString *strStatusCellForHeightID = @"strStatusCellForHeightID";
     cell.lblTitle.text = [feed title];
     cell.lblMessage.text = feed.review.content;
     cell.viewRating.rating = feed.review.rating;
+    [cell.ivPhoto setImageWithURL:[NSURL URLWithString:feed.review.userPhoto] placeholderImage:SharedImage.avatar];
     
     return cell;
 }

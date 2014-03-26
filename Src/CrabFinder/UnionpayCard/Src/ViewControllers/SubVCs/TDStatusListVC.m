@@ -18,6 +18,8 @@
 {
     [super viewDidLoad];
     self.navigationItem.title = @"All Status";
+    
+    [self installUnderConstructionPic];
 }
 
 @end

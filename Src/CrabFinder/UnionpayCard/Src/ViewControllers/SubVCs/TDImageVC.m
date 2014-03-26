@@ -35,10 +35,11 @@
     
     
     _iv = [UIImageView new];
+    _iv.contentMode = UIViewContentModeScaleAspectFit;
     [self.view addSubview:_iv];
     [_iv alignToView:self.view];
     
-    [_iv setImageWithURL:_imageURL placeholderImage:[TDImageLibrary sharedInstance].avatar];
+    [_iv setImageWithURL:_imageURL placeholderImage:nil];
 }
 
 @end

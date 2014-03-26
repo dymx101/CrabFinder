@@ -22,4 +22,6 @@
 
 -(void)openImageWithURL:(NSURL *)aImageURL;
 
+-(void)installUnderConstructionPic;
+
 @end

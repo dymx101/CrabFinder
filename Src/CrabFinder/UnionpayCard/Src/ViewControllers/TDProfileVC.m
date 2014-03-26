@@ -63,8 +63,11 @@
     
     TDStatusUpdate *status = [TDStatusUpdate new];
     status.title = @"Romulan Commander: Humans have a way of showing up when you least expect them.";
+    status.userPhoto = @"https://pbs.twimg.com/profile_images/3469829141/a1a8f0bb4a721acbe33a8257842737da.jpeg";
     [_statusArray addObject:status];
+    
     status = [TDStatusUpdate new];
+    status.userPhoto = @"https://pbs.twimg.com/profile_images/3469829141/a1a8f0bb4a721acbe33a8257842737da.jpeg";
     status.title = @"Romulan Commander: Humans have a way of showing up when you least expect them.";
     [_statusArray addObject:status];
 
@@ -73,11 +76,14 @@
     
     TDReview *review = [TDReview new];
     review.title = @"Romulan Commander Reviewed Kirk";
+    review.userPhoto = @"https://pbs.twimg.com/profile_images/3469829141/a1a8f0bb4a721acbe33a8257842737da.jpeg";
     review.content = @"Humans have a way of showing up when you least expect them.";
     review.rating = 3.5;
     [_reviewsArray addObject:review];
+    
     review = [TDReview new];
     review.title = @"Romulan Commander Reviewed Kirk";
+    review.userPhoto = @"https://pbs.twimg.com/profile_images/3469829141/a1a8f0bb4a721acbe33a8257842737da.jpeg";
     review.content = @"Humans have a way of showing up when you least expect them.";
     review.rating = 5;
     [_reviewsArray addObject:review];
@@ -140,6 +146,7 @@
         
         TDStatusUpdate *status = _statusArray[indexPath.row];
         cell.lblTitle.text = status.title;
+        [cell.ivPhoto setImageWithURL:[NSURL URLWithString:status.userPhoto] placeholderImage:SharedImage.avatar];
         return cell;
         
     } else {
@@ -150,6 +157,7 @@
         cell.lblTitle.text = review.title;
         cell.lblMessage.text = review.content;
         cell.viewRating.rating = review.rating;
+        [cell.ivPhoto setImageWithURL:[NSURL URLWithString:review.userPhoto] placeholderImage:SharedImage.avatar];
         
         return cell;
     }

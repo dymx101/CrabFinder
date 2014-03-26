@@ -44,7 +44,7 @@ DEF_SINGLETON(TDImageLibrary)
     _ratingStarHalf = [UIImage imageNamed:@"rating_star_half"];
     _ratingStarFull = [UIImage imageNamed:@"rating_star_full"];
     
-    _avatar = [UIImage imageNamed:@"super_sponge.jpg"];
+    _avatar = [UIImage imageNamed:@"avatar_default"];
     _farmersMarket = [UIImage imageNamed:@"famers_market.jpg"];
     _boxChecked = [UIImage imageNamed:@"icon_orderReview_checked"];
     _boxUnchecked = [UIImage imageNamed:@"icon_orderReview_unchecked"];

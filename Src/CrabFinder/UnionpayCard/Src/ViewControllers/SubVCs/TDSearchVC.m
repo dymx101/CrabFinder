@@ -22,6 +22,8 @@
     UIBarButtonItem *btnDismiss = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(dismissAction:)];
     self.navigationItem.leftBarButtonItem = btnDismiss;
     self.navigationItem.rightBarButtonItem = nil;
+    
+    [self installUnderConstructionPic];
 }
 
 @end

@@ -54,6 +54,16 @@
     [self installComposeButtonToNavi];
 }
 
+-(void)installUnderConstructionPic {
+    self.view.backgroundColor = [UIColor whiteColor];
+    UIImageView *iv = [UIImageView new];
+    iv.contentMode = UIViewContentModeScaleAspectFit;
+    [self.view addSubview:iv];
+    [iv alignTop:@"20" leading:@"20" bottom:@"-20" trailing:@"-20" toView:self.view];
+    NSURL *url = [NSURL URLWithString:@"https://lh4.googleusercontent.com/-fSoQ6lFr1J8/AAAAAAAAAAI/AAAAAAAAAAA/XvgS1JQfpWI/photo.jpg"];
+    [iv setImageWithURL:url placeholderImage:nil];
+}
+
 
 -(void)dealloc {
     [self unobserveAllNotifications];

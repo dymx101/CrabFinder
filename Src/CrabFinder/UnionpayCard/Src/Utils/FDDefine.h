@@ -62,7 +62,7 @@ _Pragma("clang diagnostic pop") \
 //
 #define LocalString(key)    NSLocalizedString(key, nil);
 
-#define SPONGE_BOB_URL      (@"http://orzhd.com/briian/2007/08/0022.png")
+#define SPONGE_BOB_URL      (@"http://3.bp.blogspot.com/-ieEJjbD_4oE/TpdN-hGRLrI/AAAAAAAADUU/Jv_n5Lo7ZVs/s1600/fruit.jpg")
 
 
 

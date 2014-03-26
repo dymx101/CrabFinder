@@ -10,6 +10,8 @@
 
 @interface TDReview : TDBaseModel
 @property (nonatomic, assign) long long     userID;
+@property (nonatomic, copy) NSString        *userPhoto;
+
 @property (nonatomic, assign) long long     vendorID;
 @property (nonatomic, copy)     NSString    *title;
 @property (nonatomic, copy)     NSString    *content;
